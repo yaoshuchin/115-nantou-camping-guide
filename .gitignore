@@ -20,3 +20,6 @@ __pycache__/
 # Antigravity artifacts & scratch temp
 scratch/temp*
 *.tmp
+
+.netlify/
+dist/
