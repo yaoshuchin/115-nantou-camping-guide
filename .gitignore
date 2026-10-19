@@ -1,0 +1,22 @@
+# OS / IDE
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Office lock files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# Python / uv
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.env
+
+# Antigravity artifacts & scratch temp
+scratch/temp*
+*.tmp

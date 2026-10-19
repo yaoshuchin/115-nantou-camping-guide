@@ -1,0 +1,956 @@
+[
+  {
+    "clazz": "801",
+    "name": "林O諼",
+    "gender": "男",
+    "bus": "3",
+    "tent": "A01",
+    "mealGroup": 1,
+    "note": ""
+  },
+  {
+    "clazz": "801",
+    "name": "張O鈞",
+    "gender": "男",
+    "bus": "3",
+    "tent": "A01",
+    "mealGroup": 1,
+    "note": ""
+  },
+  {
+    "clazz": "801",
+    "name": "張O偉",
+    "gender": "男",
+    "bus": "3",
+    "tent": "A01",
+    "mealGroup": 1,
+    "note": ""
+  },
+  {
+    "clazz": "801",
+    "name": "吳O岷",
+    "gender": "男",
+    "bus": "3",
+    "tent": "A01",
+    "mealGroup": 2,
+    "note": ""
+  },
+  {
+    "clazz": "801",
+    "name": "谷O恩",
+    "gender": "男",
+    "bus": "3",
+    "tent": "A01",
+    "mealGroup": 1,
+    "note": ""
+  },
+  {
+    "clazz": "801",
+    "name": "湯O丞",
+    "gender": "男",
+    "bus": "3",
+    "tent": "A02",
+    "mealGroup": 2,
+    "note": ""
+  },
+  {
+    "clazz": "801",
+    "name": "陳O廷",
+    "gender": "男",
+    "bus": "3",
+    "tent": "A02",
+    "mealGroup": 2,
+    "note": ""
+  },
+  {
+    "clazz": "801",
+    "name": "許O瑋",
+    "gender": "男",
+    "bus": "3",
+    "tent": "A02",
+    "mealGroup": 2,
+    "note": ""
+  },
+  {
+    "clazz": "801",
+    "name": "陳O宗",
+    "gender": "男",
+    "bus": "3",
+    "tent": "A02",
+    "mealGroup": 1,
+    "note": ""
+  },
+  {
+    "clazz": "801",
+    "name": "賴O豪",
+    "gender": "男",
+    "bus": "3",
+    "tent": "A02",
+    "mealGroup": 1,
+    "note": ""
+  },
+  {
+    "clazz": "801",
+    "name": "林O言",
+    "gender": "女",
+    "bus": "3",
+    "tent": "B01",
+    "mealGroup": 1,
+    "note": ""
+  },
+  {
+    "clazz": "801",
+    "name": "劉O含",
+    "gender": "女",
+    "bus": "3",
+    "tent": "B01",
+    "mealGroup": 1,
+    "note": ""
+  },
+  {
+    "clazz": "801",
+    "name": "藍O詒",
+    "gender": "女",
+    "bus": "3",
+    "tent": "B01",
+    "mealGroup": 1,
+    "note": ""
+  },
+  {
+    "clazz": "801",
+    "name": "林O嫻",
+    "gender": "女",
+    "bus": "3",
+    "tent": "B02",
+    "mealGroup": 2,
+    "note": ""
+  },
+  {
+    "clazz": "801",
+    "name": "江O婷",
+    "gender": "女",
+    "bus": "3",
+    "tent": "B02",
+    "mealGroup": 2,
+    "note": ""
+  },
+  {
+    "clazz": "801",
+    "name": "陳O翎",
+    "gender": "女",
+    "bus": "3",
+    "tent": "B02",
+    "mealGroup": 2,
+    "note": ""
+  },
+  {
+    "clazz": "801",
+    "name": "陳O涵",
+    "gender": "女",
+    "bus": "3",
+    "tent": "B02",
+    "mealGroup": 2,
+    "note": ""
+  },
+  {
+    "clazz": "802",
+    "name": "黃O睿",
+    "gender": "男",
+    "bus": "2",
+    "tent": "A03",
+    "mealGroup": 4,
+    "note": ""
+  },
+  {
+    "clazz": "802",
+    "name": "葉O毅",
+    "gender": "男",
+    "bus": "2",
+    "tent": "A03",
+    "mealGroup": 4,
+    "note": ""
+  },
+  {
+    "clazz": "802",
+    "name": "廖O惟",
+    "gender": "男",
+    "bus": "2",
+    "tent": "A03",
+    "mealGroup": 3,
+    "note": ""
+  },
+  {
+    "clazz": "802",
+    "name": "劉O宇",
+    "gender": "男",
+    "bus": "2",
+    "tent": "A04",
+    "mealGroup": 5,
+    "note": ""
+  },
+  {
+    "clazz": "802",
+    "name": "張O瑋",
+    "gender": "男",
+    "bus": "2",
+    "tent": "A04",
+    "mealGroup": 3,
+    "note": ""
+  },
+  {
+    "clazz": "802",
+    "name": "簡O宸",
+    "gender": "男",
+    "bus": "2",
+    "tent": "A04",
+    "mealGroup": 5,
+    "note": ""
+  },
+  {
+    "clazz": "802",
+    "name": "李O妮",
+    "gender": "女",
+    "bus": "2",
+    "tent": "B03",
+    "mealGroup": 4,
+    "note": ""
+  },
+  {
+    "clazz": "802",
+    "name": "李O甯",
+    "gender": "女",
+    "bus": "2",
+    "tent": "B03",
+    "mealGroup": 4,
+    "note": ""
+  },
+  {
+    "clazz": "802",
+    "name": "鄭O琳",
+    "gender": "女",
+    "bus": "2",
+    "tent": "B03",
+    "mealGroup": 4,
+    "note": ""
+  },
+  {
+    "clazz": "802",
+    "name": "黃O蒂",
+    "gender": "女",
+    "bus": "2",
+    "tent": "B03",
+    "mealGroup": 4,
+    "note": ""
+  },
+  {
+    "clazz": "802",
+    "name": "簡O懿",
+    "gender": "女",
+    "bus": "2",
+    "tent": "B04",
+    "mealGroup": 3,
+    "note": ""
+  },
+  {
+    "clazz": "802",
+    "name": "黃O薇",
+    "gender": "女",
+    "bus": "2",
+    "tent": "B04",
+    "mealGroup": 3,
+    "note": ""
+  },
+  {
+    "clazz": "802",
+    "name": "賴O其",
+    "gender": "女",
+    "bus": "2",
+    "tent": "B04",
+    "mealGroup": 3,
+    "note": ""
+  },
+  {
+    "clazz": "802",
+    "name": "鐘O彤",
+    "gender": "女",
+    "bus": "2",
+    "tent": "B04",
+    "mealGroup": 3,
+    "note": ""
+  },
+  {
+    "clazz": "802",
+    "name": "郭O琪",
+    "gender": "女",
+    "bus": "2",
+    "tent": "B05",
+    "mealGroup": 5,
+    "note": ""
+  },
+  {
+    "clazz": "802",
+    "name": "廖O昕",
+    "gender": "女",
+    "bus": "2",
+    "tent": "B05",
+    "mealGroup": 5,
+    "note": ""
+  },
+  {
+    "clazz": "802",
+    "name": "胡O薰",
+    "gender": "女",
+    "bus": "2",
+    "tent": "B05",
+    "mealGroup": 5,
+    "note": ""
+  },
+  {
+    "clazz": "802",
+    "name": "張O桔",
+    "gender": "女",
+    "bus": "2",
+    "tent": "B05",
+    "mealGroup": 5,
+    "note": ""
+  },
+  {
+    "clazz": "803",
+    "name": "許O煜",
+    "gender": "男",
+    "bus": "3",
+    "tent": "A05",
+    "mealGroup": 6,
+    "note": ""
+  },
+  {
+    "clazz": "803",
+    "name": "陳O熙",
+    "gender": "男",
+    "bus": "3",
+    "tent": "A05",
+    "mealGroup": 6,
+    "note": ""
+  },
+  {
+    "clazz": "803",
+    "name": "蔡O呈",
+    "gender": "男",
+    "bus": "3",
+    "tent": "A05",
+    "mealGroup": 6,
+    "note": ""
+  },
+  {
+    "clazz": "803",
+    "name": "陳O天",
+    "gender": "男",
+    "bus": "3",
+    "tent": "A06",
+    "mealGroup": 7,
+    "note": ""
+  },
+  {
+    "clazz": "803",
+    "name": "陳O瑜",
+    "gender": "男",
+    "bus": "3",
+    "tent": "A06",
+    "mealGroup": 7,
+    "note": ""
+  },
+  {
+    "clazz": "803",
+    "name": "李O成",
+    "gender": "男",
+    "bus": "3",
+    "tent": "A06",
+    "mealGroup": 7,
+    "note": ""
+  },
+  {
+    "clazz": "803",
+    "name": "王O芝",
+    "gender": "女",
+    "bus": "3",
+    "tent": "B06",
+    "mealGroup": 6,
+    "note": ""
+  },
+  {
+    "clazz": "803",
+    "name": "石O芳",
+    "gender": "女",
+    "bus": "3",
+    "tent": "B06",
+    "mealGroup": 6,
+    "note": ""
+  },
+  {
+    "clazz": "803",
+    "name": "吳O恩",
+    "gender": "女",
+    "bus": "3",
+    "tent": "B06",
+    "mealGroup": 6,
+    "note": ""
+  },
+  {
+    "clazz": "803",
+    "name": "吳O蓉",
+    "gender": "女",
+    "bus": "3",
+    "tent": "B06",
+    "mealGroup": 6,
+    "note": ""
+  },
+  {
+    "clazz": "803",
+    "name": "潘O汝",
+    "gender": "女",
+    "bus": "3",
+    "tent": "B06",
+    "mealGroup": 6,
+    "note": ""
+  },
+  {
+    "clazz": "803",
+    "name": "邱O慈",
+    "gender": "女",
+    "bus": "3",
+    "tent": "B07",
+    "mealGroup": 7,
+    "note": ""
+  },
+  {
+    "clazz": "803",
+    "name": "陳O羽",
+    "gender": "女",
+    "bus": "3",
+    "tent": "B07",
+    "mealGroup": 7,
+    "note": ""
+  },
+  {
+    "clazz": "803",
+    "name": "謝O璇",
+    "gender": "女",
+    "bus": "3",
+    "tent": "B07",
+    "mealGroup": 7,
+    "note": ""
+  },
+  {
+    "clazz": "803",
+    "name": "沈O愉",
+    "gender": "女",
+    "bus": "3",
+    "tent": "B07",
+    "mealGroup": 7,
+    "note": ""
+  },
+  {
+    "clazz": "804",
+    "name": "陳O光",
+    "gender": "男",
+    "bus": "2",
+    "tent": "A07",
+    "mealGroup": 8,
+    "note": ""
+  },
+  {
+    "clazz": "804",
+    "name": "蕭O皓",
+    "gender": "男",
+    "bus": "2",
+    "tent": "A07",
+    "mealGroup": 8,
+    "note": ""
+  },
+  {
+    "clazz": "804",
+    "name": "陳O昇",
+    "gender": "男",
+    "bus": "2",
+    "tent": "A07",
+    "mealGroup": 8,
+    "note": ""
+  },
+  {
+    "clazz": "804",
+    "name": "林O澄",
+    "gender": "男",
+    "bus": "2",
+    "tent": "A08",
+    "mealGroup": 8,
+    "note": ""
+  },
+  {
+    "clazz": "804",
+    "name": "許O翔",
+    "gender": "男",
+    "bus": "2",
+    "tent": "A08",
+    "mealGroup": 8,
+    "note": ""
+  },
+  {
+    "clazz": "804",
+    "name": "劉O振",
+    "gender": "男",
+    "bus": "2",
+    "tent": "A08",
+    "mealGroup": 8,
+    "note": ""
+  },
+  {
+    "clazz": "804",
+    "name": "張O帆",
+    "gender": "男",
+    "bus": "2",
+    "tent": "A08",
+    "mealGroup": 8,
+    "note": ""
+  },
+  {
+    "clazz": "804",
+    "name": "王O涵",
+    "gender": "女",
+    "bus": "2",
+    "tent": "B08",
+    "mealGroup": 9,
+    "note": ""
+  },
+  {
+    "clazz": "804",
+    "name": "陳O妘",
+    "gender": "女",
+    "bus": "2",
+    "tent": "B08",
+    "mealGroup": 9,
+    "note": ""
+  },
+  {
+    "clazz": "804",
+    "name": "張O晴",
+    "gender": "女",
+    "bus": "2",
+    "tent": "B08",
+    "mealGroup": 9,
+    "note": ""
+  },
+  {
+    "clazz": "804",
+    "name": "劉O硯",
+    "gender": "女",
+    "bus": "2",
+    "tent": "B08",
+    "mealGroup": 9,
+    "note": "同名同姓查核確認"
+  },
+  {
+    "clazz": "804",
+    "name": "羅O茜",
+    "gender": "女",
+    "bus": "2",
+    "tent": "B09",
+    "mealGroup": 9,
+    "note": ""
+  },
+  {
+    "clazz": "804",
+    "name": "簡O璇",
+    "gender": "女",
+    "bus": "2",
+    "tent": "B09",
+    "mealGroup": 9,
+    "note": ""
+  },
+  {
+    "clazz": "804",
+    "name": "余O婷",
+    "gender": "女",
+    "bus": "2",
+    "tent": "B09",
+    "mealGroup": 9,
+    "note": ""
+  },
+  {
+    "clazz": "804",
+    "name": "洪O瑄",
+    "gender": "女",
+    "bus": "2",
+    "tent": "B09",
+    "mealGroup": 9,
+    "note": ""
+  },
+  {
+    "clazz": "805",
+    "name": "林O竹",
+    "gender": "男",
+    "bus": "1",
+    "tent": "A09",
+    "mealGroup": 10,
+    "note": ""
+  },
+  {
+    "clazz": "805",
+    "name": "郭O佑",
+    "gender": "男",
+    "bus": "1",
+    "tent": "A09",
+    "mealGroup": 10,
+    "note": ""
+  },
+  {
+    "clazz": "805",
+    "name": "陳O庭",
+    "gender": "男",
+    "bus": "1",
+    "tent": "A09",
+    "mealGroup": 10,
+    "note": ""
+  },
+  {
+    "clazz": "805",
+    "name": "嚴O諭",
+    "gender": "男",
+    "bus": "1",
+    "tent": "A09",
+    "mealGroup": 10,
+    "note": ""
+  },
+  {
+    "clazz": "805",
+    "name": "吳O鋒",
+    "gender": "男",
+    "bus": "1",
+    "tent": "A10",
+    "mealGroup": 10,
+    "note": ""
+  },
+  {
+    "clazz": "805",
+    "name": "簡O宇",
+    "gender": "男",
+    "bus": "1",
+    "tent": "A10",
+    "mealGroup": 10,
+    "note": ""
+  },
+  {
+    "clazz": "805",
+    "name": "張O瑜",
+    "gender": "男",
+    "bus": "1",
+    "tent": "A10",
+    "mealGroup": 10,
+    "note": "素食"
+  },
+  {
+    "clazz": "805",
+    "name": "劉O硯",
+    "gender": "女",
+    "bus": "1",
+    "tent": "B10",
+    "mealGroup": 11,
+    "note": "同名同姓查核確認"
+  },
+  {
+    "clazz": "805",
+    "name": "吳O瑜",
+    "gender": "女",
+    "bus": "1",
+    "tent": "B10",
+    "mealGroup": 11,
+    "note": ""
+  },
+  {
+    "clazz": "805",
+    "name": "黃O薇",
+    "gender": "女",
+    "bus": "1",
+    "tent": "B10",
+    "mealGroup": 11,
+    "note": ""
+  },
+  {
+    "clazz": "805",
+    "name": "鄭O妮",
+    "gender": "女",
+    "bus": "1",
+    "tent": "B10",
+    "mealGroup": 11,
+    "note": ""
+  },
+  {
+    "clazz": "806",
+    "name": "吳O文",
+    "gender": "男",
+    "bus": "1",
+    "tent": "A11",
+    "mealGroup": 12,
+    "note": ""
+  },
+  {
+    "clazz": "806",
+    "name": "曾O承",
+    "gender": "男",
+    "bus": "1",
+    "tent": "A11",
+    "mealGroup": 12,
+    "note": ""
+  },
+  {
+    "clazz": "806",
+    "name": "洪O倫",
+    "gender": "男",
+    "bus": "1",
+    "tent": "A11",
+    "mealGroup": 12,
+    "note": ""
+  },
+  {
+    "clazz": "806",
+    "name": "張O棋",
+    "gender": "男",
+    "bus": "1",
+    "tent": "A11",
+    "mealGroup": 12,
+    "note": ""
+  },
+  {
+    "clazz": "806",
+    "name": "陳O臻",
+    "gender": "女",
+    "bus": "1",
+    "tent": "B11",
+    "mealGroup": 12,
+    "note": ""
+  },
+  {
+    "clazz": "806",
+    "name": "李O榕",
+    "gender": "女",
+    "bus": "1",
+    "tent": "B11",
+    "mealGroup": 12,
+    "note": ""
+  },
+  {
+    "clazz": "806",
+    "name": "林O妤",
+    "gender": "女",
+    "bus": "1",
+    "tent": "B11",
+    "mealGroup": 12,
+    "note": ""
+  },
+  {
+    "clazz": "806",
+    "name": "范O英",
+    "gender": "女",
+    "bus": "1",
+    "tent": "B11",
+    "mealGroup": 12,
+    "note": ""
+  },
+  {
+    "clazz": "806",
+    "name": "廖O慈",
+    "gender": "女",
+    "bus": "1",
+    "tent": "B11",
+    "mealGroup": 12,
+    "note": ""
+  },
+  {
+    "clazz": "807",
+    "name": "吳O霆",
+    "gender": "男",
+    "bus": "丁",
+    "tent": "A12",
+    "mealGroup": 15,
+    "note": ""
+  },
+  {
+    "clazz": "807",
+    "name": "洪O熙",
+    "gender": "男",
+    "bus": "丁",
+    "tent": "A12",
+    "mealGroup": 15,
+    "note": ""
+  },
+  {
+    "clazz": "807",
+    "name": "張O睿",
+    "gender": "男",
+    "bus": "丁",
+    "tent": "A12",
+    "mealGroup": 15,
+    "note": ""
+  },
+  {
+    "clazz": "807",
+    "name": "黃O壬",
+    "gender": "男",
+    "bus": "丁",
+    "tent": "A12",
+    "mealGroup": 15,
+    "note": ""
+  },
+  {
+    "clazz": "807",
+    "name": "呂O辰",
+    "gender": "男",
+    "bus": "丁",
+    "tent": "A13",
+    "mealGroup": 15,
+    "note": ""
+  },
+  {
+    "clazz": "807",
+    "name": "林O福",
+    "gender": "男",
+    "bus": "丁",
+    "tent": "A13",
+    "mealGroup": 15,
+    "note": ""
+  },
+  {
+    "clazz": "807",
+    "name": "林O旻",
+    "gender": "男",
+    "bus": "丁",
+    "tent": "A13",
+    "mealGroup": 15,
+    "note": ""
+  },
+  {
+    "clazz": "807",
+    "name": "許O瀚",
+    "gender": "男",
+    "bus": "丁",
+    "tent": "A13",
+    "mealGroup": 15,
+    "note": ""
+  },
+  {
+    "clazz": "807",
+    "name": "張O瑄",
+    "gender": "女",
+    "bus": "丁",
+    "tent": "B12",
+    "mealGroup": 13,
+    "note": ""
+  },
+  {
+    "clazz": "807",
+    "name": "郭O岑",
+    "gender": "女",
+    "bus": "丁",
+    "tent": "B12",
+    "mealGroup": 13,
+    "note": ""
+  },
+  {
+    "clazz": "807",
+    "name": "黃O浠",
+    "gender": "女",
+    "bus": "丁",
+    "tent": "B12",
+    "mealGroup": 13,
+    "note": ""
+  },
+  {
+    "clazz": "807",
+    "name": "詹O靜",
+    "gender": "女",
+    "bus": "丁",
+    "tent": "B12",
+    "mealGroup": 13,
+    "note": ""
+  },
+  {
+    "clazz": "807",
+    "name": "林O妤",
+    "gender": "女",
+    "bus": "丁",
+    "tent": "B13",
+    "mealGroup": 14,
+    "note": ""
+  },
+  {
+    "clazz": "807",
+    "name": "吳O桐",
+    "gender": "女",
+    "bus": "丁",
+    "tent": "B13",
+    "mealGroup": 14,
+    "note": ""
+  },
+  {
+    "clazz": "807",
+    "name": "陳O錥",
+    "gender": "女",
+    "bus": "丁",
+    "tent": "B13",
+    "mealGroup": 14,
+    "note": ""
+  },
+  {
+    "clazz": "807",
+    "name": "蕭O晨",
+    "gender": "女",
+    "bus": "丁",
+    "tent": "B13",
+    "mealGroup": 14,
+    "note": ""
+  },
+  {
+    "clazz": "807",
+    "name": "簡O緹",
+    "gender": "女",
+    "bus": "丁",
+    "tent": "B13",
+    "mealGroup": 14,
+    "note": ""
+  },
+  {
+    "clazz": "807",
+    "name": "廖O涵",
+    "gender": "女",
+    "bus": "丁",
+    "tent": "B14",
+    "mealGroup": 14,
+    "note": ""
+  },
+  {
+    "clazz": "807",
+    "name": "陳O伶",
+    "gender": "女",
+    "bus": "丁",
+    "tent": "B14",
+    "mealGroup": 13,
+    "note": ""
+  },
+  {
+    "clazz": "807",
+    "name": "古O潼",
+    "gender": "女",
+    "bus": "丁",
+    "tent": "B14",
+    "mealGroup": 13,
+    "note": ""
+  },
+  {
+    "clazz": "807",
+    "name": "胡O熙",
+    "gender": "女",
+    "bus": "丁",
+    "tent": "B14",
+    "mealGroup": 13,
+    "note": ""
+  }
+]
