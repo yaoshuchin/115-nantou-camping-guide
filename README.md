@@ -4,8 +4,9 @@
 
 ### 🌐 線上展示與網頁簡報連結
 - **GitHub 專案倉庫**：[yaoshuchin/115-nantou-camping-guide](https://github.com/yaoshuchin/115-nantou-camping-guide)
-- **GitHub Pages 線上簡報**：[https://yaoshuchin.github.io/115-nantou-camping-guide/](https://yaoshuchin.github.io/115-nantou-camping-guide/)
-- **Netlify 線上簡報備援**：[http://glittery-quokka-c8791c.netlify.app](http://glittery-quokka-c8791c.netlify.app)（存取密碼：`My-Drop-Site`）
+- **GitHub Pages 線上簡報版**：[https://yaoshuchin.github.io/115-nantou-camping-guide/](https://yaoshuchin.github.io/115-nantou-camping-guide/)
+- **GitHub Pages 露營手冊網頁版**：[https://yaoshuchin.github.io/115-nantou-camping-guide/handbook.html](https://yaoshuchin.github.io/115-nantou-camping-guide/handbook.html)
+- **Netlify 線上簡報備援**：[http://stirring-sunflower-3236f7.netlify.app](http://stirring-sunflower-3236f7.netlify.app)（存取密碼：`My-Drop-Site`）
 
 ---
 
@@ -15,7 +16,7 @@
 - **活動日期**：民國 115 年 10 月 27 日（二）至 10 月 28 日（三），共兩天一夜
 - **活動地點**：台南-尖山埤露營區（台南市柳營區旭山里 60 號，電話：06-6233888）
 - **主辦單位**：南投縣立南投國民中學
-- **承辦單位**：中國青年旅行社有限公司中部分公司（團控經理：邱麟凱 0972-721756）
+- **承辦單位**：中國青年旅行社有限公司中部分公司（團控經理：邱O凱 0972-721756）
 - **參加對象與人數**：
   - 二年級參加學生：**106 人**（男生 48 人、女生 58 人）
   - 隨隊師長與工作人員：**10 人**（含校長、學務主任、訓育組長、7 班導師）
@@ -27,11 +28,11 @@
 
 | 車次 | 班級與人數 | 隨隊師長 / 人員 | 備註 |
 |:---:|:---|:---|:---|
-| **1 車** | **805 班**（11人：男7、女4）<br>**806 班**（9人：男4、女5） | 學務主任 董勳遠<br>805 導師 林富銓<br>806 導師 許招玉 | 學生共 20 人 |
-| **2 車** | **802 班**（18人：男6、女12）<br>**804 班**（15人：男7、女8） | 802 導師 黃惠君<br>804 導師 李佩儒 | 學生共 33 人 |
-| **3 車** | **801 班**（17人：男10、女7）<br>**803 班**（15人：男6、女9） | 801 導師 黃麗月<br>803 導師 林宜玟 | 學生共 32 人 |
-| **丁車** | **807 班**（21人：男8、女13） | 訓育組長 姚述勤<br>807 導師 黃瓊慧 | 學生共 21 人 |
-| **公務** | 全校巡察與緊急應變 | 校長 劉松彥<br>團控經理 邱麟凱 | 全校巡迴支援 |
+| **1 車** | **805 班**（11人：男7、女4）<br>**806 班**（9人：男4、女5） | 學務主任 董O遠<br>805 導師 林O銓<br>806 導師 許O玉 | 學生共 20 人 |
+| **2 車** | **802 班**（18人：男6、女12）<br>**804 班**（15人：男7、女8） | 802 導師 黃O君<br>804 導師 李O儒 | 學生共 33 人 |
+| **3 車** | **801 班**（17人：男10、女7）<br>**803 班**（15人：男6、女9） | 801 導師 黃O月<br>803 導師 林O玟 | 學生共 32 人 |
+| **丁車** | **807 班**（21人：男8、女13） | 訓育組長 姚O勤<br>807 導師 黃O慧 | 學生共 21 人 |
+| **公務** | 全校巡察與緊急應變 | 校長 劉O彥<br>團控經理 邱O凱 | 全校巡迴支援 |
 
 ---
 

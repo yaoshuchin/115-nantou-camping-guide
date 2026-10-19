@@ -1,0 +1,1161 @@
+# -*- coding: utf-8 -*-
+"""
+生成南投國中 115 學年度二年級隔宿露營「手冊網頁版」 handbook.html
+1. 嚴格落實人名第二個字寫成 "O"（無去個資切換按鈕，直接固化）
+2. 童軍知識卡 5 大單元中「每項內容」均包含 1 張相關圖片與影片連結
+"""
+import json
+
+with open("students_data.json", "r", encoding="utf-8") as f:
+    students = json.load(f)
+
+# Double verify every student name second char is 'O'
+for s in students:
+    assert s["name"][1] == "O", f"Error in masking: {s['name']}"
+
+students_js = json.dumps(students, ensure_ascii=False)
+
+html_content = f"""<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>南投國中 115 學年度二年級戶外教育（隔宿露營）活動手冊・網頁版</title>
+  <style>
+    :root {{
+      --primary: #1b4332;
+      --primary-light: #2d6a4f;
+      --accent: #d97706;
+      --accent-light: #f59e0b;
+      --gold: #eab308;
+      --bg: #0b1329;
+      --card-bg: #1e293b;
+      --card-border: rgba(255, 255, 255, 0.1);
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --highlight: #38bdf8;
+      --danger: #ef4444;
+      --success: #10b981;
+      --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    }}
+
+    * {{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }}
+
+    body {{
+      font-family: var(--font-main);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }}
+
+    /* Top Navigation */
+    header.header-nav {{
+      position: sticky;
+      top: 0;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--card-border);
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      z-index: 1000;
+    }}
+    .nav-brand {{
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }}
+    .brand-badge {{
+      background: linear-gradient(135deg, var(--accent), var(--gold));
+      color: #0f172a;
+      font-weight: 800;
+      font-size: 0.78rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+    }}
+    .brand-title {{
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+    }}
+    .nav-links {{
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }}
+    .btn {{
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--card-border);
+      color: #fff;
+      padding: 0.45rem 0.95rem;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }}
+    .btn:hover {{
+      background: rgba(255, 255, 255, 0.18);
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }}
+    .btn-primary {{
+      background: linear-gradient(135deg, var(--primary-light), var(--primary));
+      border: 1px solid #4ade80;
+      color: #fff;
+      font-weight: 600;
+    }}
+    .btn-primary:hover {{
+      background: #4ade80;
+      color: #0f172a;
+    }}
+    .btn-video {{
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #fca5a5;
+      font-weight: 600;
+      font-size: 0.82rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.2s ease;
+      margin-top: 0.5rem;
+    }}
+    .btn-video:hover {{
+      background: #ef4444;
+      color: #fff;
+      border-color: #ef4444;
+    }}
+
+    /* Main Handbook Layout */
+    .handbook-container {{
+      max-width: 1240px;
+      margin: 2rem auto;
+      padding: 0 1.5rem 6rem 1.5rem;
+    }}
+
+    /* Handbook Cover */
+    .handbook-cover {{
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95)), radial-gradient(circle at top right, rgba(217, 119, 6, 0.15), transparent);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 3.5rem 2.5rem;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      margin-bottom: 2.5rem;
+    }}
+    .cover-school {{
+      font-size: 1.1rem;
+      color: var(--accent-light);
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-bottom: 0.5rem;
+    }}
+    .cover-title {{
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 1.25rem;
+      line-height: 1.3;
+    }}
+    .cover-subtitle {{
+      font-size: 1.35rem;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }}
+
+    /* Section Styling */
+    .section-block {{
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 2.2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }}
+    .section-title {{
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #fff;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 0.8rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }}
+    .section-subtitle {{
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--accent-light);
+      margin: 1.5rem 0 0.8rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }}
+
+    /* Grids */
+    .grid-2 {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }}
+    .grid-3 {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }}
+    .grid-4 {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.2rem;
+    }}
+
+    /* Cards */
+    .card {{
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+    }}
+    .card:hover {{
+      background: rgba(255, 255, 255, 0.065);
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateY(-2px);
+    }}
+    .card-highlight {{
+      border-left: 4px solid var(--accent);
+    }}
+    .card-title {{
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }}
+
+    /* Media Box for Knowledge Cards */
+    .media-box {{
+      width: 100%;
+      height: 180px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0.75rem 0;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }}
+    .media-box img {{
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }}
+    .card:hover .media-box img {{
+      transform: scale(1.04);
+    }}
+
+    /* Tables */
+    .table-wrap {{
+      width: 100%;
+      overflow-x: auto;
+      border-radius: 10px;
+      border: 1px solid var(--card-border);
+      margin: 1rem 0;
+    }}
+    table.data-table {{
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.95rem;
+    }}
+    table.data-table th {{
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--accent-light);
+      padding: 0.8rem 1rem;
+      font-weight: 700;
+      border-bottom: 1px solid var(--card-border);
+      white-space: nowrap;
+    }}
+    table.data-table td {{
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text);
+    }}
+    table.data-table tr:hover td {{
+      background: rgba(255, 255, 255, 0.04);
+    }}
+
+    /* Badges */
+    .pill {{
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+      margin: 0.15rem 0.2rem;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }}
+    .pill-boy {{
+      background: rgba(56, 189, 248, 0.2);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: #7dd3fc;
+    }}
+    .pill-girl {{
+      background: rgba(244, 114, 182, 0.2);
+      border: 1px solid rgba(244, 114, 182, 0.4);
+      color: #f472b6;
+    }}
+    .pill-veg {{
+      background: rgba(34, 197, 94, 0.2);
+      border: 1px solid rgba(34, 197, 94, 0.5);
+      color: #86efac;
+    }}
+    .pill-accent {{
+      background: rgba(217, 119, 6, 0.2);
+      border: 1px solid rgba(217, 119, 6, 0.5);
+      color: #fde68a;
+    }}
+
+    /* Search Component */
+    .search-bar-wrap {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 1rem;
+      border-radius: 12px;
+      margin-bottom: 1.25rem;
+      border: 1px solid var(--card-border);
+    }}
+    .input-text {{
+      background: #0f172a;
+      border: 1px solid var(--card-border);
+      color: #fff;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      min-width: 220px;
+      flex: 1;
+    }}
+    .input-text:focus {{
+      outline: none;
+      border-color: var(--highlight);
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+    }}
+    .select-dropdown {{
+      background: #0f172a;
+      border: 1px solid var(--card-border);
+      color: #fff;
+      padding: 0.6rem 0.9rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }}
+
+    /* Footer */
+    footer.handbook-footer {{
+      text-align: center;
+      padding: 2.5rem 1rem;
+      border-top: 1px solid var(--card-border);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }}
+  </style>
+</head>
+<body>
+
+  <!-- Top Header Navigation -->
+  <header class="header-nav">
+    <div class="nav-brand">
+      <span class="brand-badge">手冊網頁版</span>
+      <span class="brand-title">南投國中 115 二年級隔宿露營活動手冊</span>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="btn btn-primary">🖥️ 前往教學簡報版</a>
+      <button class="btn" onclick="window.print()">🖨️ 列印手冊</button>
+    </div>
+  </header>
+
+  <div class="handbook-container">
+
+    <!-- 封面 -->
+    <div class="handbook-cover">
+      <div class="cover-school">南投縣立南投國民中學 115 學年度</div>
+      <h1 class="cover-title">二年級戶外教育活動（隔宿露營）手冊</h1>
+      <div class="cover-subtitle">～ 好 戲 開 鑼 ・ 做 中 學 ・ 探 索 自 我 ～</div>
+      <p style="max-width: 780px; margin: 0 auto 1.5rem auto; color: #cbd5e1; font-size: 1.05rem;">
+        培養同學自立自強、主動敏捷、互相合作、活潑進取之精神，以熟練各項技能，淬鍊團隊合群生活。
+      </p>
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <span class="pill pill-accent">活動日期：115 年 10 月 27 日(二) 至 10 月 28 日(三)</span>
+        <span class="pill pill-accent">活動地點：台南-尖山埤露營區 (06-6233888)</span>
+        <span class="pill pill-accent">師生人數：共計 116 人（學生 106 人、隨隊師長 10 人）</span>
+      </div>
+    </div>
+
+    <!-- 一、課程日程表 -->
+    <section class="section-block" id="sec-schedule">
+      <div class="section-title">📅 一、活動課程表</div>
+      <div class="grid-2">
+        <div>
+          <div class="section-subtitle">🌄 第一天：115 年 10 月 27 日（星期二）</div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <tr><th>時間</th><th>活動內容</th><th>備註與說明</th></tr>
+              <tr><td>07:30-08:00</td><td>學校集合</td><td>921地震公園暨南投國際會展中心園區(逃生演練)</td></tr>
+              <tr><td>08:00-10:00</td><td>乘車出發、安全檢查</td><td>抵達營地時實施安全檢查</td></tr>
+              <tr><td>10:00-11:00</td><td>喜相逢～環境認識</td><td>活動小隊編組，安全檢查</td></tr>
+              <tr><td>11:00-12:00</td><td>始業式～營規介紹、工作人員介紹</td><td>環境介紹、營隊規範宣導</td></tr>
+              <tr><td>12:00-13:00</td><td>午餐</td><td>中式便當</td></tr>
+              <tr><td>13:00-14:00</td><td>野營常識介紹：①帳棚搭設 ②環境認識 ③器材領取</td><td>標準營地教學、搭帳教學</td></tr>
+              <tr><td>14:00-17:00</td><td>分站教育 Part 1：童軍技能教育</td><td>生火烹調、戰術偽裝、方向辨識、繩結、六大毒蛇、晚會動唱</td></tr>
+              <tr><td>17:00-19:00</td><td>晚餐(炊事競賽)</td><td>野炊大賽、團隊互助合作</td></tr>
+              <tr><td>19:10-21:30</td><td>超ㄅ一ㄤˋ的營火晚會！～燭光夜語</td><td>班級節目競賽、隊輔熱舞、師生趣味動唱、薪火相傳</td></tr>
+              <tr><td>21:30-22:30</td><td>盥洗、宵夜</td><td>整理個人儀容、享用宵夜</td></tr>
+              <tr><td>22:30-----</td><td>就寢＆查舖</td><td>清點人數、熄燈就寢</td></tr>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="section-subtitle">🌅 第二天：115 年 10 月 28 日（星期三）</div>
+          <div class="table-wrap">
+            <table class="data-table">
+              <tr><th>時間</th><th>活動內容</th><th>備註與說明</th></tr>
+              <tr><td>06:00-06:30</td><td>起床～做個跟太陽賽跑的人</td><td>晨喚起身、整理內務</td></tr>
+              <tr><td>06:30-07:20</td><td>活力有氧</td><td>早操時間、晨檢</td></tr>
+              <tr><td>07:20-08:00</td><td>早餐</td><td>中式早餐(合菜)</td></tr>
+              <tr><td>08:00-11:30</td><td>分站教育 Part 2：山訓、探索教育</td><td>垂降、解手結/跳繩、攀岩絕技、水彈生存遊戲、獨木橋</td></tr>
+              <tr><td>11:30-14:00</td><td>午餐</td><td>BBQ 烤肉餐</td></tr>
+              <tr><td>14:00-15:00</td><td>結訓典禮～～I’m the Best！！</td><td>頒獎：炊事比賽、晚會節目、晨檢、分站活動、生活教育、總錦標</td></tr>
+              <tr><td>15:00-16:20</td><td>平安抵校～～Bye-Bye！</td><td>預計抵達學校時間 16:20</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 二、實施計劃與攜帶裝備 -->
+    <section class="section-block" id="sec-plan">
+      <div class="section-title">📋 二、實施計畫與行李裝備清單</div>
+      <div class="grid-2">
+        <div class="card card-highlight">
+          <div class="card-title">🎯 實施計畫重點概要</div>
+          <ul style="padding-left: 1.3rem; line-height: 1.85; font-size: 0.95rem;">
+            <li><strong>主辦單位</strong>：南投縣立南投國民中學</li>
+            <li><strong>承辦單位</strong>：中國青年旅行社有限公司中部分公司</li>
+            <li><strong>時間地點</strong>：115 年 10 月 27 日(二) 至 10 月 28 日(三)，台南-尖山埤露營區（柳營區旭山里 60 號，電話 06-6233888）</li>
+            <li><strong>參加對象</strong>：二年級全體師生共計 116 人（學生 106 人、隨隊師長 10 人）</li>
+            <li><strong>團控經理</strong>：邱O凱 0972-721756</li>
+            <li><strong>服裝規範</strong>：請一律著學校規定之運動服裝與運動鞋。</li>
+          </ul>
+        </div>
+        <div class="card card-highlight">
+          <div class="card-title">🎒 行前裝備攜帶自我檢查清單</div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.92rem;">
+            <div>☑️ <strong>健保 IC 卡（第一必備）</strong></div>
+            <div>☑️ 輕便型雨衣 / 摺疊傘</div>
+            <div>☑️ 換洗衣物 1~2 套及外套</div>
+            <div>☑️ 運動鞋（禁皮鞋/涼鞋）</div>
+            <div>☑️ 拖鞋、多備襪子</div>
+            <div>☑️ 盥洗用具（牙刷、牙膏、毛巾）</div>
+            <div>☑️ <strong>手電筒（夜間必備）</strong></div>
+            <div>☑️ 隨身防護口罩</div>
+            <div>☑️ 遮陽帽子、防曬保養品</div>
+            <div>☑️ 個人自用常備藥品</div>
+            <div>☑️ 旅行背包、乾淨塑膠袋</div>
+            <div>☑️ 少許零錢、水壺</div>
+          </div>
+          <p style="font-size: 0.85rem; color: #fca5a5; margin-top: 0.8rem;">
+            ⚠️ 嚴禁攜帶危險物品、刀械、打火機、貴重飾品（項鍊、戒指、手鐲、長垂耳環）。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 三、工作人員一覽表 -->
+    <section class="section-block" id="sec-staff">
+      <div class="section-title">👨‍🏫 三、工作人員與隨隊師長一覽表</div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>職稱</th><th>師長姓名</th><th>男生人數</th><th>女生人數</th><th>合計人數</th><th>乘車車次</th><th>行政任務與職掌</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>校長</strong></td><td>劉O彥</td><td>-</td><td>-</td><td>-</td><td><span class="pill pill-accent">全校巡察</span></td><td>整體戶外教育活動最高督導與巡迴關懷</td></tr>
+            <tr><td><strong>學務主任</strong></td><td>董O遠</td><td>-</td><td>-</td><td>-</td><td><span class="pill pill-accent">1 車</span></td><td>第 1 車隨車總督導、全隊安全與秩序指揮</td></tr>
+            <tr><td><strong>訓育組長</strong></td><td>姚O勤</td><td>-</td><td>-</td><td>-</td><td><span class="pill pill-accent">丁 車</span></td><td>第 丁 車隨車督導、營隊活動行政聯絡與協調</td></tr>
+            <tr><td><strong>801 導師</strong></td><td>黃O月</td><td>10</td><td>7</td><td>17</td><td><span class="pill">3 車</span></td><td>801 班學生生活照護、點名查舖、野炊輔導</td></tr>
+            <tr><td><strong>802 導師</strong></td><td>黃O君</td><td>6</td><td>12</td><td>18</td><td><span class="pill">2 車</span></td><td>802 班學生生活照護、點名查舖、野炊輔導</td></tr>
+            <tr><td><strong>803 導師</strong></td><td>林O玟</td><td>6</td><td>9</td><td>15</td><td><span class="pill">3 車</span></td><td>803 班學生生活照護、點名查舖、野炊輔導</td></tr>
+            <tr><td><strong>804 導師</strong></td><td>李O儒</td><td>7</td><td>8</td><td>15</td><td><span class="pill">2 車</span></td><td>804 班學生生活照護、點名查舖、野炊輔導</td></tr>
+            <tr><td><strong>805 導師</strong></td><td>林O銓</td><td>7</td><td>4</td><td>11</td><td><span class="pill">1 車</span></td><td>805 班學生生活照護、點名查舖、野炊輔導</td></tr>
+            <tr><td><strong>806 導師</strong></td><td>許O玉</td><td>4</td><td>5</td><td>9</td><td><span class="pill">1 車</span></td><td>806 班學生生活照護、點名查舖、野炊輔導</td></tr>
+            <tr><td><strong>807 導師</strong></td><td>黃O慧</td><td>8</td><td>13</td><td>21</td><td><span class="pill">丁 車</span></td><td>807 班學生生活照護、點名查舖、野炊輔導</td></tr>
+            <tr style="background: rgba(255, 255, 255, 0.08); font-weight: bold;">
+              <td><strong>團控經理</strong></td><td>邱O凱</td><td>48</td><td>58</td><td>106</td><td><span class="pill pill-accent">機動指揮</span></td><td>旅行社營隊總指揮、活動教官調度、安全戒護總負責</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">
+        * 學生合計 106 人（男生 48 人、女生 58 人），隨隊教職員合計 10 人。所有師生姓名第二個字皆已寫為「O」。
+      </p>
+    </section>
+
+    <!-- 四、乘車車次與帳棚分配 -->
+    <section class="section-block" id="sec-tents-bus">
+      <div class="section-title">⛺ 四、乘車車次與帳棚膳食編組一覽表</div>
+
+      <div class="section-subtitle">🚌 車次乘車配置</div>
+      <div class="grid-4" style="margin-bottom: 1.5rem;">
+        <div class="card">
+          <div class="card-title">🚍 第 1 車（學生 20 人）</div>
+          <p style="font-size: 0.9rem;"><strong>隨車師長：</strong>董O遠主任、林O銓老師、許O玉老師</p>
+          <p style="font-size: 0.88rem; margin-top: 0.3rem;"><strong>班級：</strong>805 班（11人）、806 班（9人）</p>
+        </div>
+        <div class="card">
+          <div class="card-title">🚍 第 2 車（學生 33 人）</div>
+          <p style="font-size: 0.9rem;"><strong>隨車師長：</strong>黃O君老師、李O儒老師</p>
+          <p style="font-size: 0.88rem; margin-top: 0.3rem;"><strong>班級：</strong>802 班（18人）、804 班（15人）</p>
+        </div>
+        <div class="card">
+          <div class="card-title">🚍 第 3 車（學生 32 人）</div>
+          <p style="font-size: 0.9rem;"><strong>隨車師長：</strong>黃O月老師、林O玟老師</p>
+          <p style="font-size: 0.88rem; margin-top: 0.3rem;"><strong>班級：</strong>801 班（17人）、803 班（15人）</p>
+        </div>
+        <div class="card">
+          <div class="card-title">🚍 第 丁 車（學生 21 人）</div>
+          <p style="font-size: 0.9rem;"><strong>隨車師長：</strong>姚O勤組長、黃O慧老師</p>
+          <p style="font-size: 0.88rem; margin-top: 0.3rem;"><strong>班級：</strong>807 班（21人）全班獨立成車</p>
+        </div>
+      </div>
+
+      <div class="section-subtitle">⛺ 帳棚住宿分配（男帳 A01~A13 共 13 頂、女帳 B01~B14 共 14 頂）</div>
+      <div class="grid-2">
+        <div>
+          <h4 style="color: #7dd3fc; margin-bottom: 0.5rem;">🏕️ 男生帳棚（A01 ~ A13）</h4>
+          <div class="table-wrap">
+            <table class="data-table">
+              <tr><th>帳號</th><th>班級</th><th>人數</th><th>住宿學生名單</th></tr>
+              <tr><td><span class="pill pill-boy">A01</span></td><td>801</td><td>5人</td><td>林O諼、張O鈞、張O偉、吳O岷、谷O恩</td></tr>
+              <tr><td><span class="pill pill-boy">A02</span></td><td>801</td><td>5人</td><td>湯O丞、陳O廷、許O瑋、陳O宗、賴O豪</td></tr>
+              <tr><td><span class="pill pill-boy">A03</span></td><td>802</td><td>3人</td><td>黃O睿、葉O毅、廖O惟</td></tr>
+              <tr><td><span class="pill pill-boy">A04</span></td><td>802</td><td>3人</td><td>劉O宇、張O瑋、簡O宸</td></tr>
+              <tr><td><span class="pill pill-boy">A05</span></td><td>803</td><td>3人</td><td>許O煜、陳O熙、蔡O呈</td></tr>
+              <tr><td><span class="pill pill-boy">A06</span></td><td>803</td><td>3人</td><td>陳O天、陳O瑜、李O成</td></tr>
+              <tr><td><span class="pill pill-boy">A07</span></td><td>804</td><td>3人</td><td>陳O光、蕭O皓、陳O昇</td></tr>
+              <tr><td><span class="pill pill-boy">A08</span></td><td>804</td><td>4人</td><td>林O澄、許O翔、劉O振、張O帆</td></tr>
+              <tr><td><span class="pill pill-boy">A09</span></td><td>805</td><td>4人</td><td>林O竹、郭O佑、陳O庭、嚴O諭</td></tr>
+              <tr><td><span class="pill pill-boy">A10</span></td><td>805</td><td>3人</td><td>吳O鋒、簡O宇、張O瑜 <span class="pill pill-veg">素食</span></td></tr>
+              <tr><td><span class="pill pill-boy">A11</span></td><td>806</td><td>4人</td><td>吳O文、曾O承、洪O倫、張O棋</td></tr>
+              <tr><td><span class="pill pill-boy">A12</span></td><td>807</td><td>4人</td><td>吳O霆、洪O熙、張O睿、黃O壬</td></tr>
+              <tr><td><span class="pill pill-boy">A13</span></td><td>807</td><td>4人</td><td>呂O辰、林O福、林O旻、許O瀚</td></tr>
+            </table>
+          </div>
+        </div>
+        <div>
+          <h4 style="color: #f472b6; margin-bottom: 0.5rem;">🏕️ 女生帳棚（B01 ~ B14）</h4>
+          <div class="table-wrap">
+            <table class="data-table">
+              <tr><th>帳號</th><th>班級</th><th>人數</th><th>住宿學生名單</th></tr>
+              <tr><td><span class="pill pill-girl">B01</span></td><td>801</td><td>3人</td><td>林O言、劉O含、藍O詒</td></tr>
+              <tr><td><span class="pill pill-girl">B02</span></td><td>801</td><td>4人</td><td>林O嫻、江O婷、陳O翎、陳O涵</td></tr>
+              <tr><td><span class="pill pill-girl">B03</span></td><td>802</td><td>4人</td><td>李O妮、李O甯、鄭O琳、黃O蒂</td></tr>
+              <tr><td><span class="pill pill-girl">B04</span></td><td>802</td><td>4人</td><td>簡O懿、黃O薇、賴O其、鐘O彤</td></tr>
+              <tr><td><span class="pill pill-girl">B05</span></td><td>802</td><td>4人</td><td>郭O琪、廖O昕、胡O薰、張O桔</td></tr>
+              <tr><td><span class="pill pill-girl">B06</span></td><td>803</td><td>5人</td><td>王O芝、石O芳、吳O恩、吳O蓉、潘O汝</td></tr>
+              <tr><td><span class="pill pill-girl">B07</span></td><td>803</td><td>4人</td><td>邱O慈、陳O羽、謝O璇、沈O愉</td></tr>
+              <tr><td><span class="pill pill-girl">B08</span></td><td>804</td><td>4人</td><td>王O涵、陳O妘、張O晴、劉O硯 <span class="pill pill-accent">804</span></td></tr>
+              <tr><td><span class="pill pill-girl">B09</span></td><td>804</td><td>4人</td><td>羅O茜、簡O璇、余O婷、洪O瑄</td></tr>
+              <tr><td><span class="pill pill-girl">B10</span></td><td>805</td><td>4人</td><td>劉O硯 <span class="pill pill-accent">805</span>、吳O瑜、黃O薇、鄭O妮</td></tr>
+              <tr><td><span class="pill pill-girl">B11</span></td><td>806</td><td>5人</td><td>陳O臻、李O榕、林O妤、范O英、廖O慈</td></tr>
+              <tr><td><span class="pill pill-girl">B12</span></td><td>807</td><td>4人</td><td>張O瑄、郭O岑、黃O浠、詹O靜</td></tr>
+              <tr><td><span class="pill pill-girl">B13</span></td><td>807</td><td>5人</td><td>林O妤、吳O桐、陳O錥、蕭O晨、簡O緹</td></tr>
+              <tr><td><span class="pill pill-girl">B14</span></td><td>807</td><td>4人</td><td>廖O涵、陳O伶、古O潼、胡O熙</td></tr>
+            </table>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">
+            💡 <strong>名冊查核備註</strong>：B08 帳（804班）與 B10 帳（805班）各有一位女同學名為「<strong>劉O硯</strong>」，經學籍底冊校對，兩人座號不同（804班11號、805班13號）、身分證與學號皆相異，確認為兩位同名同姓同學，手冊名冊完全正確。
+          </p>
+        </div>
+      </div>
+
+      <div class="section-subtitle">🍲 膳食野炊與烤肉小隊編組（第 1 組 ～ 第 15 組）</div>
+      <div class="grid-3">
+        <div class="card"><div class="card-title">🥢 第 1 組（801 班，9人）</div><p style="font-size: 0.88rem;">劉O含、林O言、谷O恩、張O鈞、張O偉、林O諼、陳O宗、賴O豪、藍O詒</p></div>
+        <div class="card"><div class="card-title">🥢 第 2 組（801 班，8人）</div><p style="font-size: 0.88rem;">林O嫻、陳O翎、江O婷、陳O涵、湯O丞、吳O岷、許O瑋、陳O廷</p></div>
+        <div class="card"><div class="card-title">🥢 第 3 組（802 班，6人）</div><p style="font-size: 0.88rem;">黃O薇、廖O惟、賴O其、簡O懿、鐘O彤、張O瑋</p></div>
+        <div class="card"><div class="card-title">🥢 第 4 組（802 班，6人）</div><p style="font-size: 0.88rem;">葉O毅、李O甯、李O妮、鄭O琳、黃O蒂、黃O睿</p></div>
+        <div class="card"><div class="card-title">🥢 第 5 組（802 班，6人）</div><p style="font-size: 0.88rem;">廖O昕、胡O薰、郭O琪、張O桔、簡O宸、劉O宇</p></div>
+        <div class="card"><div class="card-title">🥢 第 6 組（803 班，8人）</div><p style="font-size: 0.88rem;">王O芝、石O芳、吳O恩、吳O蓉、潘O汝、許O煜、陳O熙、蔡O呈</p></div>
+        <div class="card"><div class="card-title">🥢 第 7 組（803 班，7人）</div><p style="font-size: 0.88rem;">邱O慈、陳O羽、謝O璇、沈O愉、陳O天、陳O瑜、李O成</p></div>
+        <div class="card"><div class="card-title">🥢 第 8 組（804 班，7人）</div><p style="font-size: 0.88rem;">陳O光、張O帆、林O澄、劉O振、許O翔、蕭O皓、陳O昇</p></div>
+        <div class="card"><div class="card-title">🥢 第 9 組（804 班，8人）</div><p style="font-size: 0.88rem;">張O晴、洪O瑄、余O婷、簡O璇、陳O妘、羅O茜、王O涵、劉O硯</p></div>
+        <div class="card card-highlight"><div class="card-title">🥢 第 10 組（805 班，7人）</div><p style="font-size: 0.88rem;">林O竹、吳O鋒、簡O宇、郭O佑、陳O庭、嚴O諭、<strong>張O瑜 <span class="pill pill-veg">素食</span></strong></p></div>
+        <div class="card"><div class="card-title">🥢 第 11 組（805 班，4人）</div><p style="font-size: 0.88rem;">劉O硯、吳O瑜、黃O薇、鄭O妮</p></div>
+        <div class="card"><div class="card-title">🥢 第 12 組（806 班，9人）</div><p style="font-size: 0.88rem;">廖O慈、洪O倫、范O英、林O妤、張O棋、吳O文、陳O臻、李O榕、曾O承</p></div>
+        <div class="card"><div class="card-title">🥢 第 13 組（807 班，7人）</div><p style="font-size: 0.88rem;">郭O岑、黃O浠、詹O靜、張O瑄、胡O熙、古O潼、陳O伶</p></div>
+        <div class="card"><div class="card-title">🥢 第 14 組（807 班，6人）</div><p style="font-size: 0.88rem;">吳O桐、林O妤、陳O錥、廖O涵、蕭O晨、簡O緹</p></div>
+        <div class="card"><div class="card-title">🥢 第 15 組（807 班，8人）</div><p style="font-size: 0.88rem;">吳O霆、呂O辰、林O福、林O旻、洪O熙、張O睿、許O瀚、黃O壬</p></div>
+      </div>
+    </section>
+
+    <!-- 五、童軍知識卡專題（每項均有 1 張相關圖片與影片連結） -->
+    <section class="section-block" id="sec-scout-knowledge">
+      <div class="section-title">🏕️ 五、童軍知識卡核心專題（圖文詳解與教學影音）</div>
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+        以下 5 大核心教學單元，每項內容均配備手冊原版/專業解析圖片 1 張，並提供官方權威教學影片連結，供師生線上預習與實作參考。
+      </p>
+
+      <!-- 單元 1: 營地建設與屋式帳 -->
+      <div class="section-subtitle">🏕️ 單元 ①：營地建設與屋式帳</div>
+      <div class="grid-4">
+        <!-- 內容 1 -->
+        <div class="card">
+          <div>
+            <div class="card-title">1. 營地五大分區規劃</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">
+              營地劃分：1.搭帳區(門口順風) 2.炊事區(靠近水源) 3.活動場地 4.WC 5.垃圾場。避開落石與枯木，遵循 LNT 無痕山林原則。
+            </p>
+            <div class="media-box">
+              <img src="assets/p13_img3.jpeg" alt="營地建設規劃">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=童軍+營地建設+LNT" target="_blank" class="btn-video">▶ 觀看營地建設教學影片</a>
+        </div>
+        <!-- 內容 2 -->
+        <div class="card">
+          <div>
+            <div class="card-title">2. 屋式帳結構與器材</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">
+              器具清單：營釘 14 支、主繩 2 條、副繩 16 條、營柱、雷管雷帽、營樑、內外帳。考核標準為搭帳 2 分鐘、收帳 3 分鐘。
+            </p>
+            <div class="media-box">
+              <img src="assets/camp_setup_page13.png" alt="屋式帳結構器材">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=童軍+屋式帳+結構+營柱營釘" target="_blank" class="btn-video">▶ 觀看屋式帳結構解說</a>
+        </div>
+        <!-- 內容 3 -->
+        <div class="card">
+          <div>
+            <div class="card-title">3. 帳棚搭設圖文四步驟</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">
+              步驟：1.內帳取出鋪平 2.組合四邊營柱 3.四邊小釘固定撐起內帳 4.短營柱穿過內帳頂端與外帳組合搭設完成。
+            </p>
+            <div class="media-box">
+              <img src="assets/tent_pitching_page14.png" alt="帳棚搭設步驟圖">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=童軍+帳篷搭設教學+步驟" target="_blank" class="btn-video">▶ 觀看搭帳實作步驟教學</a>
+        </div>
+        <!-- 內容 4 -->
+        <div class="card">
+          <div>
+            <div class="card-title">4. 搭收口訣與防蛇曬帳</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">
+              搭帳口訣：一拉對角、二立中柱、三拉角繩、四拉邊繩、五加外帳膨內帳。收外帳口訣：一拜天地、二拜高堂、夫妻相拜、送入洞房。
+            </p>
+            <div class="media-box">
+              <img src="assets/p14_img7.jpeg" alt="搭收口訣與外帳">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=童軍+搭帳口訣+一拉對角+收外帳" target="_blank" class="btn-video">▶ 觀看搭帳口訣示範</a>
+        </div>
+      </div>
+
+      <!-- 單元 2: 童軍常用八大繩結 -->
+      <div class="section-subtitle" style="margin-top: 2rem;">🪢 單元 ②：童軍常用八大繩結</div>
+      <div class="grid-4">
+        <!-- 繩結 1 -->
+        <div class="card">
+          <div>
+            <div class="card-title">1. 單結 (Overhand Knot)</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">基礎防脫結眼，防止繩頭滑脫鬆散。受重力拉緊後不易解開。</p>
+            <div class="media-box">
+              <img src="assets/knot_1_single.png" alt="單結圖解">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=童軍+單結+Overhand+Knot" target="_blank" class="btn-video">▶ 觀看單結教學影片</a>
+        </div>
+        <!-- 繩結 2 -->
+        <div class="card">
+          <div>
+            <div class="card-title">2. 八字結 (Figure-8 Knot)</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">體積大於單結，受拉後容易解開，登山攀岩主繩防脫必備基礎結。</p>
+            <div class="media-box">
+              <img src="assets/knot_2_figure8.png" alt="八字結圖解">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=童軍+八字結+Figure+Eight+Knot" target="_blank" class="btn-video">▶ 觀看八字結教學影片</a>
+        </div>
+        <!-- 繩結 3 -->
+        <div class="card">
+          <div>
+            <div class="card-title">3. 活結 (Slip Knot)</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">拉動單端即可瞬間解開。用於臨時牽繫物品、鞋帶繫綁與快拆場合。</p>
+            <div class="media-box">
+              <img src="assets/knot_3_slip.png" alt="活結圖解">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=童軍+活結+Slip+Knot" target="_blank" class="btn-video">▶ 觀看活結教學影片</a>
+        </div>
+        <!-- 繩結 4 -->
+        <div class="card">
+          <div>
+            <div class="card-title">4. 平結 (Reef Knot)</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">左壓右、右壓左。連接粗細相同繩索，急救三角巾包紮首選（平整不壓迫）。</p>
+            <div class="media-box">
+              <img src="assets/knot_4_square.png" alt="平結圖解">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=童軍+平結+Square+Knot+Reef+Knot" target="_blank" class="btn-video">▶ 觀看平結教學影片</a>
+        </div>
+        <!-- 繩結 5 -->
+        <div class="card">
+          <div>
+            <div class="card-title">5. 接繩結 (Sheet Bend)</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">粗繩折圈、細繩穿繞收緊。專用於連接兩條粗細不同或材質相異之繩索。</p>
+            <div class="media-box">
+              <img src="assets/knot_5_sheetbend.png" alt="接繩結圖解">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=童軍+接繩結+Sheet+Bend" target="_blank" class="btn-video">▶ 觀看接繩結教學影片</a>
+        </div>
+        <!-- 繩結 6 -->
+        <div class="card">
+          <div>
+            <div class="card-title">6. 雙套結 (Clove Hitch)</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">工程結之母！固定營柱、主繩接雷管，所有營地工程綑綁之起點與終點。</p>
+            <div class="media-box">
+              <img src="assets/knot_6_clovehitch.png" alt="雙套結圖解">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=童軍+雙套結+Clove+Hitch" target="_blank" class="btn-video">▶ 觀看雙套結教學影片</a>
+        </div>
+        <!-- 繩結 7 -->
+        <div class="card">
+          <div>
+            <div class="card-title">7. 雙半結 (Two Half Hitches)</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">繞過樹幹或營樁後打兩次半結，受拉時牢牢咬緊柱體，不易被風吹落。</p>
+            <div class="media-box">
+              <img src="assets/knot_7_twohalf.png" alt="雙半結圖解">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=童軍+雙半結+Two+Half+Hitches" target="_blank" class="btn-video">▶ 觀看雙半結教學影片</a>
+        </div>
+        <!-- 繩結 8 -->
+        <div class="card">
+          <div>
+            <div class="card-title">8. 營繩結 (Taut-Line Hitch)</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">露營搭帳靈魂結！能在繩索上自由滑動，拉緊後卡死，微調營繩張力。</p>
+            <div class="media-box">
+              <img src="assets/knot_8_tautline.png" alt="營繩結圖解">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=童軍+營繩結+營釘結+Taut-line+Hitch" target="_blank" class="btn-video">▶ 觀看營繩結教學影片</a>
+        </div>
+      </div>
+
+      <!-- 單元 3: 自然方向辨識 -->
+      <div class="section-subtitle" style="margin-top: 2rem;">🧭 單元 ③：自然方向辨識</div>
+      <div class="grid-4">
+        <!-- 定向 1 -->
+        <div class="card">
+          <div>
+            <div class="card-title">1. 指南針與 16 方位盤</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">
+              指北針紅針指北（磁北）。16 方位角標準判讀（北0°、東90°、南180°、西270°）。
+            </p>
+            <div class="media-box">
+              <img src="assets/dir_compass_rose.png" alt="16 方位盤">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=指北針+指南針+16方位+地圖定向" target="_blank" class="btn-video">▶ 觀看指北針定位影片</a>
+        </div>
+        <!-- 定向 2 -->
+        <div class="card">
+          <div>
+            <div class="card-title">2. 手錶時針太陽法</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">
+              時針對準太陽，<strong>時針與 12 點角平分線</strong>所指方向即為<strong>正南方</strong>（北半球適用）。
+            </p>
+            <div class="media-box">
+              <img src="assets/direction_page17.png" alt="手錶時針太陽法">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=手錶+太陽+方向辨識" target="_blank" class="btn-video">▶ 觀看手錶太陽定位教學</a>
+        </div>
+        <!-- 定向 3 -->
+        <div class="card">
+          <div>
+            <div class="card-title">3. 夜間北極星定位法</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">
+              利用北斗七星天璇至天樞向勺口延伸 5 倍距離；或仙后座 W 型開口平分線尋找正北極星。
+            </p>
+            <div class="media-box">
+              <img src="assets/p17_img3.jpeg" alt="星象定向">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=北極星+尋找+北斗七星+仙后座" target="_blank" class="btn-video">▶ 觀看北極星定位教學</a>
+        </div>
+        <!-- 定向 4 -->
+        <div class="card">
+          <div>
+            <div class="card-title">4. 樹木年輪與建築坐向</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">
+              北半球向南生長繁盛年輪疏，<strong>年輪密者為北</strong>；向日葵 12 點前朝東南，午後朝西南；古厝多坐北朝南。
+            </p>
+            <div class="media-box">
+              <img src="assets/worksheet_page22.png" alt="自然定向與觀察">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=野外求生+自然方位辨識+年輪" target="_blank" class="btn-video">▶ 觀看自然特徵定向影片</a>
+        </div>
+      </div>
+
+      <!-- 單元 4: 野外簡易急救處置 -->
+      <div class="section-subtitle" style="margin-top: 2rem;">🩹 單元 ④：野外簡易急救處置</div>
+      <div class="grid-4">
+        <!-- 急救 1 -->
+        <div class="card">
+          <div>
+            <div class="card-title">1. 意外割傷處理</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">
+              1. 清水沖洗傷口。2. 乾淨紗布直接<strong>加壓止血</strong>。3. 抬高傷處高於心臟，繃帶包紮送醫。
+            </p>
+            <div class="media-box">
+              <img src="assets/fa_cuts.png" alt="意外割傷處理">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=外傷出血+加壓止血+包紮教學" target="_blank" class="btn-video">▶ 觀看加壓止血教學</a>
+        </div>
+        <!-- 急救 2 -->
+        <div class="card">
+          <div>
+            <div class="card-title">2. 肌肉抽筋處理</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">
+              遵守「反向被動伸展」原則。小腿抽筋膝蓋打直，將腳掌向上屈壓向小腿，輕按肌肉緩解。
+            </p>
+            <div class="media-box">
+              <img src="assets/fa_cramps.png" alt="肌肉抽筋處理">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=小腿抽筋+急救處理+伸展" target="_blank" class="btn-video">▶ 觀看抽筋處理示範</a>
+        </div>
+        <!-- 急救 3 -->
+        <div class="card">
+          <div>
+            <div class="card-title">3. 流鼻血緊急處置</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">
+              患者坐下<strong>頭部微向前傾</strong>（切忌後仰防吞血嗆咳），用力捏住兩側鼻翼軟骨 10~15 分鐘，以口呼吸冷敷。
+            </p>
+            <div class="media-box">
+              <img src="assets/fa_nosebleed.png" alt="流鼻血處置">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=流鼻血+正確急救姿勢+頭前傾" target="_blank" class="btn-video">▶ 觀看流鼻血正確急救</a>
+        </div>
+        <!-- 急救 4 -->
+        <div class="card">
+          <div>
+            <div class="card-title">4. 骨折固定處置</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">
+              評估生命徵象，切勿隨意推拿搬動。就地取材夾板，長度必須<strong>超過骨折處上下兩關節</strong>，固定後送醫。
+            </p>
+            <div class="media-box">
+              <img src="assets/fa_fracture.png" alt="骨折夾板固定">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=骨折+夾板固定+急救教學" target="_blank" class="btn-video">▶ 觀看骨折夾板固定教學</a>
+        </div>
+      </div>
+
+      <!-- 單元 5: 臺灣六大毒蛇與急救「五要五不」 -->
+      <div class="section-subtitle" style="margin-top: 2rem;">🐍 單元 ⑤：臺灣六大毒蛇與急救「五要五不」</div>
+      <div class="grid-4">
+        <!-- 毒蛇 1 -->
+        <div class="card">
+          <div>
+            <div class="card-title">1. 出血性毒蛇：百步蛇</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">
+              吻端上翹、黑色三角形側斑。出血性毒素造成傷口劇痛黑死、血流不止，致死率居首。
+            </p>
+            <div class="media-box">
+              <img src="assets/p16_img3.jpeg" alt="百步蛇">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=百步蛇+出血性毒蛇+介紹" target="_blank" class="btn-video">▶ 觀看百步蛇生態影片</a>
+        </div>
+        <!-- 毒蛇 2 -->
+        <div class="card">
+          <div>
+            <div class="card-title">2. 神經性毒蛇：雨傘節</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">
+              黑白均勻環紋、背脊隆起。神經性毒素造成視力模糊、吞嚥困難、呼吸麻痺衰竭，致死率居次。
+            </p>
+            <div class="media-box">
+              <img src="assets/p16_img4.jpeg" alt="雨傘節">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=雨傘節+神經性毒蛇+介紹" target="_blank" class="btn-video">▶ 觀看雨傘節生態影片</a>
+        </div>
+        <!-- 毒蛇 3 -->
+        <div class="card">
+          <div>
+            <div class="card-title">3. 出血/神經/混合毒蛇鑑別</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">
+              龜殼花（三角形頭波浪斑）、赤尾青竹絲（綠體紅尾）、眼鏡蛇（膨頸）、鎖鏈蛇（鎖鏈斑混合毒）。
+            </p>
+            <div class="media-box">
+              <img src="assets/snakes_cards.png" alt="毒蛇鑑別圖">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=臺灣六大毒蛇+辨識教學" target="_blank" class="btn-video">▶ 觀看六大毒蛇辨識教學</a>
+        </div>
+        <!-- 毒蛇 4 -->
+        <div class="card card-highlight">
+          <div>
+            <div class="card-title">4. 蛇傷急救「五要五不」SOP</div>
+            <p style="font-size: 0.85rem; color: #cbd5e1;">
+              <strong>五要</strong>：視為毒蛇、記特徵、脫飾品、包紮上緣低於心臟、送醫。<br>
+              <strong>五不</strong>：不割開、不口吸、不冰敷、不緊紮、不喝酒！
+            </p>
+            <div class="media-box">
+              <img src="assets/snakes_safety_page16.png" alt="蛇傷五要五不">
+            </div>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=疾管署+毒蛇咬傷+五要五不" target="_blank" class="btn-video">▶ 觀看疾管署五要五不宣導</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 六、山訓探索與水彈安全守則 -->
+    <section class="section-block" id="sec-adventure">
+      <div class="section-title">🧗 六、山訓探索教育與水彈競賽安全守則</div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-title">🌟 探索教育三大哲學</div>
+          <p style="font-size: 0.9rem; line-height: 1.8;">
+            1. <strong>Full Value Contract（全價值契約）</strong>：同心合作、守護安全、積極互饋。<br>
+            2. <strong>Challenge by Choice（選擇性挑戰）</strong>：自主決定挑戰深度，走出舒適圈。<br>
+            3. <strong>做中學（Learning by Doing）</strong>：閱讀吸收 10%、聆聽吸收 15%、<strong>親身體驗吸收 80%</strong>！
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-title">🧗 山訓實作技術守則</div>
+          <p style="font-size: 0.9rem; line-height: 1.8;">
+            • <strong>進擊の垂降</strong>：坐式吊帶三點安全檢查，導引手在前制動手在後，後傾蹬壁小步下降。<br>
+            • <strong>超級蜘蛛人攀岩</strong>：三點不動一點動，重心緊貼岩壁，雙腿發力推蹬。<br>
+            • <strong>突擊吊橋</strong>：雙索/三索均外八字踩繩，手不離索，身微前傾穩步橫移。
+          </p>
+          <div class="media-box" style="height: 140px;">
+            <img src="assets/p21_img3.jpeg" alt="突擊吊橋">
+          </div>
+        </div>
+        <div class="card card-highlight">
+          <div class="card-title">🎯 水彈生存射擊十三大安全守則</div>
+          <p style="font-size: 0.88rem; line-height: 1.7;">
+            1. <strong>遊戲進行中嚴禁取下護目面罩</strong>！<br>
+            2. 任何狀況下不得窺視水彈槍口，嚴禁持槍朝向未穿護具者。<br>
+            3. 十英呎（約 3 公尺）內禁止對人體射擊。<br>
+            4. 嚴禁對裁判員、觀察員與出局者射擊。<br>
+            5. 非遊戲時槍枝一律關保險並套上槍口塞。
+          </p>
+          <div class="media-box" style="height: 140px;">
+            <img src="assets/p21_img6.jpeg" alt="水彈射擊">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 七、學習單與自我檢核表 -->
+    <section class="section-block" id="sec-evaluation">
+      <div class="section-title">📝 七、學習單指引與學生自我檢核表</div>
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-title">💡 童軍技能學習單核心解析</div>
+          <ul style="padding-left: 1.25rem; font-size: 0.92rem; line-height: 1.8;">
+            <li><strong>違反露營原則指認</strong>：營帳不可搭在枯樹或斜坡落石下；火源不可貼近帳棚；水桶沙土需常備。</li>
+            <li><strong>毒物連連看</strong>：百步蛇、雨傘節、姑婆芋（葉片不沾水滴）、海濛果（劇毒果實）、咬人貓/咬人狗（焮毛刺痛）。</li>
+            <li><strong>繩子用途與材質</strong>：尼龍繩耐磨防腐抗拉力強；麻繩天然粗糙摩擦力大、耐熱耐火。</li>
+          </ul>
+        </div>
+        <div class="card card-highlight">
+          <div class="card-title">⭐ 學生自我檢核 13 大指標（手冊第 23 頁）</div>
+          <div style="font-size: 0.88rem; line-height: 1.6; display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem;">
+            <div>• 能學習規劃童軍生活</div>
+            <div>• 能運用資訊做好準備</div>
+            <div>• 每個課程能仔細觀察</div>
+            <div>• 能認真完成學習手冊</div>
+            <div>• 體會行萬里路勝讀萬卷書</div>
+            <div>• 集合能守時遵守作息</div>
+            <div>• 能熟讀生活須知並遵守</div>
+            <div>• 能遵守團體紀律護榮譽</div>
+            <div>• 聽從師長指導不私自行動</div>
+            <div>• 能與同學互助互相照顧</div>
+            <div>• 能傾聽發表與同學分享</div>
+            <div>• 能尊重生命愛惜自然</div>
+            <div style="grid-column: span 2; color: var(--gold); font-weight: bold;">• 遊必有方，每天向家人報平安！</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 八、美好回憶 -->
+    <section class="section-block" style="text-align: center; padding: 3rem 2rem;">
+      <h3 style="font-size: 1.8rem; color: var(--gold); margin-bottom: 1rem;">🌟 八、美好回憶</h3>
+      <blockquote style="font-size: 1.2rem; color: #cbd5e1; max-width: 800px; margin: 0 auto; font-style: italic; line-height: 2;">
+        「在休閒旅遊的地圖上，找到失落已久的寶藏；<br>
+        發現真實的自己，以及與心靈對話的樂趣；<br>
+        而福爾摩沙的星空，有我最美的記憶。」
+      </blockquote>
+    </section>
+
+    <!-- 九、智慧名冊速查系統 -->
+    <section class="section-block" id="sec-roster-search">
+      <div class="section-title">🔍 九、隔宿露營 106 位學生名冊速查系統</div>
+      <div class="search-bar-wrap">
+        <input type="text" id="searchInput" class="input-text" placeholder="🔍 輸入學生姓名（例：林O諼、劉O硯）或帳號..." oninput="filterStudents()">
+        <select id="filterClass" class="select-dropdown" onchange="filterStudents()">
+          <option value="ALL">全部班級 (801~807)</option>
+          <option value="801">801 班 (17人)</option>
+          <option value="802">802 班 (18人)</option>
+          <option value="803">803 班 (15人)</option>
+          <option value="804">804 班 (15人)</option>
+          <option value="805">805 班 (11人)</option>
+          <option value="806">806 班 (9人)</option>
+          <option value="807">807 班 (21人)</option>
+        </select>
+        <select id="filterBus" class="select-dropdown" onchange="filterStudents()">
+          <option value="ALL">全部車次</option>
+          <option value="1">1 車 (805, 806)</option>
+          <option value="2">2 車 (802, 804)</option>
+          <option value="3">3 車 (801, 803)</option>
+          <option value="丁">丁 車 (807)</option>
+        </select>
+        <select id="filterGender" class="select-dropdown" onchange="filterStudents()">
+          <option value="ALL">全部性別</option>
+          <option value="男">男生 (48人)</option>
+          <option value="女">女生 (58人)</option>
+        </select>
+        <button class="btn btn-primary" onclick="resetFilters()">重設篩選</button>
+        <span id="resultCount" style="font-size: 0.9rem; font-weight: bold; color: var(--gold); margin-left: auto;">
+          共 106 筆資料
+        </span>
+      </div>
+
+      <div class="table-wrap" style="max-height: 520px; overflow-y: auto;">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>序號</th>
+              <th>班級</th>
+              <th>學生姓名</th>
+              <th>性別</th>
+              <th>車次</th>
+              <th>帳棚編號</th>
+              <th>膳食野炊組別</th>
+              <th>備註</th>
+            </tr>
+          </thead>
+          <tbody id="studentTbody">
+            <!-- Populated dynamically -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="handbook-footer">
+    <p>南投縣立南投國民中學 115 學年度二年級戶外教育活動（隔宿露營）行政手冊網頁版</p>
+    <p style="margin-top: 0.4rem; font-size: 0.8rem;">
+      本網頁資料已落實個人資料保護法規範，姓名第二字全數以「O」替換，確保學生隱私安全。
+    </p>
+  </footer>
+
+  <script>
+    const studentsData = {students_js};
+
+    function renderStudents(list) {{
+      const tbody = document.getElementById('studentTbody');
+      tbody.innerHTML = '';
+      list.forEach((s, idx) => {{
+        const tr = document.createElement('tr');
+        const genderClass = s.gender === '男' ? 'pill-boy' : 'pill-girl';
+        const vegBadge = s.note && s.note.includes('素食') ? '<span class="pill pill-veg">素食</span>' : '';
+        const noteBadge = s.note && s.note.includes('同名') ? `<span class="pill pill-accent">${{s.note}}</span>` : vegBadge;
+        
+        tr.innerHTML = `
+          <td>${{idx + 1}}</td>
+          <td><strong>${{s.clazz}} 班</strong></td>
+          <td><strong style="color:#fff;">${{s.name}}</strong></td>
+          <td><span class="pill ${{genderClass}}">${{s.gender}}</span></td>
+          <td><span class="pill pill-accent">${{s.bus}} 車</span></td>
+          <td><span class="pill">${{s.tent}}</span></td>
+          <td>第 ${{s.mealGroup}} 組</td>
+          <td>${{noteBadge}}</td>
+        `;
+        tbody.appendChild(tr);
+      }});
+      document.getElementById('resultCount').innerText = `共 ${{list.length}} 筆資料`;
+    }}
+
+    function filterStudents() {{
+      const query = document.getElementById('searchInput').value.trim().toLowerCase();
+      const cls = document.getElementById('filterClass').value;
+      const bus = document.getElementById('filterBus').value;
+      const gender = document.getElementById('filterGender').value;
+
+      const filtered = studentsData.filter(s => {{
+        const matchQuery = !query || s.name.toLowerCase().includes(query) || s.tent.toLowerCase().includes(query) || s.clazz.includes(query);
+        const matchClass = cls === 'ALL' || s.clazz === cls;
+        const matchBus = bus === 'ALL' || s.bus === bus;
+        const matchGender = gender === 'ALL' || s.gender === gender;
+        return matchQuery && matchClass && matchBus && matchGender;
+      }});
+
+      renderStudents(filtered);
+    }}
+
+    function resetFilters() {{
+      document.getElementById('searchInput').value = '';
+      document.getElementById('filterClass').value = 'ALL';
+      document.getElementById('filterBus').value = 'ALL';
+      document.getElementById('filterGender').value = 'ALL';
+      renderStudents(studentsData);
+    }}
+
+    // Init table
+    renderStudents(studentsData);
+  </script>
+</body>
+</html>
+"""
+
+with open("handbook.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print("handbook.html generated successfully!")
