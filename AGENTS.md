@@ -5,6 +5,10 @@
 - **專案名稱**：南投縣立南投國民中學 115 學年度二年級戶外教育活動（隔宿露營）手冊與行政執行專案
 - **專案用途**：全面解析、彙整與管理「115南投國二露營手冊.pdf」之各項活動時程、師生人員名冊、車次分配、帳棚住宿與膳食野炊小隊編組、安全守則及行政表冊，支援後續報表產出、導師與行前作業查詢、以及活動現場執行。
 - **主要工作目錄**：`D:\antigravity\1151019二年級隔宿露營`
+- **GitHub 倉庫**：https://github.com/yaoshuchin/115-nantou-camping-guide
+- **GitHub Pages 站點**：https://yaoshuchin.github.io/115-nantou-camping-guide/
+- **Netlify 發布站點**：http://glittery-quokka-c8791c.netlify.app
+- **預設分支**：`main`
 - **核心資料來源**：
   - 本目錄手冊檔案：`1151019-115南投國二露營手冊.pdf`（共 26 頁完整活動手冊）
   - 歷次關聯整合資料：`D:\antigravity\1151015二年級參加學生` 與 `D:\antigravity\1151015投中二年級隔宿-帳棚野炊`

@@ -5,7 +5,9 @@
 - **核心來源**：`1151019-115南投國二露營手冊.pdf`（共 26 頁）
 - **關聯對照**：`D:\antigravity\1151015二年級參加學生`、`D:\antigravity\1151015投中二年級隔宿-帳棚野炊`
 - **線上發布網址**：
-  - **Netlify 站點**：[http://glittery-quokka-c8791c.netlify.app](http://glittery-quokka-c8791c.netlify.app)（預設存取密碼：`My-Drop-Site`）
+  - **GitHub 倉庫**：[https://github.com/yaoshuchin/115-nantou-camping-guide](https://github.com/yaoshuchin/115-nantou-camping-guide)
+  - **GitHub Pages 站點**：[https://yaoshuchin.github.io/115-nantou-camping-guide/](https://yaoshuchin.github.io/115-nantou-camping-guide/)
+  - **Netlify 發布站點**：[http://glittery-quokka-c8791c.netlify.app](http://glittery-quokka-c8791c.netlify.app)（預設存取密碼：`My-Drop-Site`）
 
 ---
 

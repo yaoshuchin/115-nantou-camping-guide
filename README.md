@@ -2,6 +2,11 @@
 
 本專案彙整與管理「115南投國二露營手冊.pdf」所有資訊，包含活動日程、工作人員、車次配置、住宿帳棚、野炊膳食分組及各項重要注意事項。
 
+### 🌐 線上展示與網頁簡報連結
+- **GitHub 專案倉庫**：[yaoshuchin/115-nantou-camping-guide](https://github.com/yaoshuchin/115-nantou-camping-guide)
+- **GitHub Pages 線上簡報**：[https://yaoshuchin.github.io/115-nantou-camping-guide/](https://yaoshuchin.github.io/115-nantou-camping-guide/)
+- **Netlify 線上簡報備援**：[http://glittery-quokka-c8791c.netlify.app](http://glittery-quokka-c8791c.netlify.app)（存取密碼：`My-Drop-Site`）
+
 ---
 
 ## 📌 活動基本資訊
