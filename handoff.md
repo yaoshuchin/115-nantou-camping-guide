@@ -7,7 +7,7 @@
   - **GitHub 倉庫**：[https://github.com/yaoshuchin/115-nantou-camping-guide](https://github.com/yaoshuchin/115-nantou-camping-guide)
   - **GitHub Pages 線上簡報版**：[https://yaoshuchin.github.io/115-nantou-camping-guide/](https://yaoshuchin.github.io/115-nantou-camping-guide/)
   - **GitHub Pages 露營手冊網頁版**：[https://yaoshuchin.github.io/115-nantou-camping-guide/handbook.html](https://yaoshuchin.github.io/115-nantou-camping-guide/handbook.html)
-  - **Netlify 發布站點**：[http://harmonious-griffin-a72e95.netlify.app](http://harmonious-griffin-a72e95.netlify.app)（手冊網頁版：[http://harmonious-griffin-a72e95.netlify.app/handbook.html](http://harmonious-griffin-a72e95.netlify.app/handbook.html)，預設存取密碼：`My-Drop-Site`）
+  - **Netlify 發布站點**：[http://silly-bubblegum-01fa1b.netlify.app](http://silly-bubblegum-01fa1b.netlify.app)（手冊網頁版：[http://silly-bubblegum-01fa1b.netlify.app/handbook.html](http://silly-bubblegum-01fa1b.netlify.app/handbook.html)，預設存取密碼：`My-Drop-Site`）
 
 ---
 
