@@ -579,8 +579,8 @@ html_template = f"""<!DOCTYPE html>
             </div>
             <div class="card card-success">
               <div class="card-title">👥 參與規模</div>
-              <p style="font-size: 1.15rem; font-weight: 700; color: #fff;">師生共計 116 人</p>
-              <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.4rem;">學生 106 人（男 48、女 58）+ 師長 10 人</p>
+              <p style="font-size: 1.15rem; font-weight: 700; color: #fff;">師生共計 117 人</p>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.4rem;">學生 107 人（男 48、女 59）+ 師長 10 人</p>
             </div>
           </div>
           <div style="margin-top: 2.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
@@ -799,19 +799,19 @@ html_template = f"""<!DOCTYPE html>
               <tr><td><strong>學務主任</strong></td><td>董O遠</td><td>-</td><td>-</td><td>-</td><td><span class="pill pill-accent">1 車</span></td><td>第 1 車隨車總指揮、全隊秩序與安全督導</td></tr>
               <tr><td><strong>訓育組長</strong></td><td>姚O勤</td><td>-</td><td>-</td><td>-</td><td><span class="pill pill-accent">丁 車</span></td><td>第 丁 車隨車主管、活動時程與行程協調</td></tr>
               <tr><td><strong>801 導師</strong></td><td>黃O月</td><td>10</td><td>7</td><td>17</td><td><span class="pill">3 車</span></td><td>801 班生活照護、點名查舖、野炊指導</td></tr>
-              <tr><td><strong>802 導師</strong></td><td>黃O君</td><td>6</td><td>12</td><td>18</td><td><span class="pill">2 車</span></td><td>802 班生活照護、點名查舖、野炊指導</td></tr>
+              <tr><td><strong>802 導師</strong></td><td>黃O君</td><td>6</td><td>13</td><td>19</td><td><span class="pill">2 車</span></td><td>802 班生活照護、點名查舖、野炊指導</td></tr>
               <tr><td><strong>803 導師</strong></td><td>林O玟</td><td>6</td><td>9</td><td>15</td><td><span class="pill">3 車</span></td><td>803 班生活照護、點名查舖、野炊指導</td></tr>
               <tr><td><strong>804 導師</strong></td><td>李O儒</td><td>7</td><td>8</td><td>15</td><td><span class="pill">2 車</span></td><td>804 班生活照護、點名查舖、野炊指導</td></tr>
               <tr><td><strong>805 導師</strong></td><td>林O銓</td><td>7</td><td>4</td><td>11</td><td><span class="pill">1 車</span></td><td>805 班生活照護、點名查舖、野炊指導</td></tr>
               <tr><td><strong>806 導師</strong></td><td>許O玉</td><td>4</td><td>5</td><td>9</td><td><span class="pill">1 車</span></td><td>806 班生活照護、點名查舖、野炊指導</td></tr>
               <tr><td><strong>807 導師</strong></td><td>黃O慧</td><td>8</td><td>13</td><td>21</td><td><span class="pill">丁 車</span></td><td>807 班生活照護、點名查舖、野炊指導</td></tr>
               <tr style="background: rgba(255, 255, 255, 0.08); font-weight: bold;">
-                <td><strong>團控經理</strong></td><td>邱O凱</td><td>48</td><td>58</td><td>106</td><td><span class="pill pill-accent">全隊機動</span></td><td>旅行社領隊、隊輔調度、安全戒護總負責</td></tr>
+                <td><strong>團控經理</strong></td><td>邱O凱</td><td>48</td><td>59</td><td>107</td><td><span class="pill pill-accent">全隊機動</span></td><td>旅行社領隊、隊輔調度、安全戒護總負責</td></tr>
             </tbody>
           </table>
         </div>
         <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">
-          * 學生合計 106 人（男生 48 人、女生 58 人），隨隊教職員合計 10 人。所有師生姓名第二個字均已寫為「O」。
+          * 學生合計 107 人（男生 48 人、女生 59 人），隨隊教職員合計 10 人。所有師生姓名第二個字均已寫為「O」。
         </p>
       </section>
 
@@ -837,10 +837,10 @@ html_template = f"""<!DOCTYPE html>
           </div>
           <!-- 車次 2 -->
           <div class="card card-info">
-            <div class="card-title">🚍 第 2 車（共 33 學生）</div>
+            <div class="card-title">🚍 第 2 車（共 34 學生）</div>
             <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>隨車師長：</strong>黃O君老師、李O儒老師</p>
             <div style="background: rgba(0,0,0,0.2); padding: 0.75rem; border-radius: 8px; font-size: 0.88rem; line-height: 1.6;">
-              <strong>802 班（18 人）</strong>：男 6、女 12<br>
+              <strong>802 班（19 人）</strong>：男 6、女 13<br>
               <strong>804 班（15 人）</strong>：男 7、女 8
             </div>
             <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">人數最多車輛之一，配置兩位隨車導師全權照護</p>
@@ -929,7 +929,7 @@ html_template = f"""<!DOCTYPE html>
               <tr><td><span class="pill pill-girl">B02</span></td><td>801</td><td>4人</td><td>林O嫻、江O婷、陳O翎、陳O涵</td><td>3 車</td></tr>
               <tr><td><span class="pill pill-girl">B03</span></td><td>802</td><td>4人</td><td>李O妮、李O甯、鄭O琳、黃O蒂</td><td>2 車</td></tr>
               <tr><td><span class="pill pill-girl">B04</span></td><td>802</td><td>4人</td><td>簡O懿、黃O薇、賴O其、鐘O彤</td><td>2 車</td></tr>
-              <tr><td><span class="pill pill-girl">B05</span></td><td>802</td><td>4人</td><td>郭O琪、廖O昕、胡O薰、張O桔</td><td>2 車</td></tr>
+              <tr><td><span class="pill pill-girl">B05</span></td><td>802</td><td>5人</td><td>郭O琪、廖O昕、胡O薰、張O桔、詹O彤</td><td>2 車</td></tr>
               <tr><td><span class="pill pill-girl">B06</span></td><td>803</td><td>5人</td><td>王O芝、石O芳、吳O恩、吳O蓉、潘O汝</td><td>3 車</td></tr>
               <tr><td><span class="pill pill-girl">B07</span></td><td>803</td><td>4人</td><td>邱O慈、陳O羽、謝O璇、沈O愉</td><td>3 車</td></tr>
               <tr><td><span class="pill pill-girl">B08</span></td><td>804</td><td>4人</td><td>王O涵、陳O妘、張O晴、劉O硯 <span class="pill pill-accent">804</span></td><td>2 車</td></tr>
@@ -963,7 +963,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card"><div class="card-title">🥢 第 2 組（801 班，8人）</div><p style="font-size: 0.9rem;">林O嫻、陳O翎、江O婷、陳O涵、湯O丞、吳O岷、許O瑋、陳O廷</p></div>
           <div class="card"><div class="card-title">🥢 第 3 組（802 班，6人）</div><p style="font-size: 0.9rem;">黃O薇、廖O惟、賴O其、簡O懿、鐘O彤、張O瑋</p></div>
           <div class="card"><div class="card-title">🥢 第 4 組（802 班，6人）</div><p style="font-size: 0.9rem;">葉O毅、李O甯、李O妮、鄭O琳、黃O蒂、黃O睿</p></div>
-          <div class="card"><div class="card-title">🥢 第 5 組（802 班，6人）</div><p style="font-size: 0.9rem;">廖O昕、胡O薰、郭O琪、張O桔、簡O宸、劉O宇</p></div>
+          <div class="card"><div class="card-title">🥢 第 5 組（802 班，7人）</div><p style="font-size: 0.9rem;">廖O昕、胡O薰、郭O琪、張O桔、簡O宸、劉O宇、詹O彤</p></div>
           <div class="card"><div class="card-title">🥢 第 6 組（803 班，8人）</div><p style="font-size: 0.9rem;">王O芝、石O芳、吳O恩、吳O蓉、潘O汝、許O煜、陳O熙、蔡O呈</p></div>
           <div class="card"><div class="card-title">🥢 第 7 組（803 班，7人）</div><p style="font-size: 0.9rem;">邱O慈、陳O羽、謝O璇、沈O愉、陳O天、陳O瑜、李O成</p></div>
           <div class="card"><div class="card-title">🥢 第 8 組（804 班，7人）</div><p style="font-size: 0.9rem;">陳O光、張O帆、林O澄、劉O振、許O翔、蕭O皓、陳O昇</p></div>
@@ -1285,7 +1285,7 @@ html_template = f"""<!DOCTYPE html>
         <div class="slide-header">
           <div>
             <div class="slide-category">現場執行與導師工具</div>
-            <div class="slide-title">👥 二年級隔宿露營 106 位學生名冊速查系統</div>
+            <div class="slide-title">👥 二年級隔宿露營 107 位學生名冊速查系統</div>
           </div>
           <div class="slide-num">17 / 17</div>
         </div>
@@ -1296,7 +1296,7 @@ html_template = f"""<!DOCTYPE html>
           <select id="filterClass" class="select-dropdown" onchange="filterStudents()">
             <option value="ALL">全部班級 (801~807)</option>
             <option value="801">801 班 (17人)</option>
-            <option value="802">802 班 (18人)</option>
+            <option value="802">802 班 (19人)</option>
             <option value="803">803 班 (15人)</option>
             <option value="804">804 班 (15人)</option>
             <option value="805">805 班 (11人)</option>
@@ -1313,11 +1313,11 @@ html_template = f"""<!DOCTYPE html>
           <select id="filterGender" class="select-dropdown" onchange="filterStudents()">
             <option value="ALL">全部性別</option>
             <option value="男">男生 (48人)</option>
-            <option value="女">女生 (58人)</option>
+            <option value="女">女生 (59人)</option>
           </select>
           <button class="btn btn-primary" onclick="resetFilters()">重設篩選</button>
           <span id="resultCount" style="font-size: 0.9rem; font-weight: bold; color: var(--gold); margin-left: auto;">
-            共 106 筆資料
+            共 107 筆資料
           </span>
         </div>
 
@@ -1403,7 +1403,7 @@ html_template = f"""<!DOCTYPE html>
       "14. 童軍知識卡 ④ 野外簡易急救處置",
       "15. 童軍知識卡 ⑤ 臺灣六大毒蛇與急救五要五不",
       "16. 營火晚會精神・學習單指引與自我檢核",
-      "17. 👥 隔宿露營 106 位學生名冊速查系統"
+      "17. 👥 隔宿露營 107 位學生名冊速查系統"
     ];
 
     const teacherNotes = [

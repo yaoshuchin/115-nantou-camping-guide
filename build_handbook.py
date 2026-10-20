@@ -333,7 +333,7 @@ tent_list = [
     {"id": "B02", "type": "B", "clazz": "801", "count": 4, "members": ["林O嫻", "江O婷", "陳O翎", "陳O涵"]},
     {"id": "B03", "type": "B", "clazz": "802", "count": 4, "members": ["李O妮", "李O甯", "鄭O琳", "黃O蒂"]},
     {"id": "B04", "type": "B", "clazz": "802", "count": 4, "members": ["簡O懿", "黃O薇", "賴O其", "鐘O彤"]},
-    {"id": "B05", "type": "B", "clazz": "802", "count": 4, "members": ["郭O琪", "廖O昕", "胡O薰", "張O桔"]},
+    {"id": "B05", "type": "B", "clazz": "802", "count": 5, "members": ["郭O琪", "廖O昕", "胡O薰", "張O桔", "詹O彤"]},
     {"id": "B06", "type": "B", "clazz": "803", "count": 5, "members": ["王O芝", "石O芳", "吳O恩", "吳O蓉", "潘O汝"]},
     {"id": "B07", "type": "B", "clazz": "803", "count": 4, "members": ["邱O慈", "陳O羽", "謝O璇", "沈O愉"]},
     {"id": "B08", "type": "B", "clazz": "804", "count": 4, "members": ["王O涵", "陳O妘", "張O晴", "劉O硯"]},
@@ -368,7 +368,7 @@ meal_list = [
     {"group": 2, "clazz": "801", "count": 8, "members": ["林O嫻", "陳O翎", "江O婷", "陳O涵", "湯O丞", "吳O岷", "許O瑋", "陳O廷"], "note": ""},
     {"group": 3, "clazz": "802", "count": 6, "members": ["黃O薇", "廖O惟", "賴O其", "簡O懿", "鐘O彤", "張O瑋"], "note": ""},
     {"group": 4, "clazz": "802", "count": 6, "members": ["葉O毅", "李O甯", "李O妮", "鄭O琳", "黃O蒂", "黃O睿"], "note": ""},
-    {"group": 5, "clazz": "802", "count": 6, "members": ["廖O昕", "胡O薰", "郭O琪", "張O桔", "簡O宸", "劉O宇"], "note": ""},
+    {"group": 5, "clazz": "802", "count": 7, "members": ["廖O昕", "胡O薰", "郭O琪", "張O桔", "簡O宸", "劉O宇", "詹O彤"], "note": ""},
     {"group": 6, "clazz": "803", "count": 8, "members": ["王O芝", "石O芳", "吳O恩", "吳O蓉", "潘O汝", "許O煜", "陳O熙", "蔡O呈"], "note": ""},
     {"group": 7, "clazz": "803", "count": 7, "members": ["邱O慈", "陳O羽", "謝O璇", "沈O愉", "陳O天", "陳O瑜", "李O成"], "note": ""},
     {"group": 8, "clazz": "804", "count": 7, "members": ["陳O光", "張O帆", "林O澄", "劉O振", "許O翔", "蕭O皓", "陳O昇"], "note": ""},
@@ -1399,7 +1399,7 @@ html_content = f"""<!DOCTYPE html>
         <span class="pill-tag">🏫 南投縣立南投國民中學</span>
         <span class="pill-tag pill-orange">兩天一夜</span>
         <span class="pill-tag">115.10.27(二) ~ 10.28(三)</span>
-        <span class="pill-tag">共 106 位同學・10 位隨隊師長</span>
+        <span class="pill-tag">共 107 位同學・10 位隨隊師長</span>
       </div>
       <h1 class="hero-title">115學年度 二年級戶外教育（隔宿露營）行動手冊</h1>
       <p class="hero-subtitle">集合出發：10/27 (二) 07:30 學校集合（921地震公園逃生演練） | 尖山埤野營・童軍分站技能・營火晚會・山訓攀岩垂降</p>
@@ -1689,7 +1689,7 @@ html_content = f"""<!DOCTYPE html>
           <button class="filter-pill-btn active" data-type="gender" data-val="all" onclick="setFilter('gender', 'all', this)">全部性別</button>
           <button class="filter-pill-btn" data-type="gender" data-val="男" onclick="setFilter('gender', '男', this)">男生</button>
           <button class="filter-pill-btn" data-type="gender" data-val="女" onclick="setFilter('gender', '女', this)">女生</button>
-          <span id="resultCountBadge" style="margin-left:auto; font-size:0.88rem; font-weight:700; color:#0284c7;">共 106 筆資料</span>
+          <span id="resultCountBadge" style="margin-left:auto; font-size:0.88rem; font-weight:700; color:#0284c7;">共 107 筆資料</span>
         </div>
       </div>
 
@@ -1761,10 +1761,10 @@ html_content = f"""<!DOCTYPE html>
           <div>
             <div class="bus-card-header">
               <div class="bus-card-title">🚌 2 車</div>
-              <span class="bus-student-pill">學生 33 人</span>
+              <span class="bus-student-pill">學生 34 人</span>
             </div>
             <div class="bus-class-line">班級分配：802 (全部) + 804 (全部)</div>
-            <div class="bus-breakdown">802班：男6、女12 (18人) | 804班：男7、女8 (15人)</div>
+            <div class="bus-breakdown">802班：男6、女13 (19人) | 804班：男7、女8 (15人)</div>
             
             <div class="bus-teachers-box">
               <div class="bus-teachers-label">隨車師長</div>
@@ -2270,7 +2270,7 @@ html_content = f"""<!DOCTYPE html>
         }}
       }});
 
-      document.getElementById('resultCountBadge').innerText = `共找到 ${{matched}} / 106 筆資料`;
+      document.getElementById('resultCountBadge').innerText = `共找到 ${{matched}} / 107 筆資料`;
     }}
 
     // Filter Tents
