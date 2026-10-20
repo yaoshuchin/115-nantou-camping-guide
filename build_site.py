@@ -557,7 +557,7 @@ html_template = f"""<!DOCTYPE html>
             <div class="slide-category">南投縣立南投國民中學 115 學年度</div>
             <div class="slide-title">🏕️ 二年級戶外教育活動（隔宿露營）手冊與教學簡報</div>
           </div>
-          <div class="slide-num">01 / 16</div>
+          <div class="slide-num">01 / 17</div>
         </div>
         <div style="text-align: center; padding: 2rem 1rem;">
           <h2 style="font-size: 2.2rem; color: var(--gold); margin-bottom: 1rem; font-weight: 800;">
@@ -598,7 +598,7 @@ html_template = f"""<!DOCTYPE html>
             <div class="slide-category">活動方針與規範</div>
             <div class="slide-title">📋 隔宿露營實施計畫與教育宗旨</div>
           </div>
-          <div class="slide-num">02 / 16</div>
+          <div class="slide-num">02 / 17</div>
         </div>
         <div class="grid-2">
           <div class="card card-highlight">
@@ -627,14 +627,59 @@ html_template = f"""<!DOCTYPE html>
         </div>
       </section>
 
-      <!-- SLIDE 3: 攜帶裝備自我檢核清單 -->
+            <!-- SLIDE 3: 10/23 行前說明會重點宣導 -->
       <section class="slide" id="slide-3">
+        <div class="slide-header">
+          <div>
+            <div class="slide-category">重要生活紀律宣導</div>
+            <div class="slide-title">📢 10/23（五）隔宿露營行前說明會四大重點</div>
+          </div>
+          <div class="slide-num">03 / 17</div>
+        </div>
+        <div class="grid-2">
+          <!-- Card 1: 違禁品清查 -->
+          <div class="card card-danger">
+            <div class="card-title">🚫 一、違禁品嚴格清查（出發前務必再檢查一次）</div>
+            <p style="line-height: 1.7; font-size: 0.95rem; margin-top: 0.3rem;">
+              • <strong>嚴禁攜帶物品</strong>：菸品、電子菸、酒精飲品、檳榔、各類刀械利器、打火機、煙火爆竹或具危險性之物品。<br>
+              • <strong>行前再次清查</strong>：10/23 說明會後及出發前，請導師與家長協助再次徹底檢查學生背包行李，入營後亦會實施嚴密安全檢查。
+            </p>
+          </div>
+          <!-- Card 2: 個人物品與手機保管 -->
+          <div class="card card-info">
+            <div class="card-title">📱 二、個人隨身物品規範與手機統一保管</div>
+            <p style="line-height: 1.7; font-size: 0.95rem; margin-top: 0.3rem;">
+              • <strong>個人必帶物品</strong>：健保 IC 卡、個人常備醫藥、<strong>零用錢限制在 600 元以內</strong>（切勿帶過多現鈔）、<strong>學校體育服（供晚上洗澡後就寢穿著）</strong>。<br>
+              • <strong>手機集中保管</strong>：活動期間手機一律由學校與隨車導師集中統一保管，<strong>每晚預計開放約 1 小時</strong>讓同學向家長撥打電話報平安，通話後立即繳回。
+            </p>
+          </div>
+          <!-- Card 3: 服裝儀容規定 -->
+          <div class="card card-highlight">
+            <div class="card-title">👕 三、服裝儀容規定（畢旅服裝看本次表現！）</div>
+            <p style="line-height: 1.7; font-size: 0.95rem; margin-top: 0.3rem;">
+              • <strong>日間活動穿著</strong>：穿著休閒便服或各班班服，下半身一律穿著「<strong>深色長褲</strong>」（防蚊蟲叮咬與林間攀爬劃傷），嚴禁穿著拖鞋或涼鞋走動。<br>
+              • <strong>與畢業旅行連動</strong>：本次隔宿露營的全校生活常規與紀律遵守狀況，將作為<strong>三年級畢業旅行服裝穿著開放之重要評估指標</strong>（畢旅服裝看表現）！
+            </p>
+          </div>
+          <!-- Card 4: 機動車即刻送回學校 -->
+          <div class="card card-danger" style="border: 2px solid #ef4444; background: #fff5f5;">
+            <div class="card-title" style="color: #b91c1c;">🚨 四、機動車即刻遣返機制（記大過處分！）</div>
+            <p style="line-height: 1.7; font-size: 0.95rem; margin-top: 0.3rem; color: #7f1d1d;">
+              • <strong>嚴厲紀律底線</strong>：露營期間凡違犯重大校規之行為（包含：<strong>打架滋事、抽菸、喝酒、嚼食檳榔等</strong>），營區將一律啟動「<strong>機動車即刻送回學校</strong>」！<br>
+              • <strong>家長帶回管教</strong>：立即通知家長親自到校帶回管教，並依校規召開學生獎懲委員會，<strong>一律予以「記大過處分」</strong>，絕不寬貸！
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 17: 攜帶裝備自我檢核清單 -->
+      <section class="slide" id="slide-4">
         <div class="slide-header">
           <div>
             <div class="slide-category">行前準備 CheckList</div>
             <div class="slide-title">🎒 想一想，準備好了，出發！攜帶物品自我檢核</div>
           </div>
-          <div class="slide-num">03 / 16</div>
+          <div class="slide-num">04 / 17</div>
         </div>
         <div class="grid-4">
           <div class="card">
@@ -684,14 +729,14 @@ html_template = f"""<!DOCTYPE html>
         </div>
       </section>
 
-      <!-- SLIDE 4: 活動日程表 -->
-      <section class="slide" id="slide-4">
+      <!-- SLIDE 17: 活動日程表 -->
+      <section class="slide" id="slide-5">
         <div class="slide-header">
           <div>
             <div class="slide-category">兩天一夜精實行程</div>
             <div class="slide-title">📅 活動日程與課程時刻總表</div>
           </div>
-          <div class="slide-num">04 / 16</div>
+          <div class="slide-num">05 / 17</div>
         </div>
         <div class="grid-2">
           <!-- Day 1 -->
@@ -733,14 +778,14 @@ html_template = f"""<!DOCTYPE html>
         </div>
       </section>
 
-      <!-- SLIDE 5: 工作人員一覽表 -->
-      <section class="slide" id="slide-5">
+      <!-- SLIDE 17: 工作人員一覽表 -->
+      <section class="slide" id="slide-6">
         <div class="slide-header">
           <div>
             <div class="slide-category">行政隨隊與導師陣容</div>
             <div class="slide-title">👨‍🏫 工作人員與隨隊導師一覽表</div>
           </div>
-          <div class="slide-num">05 / 16</div>
+          <div class="slide-num">06 / 17</div>
         </div>
         <div class="table-responsive">
           <table class="data-table">
@@ -770,14 +815,14 @@ html_template = f"""<!DOCTYPE html>
         </p>
       </section>
 
-      <!-- SLIDE 6: 車次分配表 -->
-      <section class="slide" id="slide-6">
+      <!-- SLIDE 17: 車次分配表 -->
+      <section class="slide" id="slide-7">
         <div class="slide-header">
           <div>
             <div class="slide-category">交通乘車編組</div>
             <div class="slide-title">🚌 車次分配與隨車配置表</div>
           </div>
-          <div class="slide-num">06 / 16</div>
+          <div class="slide-num">07 / 17</div>
         </div>
         <div class="grid-4">
           <!-- 車次 1 -->
@@ -829,14 +874,14 @@ html_template = f"""<!DOCTYPE html>
         </div>
       </section>
 
-      <!-- SLIDE 7: 男生帳棚清冊 A01~A13 -->
-      <section class="slide" id="slide-7">
+      <!-- SLIDE 17: 男生帳棚清冊 A01~A13 -->
+      <section class="slide" id="slide-8">
         <div class="slide-header">
           <div>
             <div class="slide-category">營地夜宿分配</div>
             <div class="slide-title">⛺ 男生帳棚分配清冊（A01 ~ A13 共 13 頂）</div>
           </div>
-          <div class="slide-num">07 / 16</div>
+          <div class="slide-num">08 / 17</div>
         </div>
         <div class="table-responsive">
           <table class="data-table">
@@ -865,14 +910,14 @@ html_template = f"""<!DOCTYPE html>
         </p>
       </section>
 
-      <!-- SLIDE 8: 女生帳棚清冊 B01~B14 -->
-      <section class="slide" id="slide-8">
+      <!-- SLIDE 17: 女生帳棚清冊 B01~B14 -->
+      <section class="slide" id="slide-9">
         <div class="slide-header">
           <div>
             <div class="slide-category">營地夜宿分配</div>
             <div class="slide-title">⛺ 女生帳棚分配清冊（B01 ~ B14 共 14 頂）</div>
           </div>
-          <div class="slide-num">08 / 16</div>
+          <div class="slide-num">09 / 17</div>
         </div>
         <div class="table-responsive">
           <table class="data-table">
@@ -904,14 +949,14 @@ html_template = f"""<!DOCTYPE html>
         </div>
       </section>
 
-      <!-- SLIDE 9: 野炊膳食分組 1~15 組 -->
-      <section class="slide" id="slide-9">
+      <!-- SLIDE 17: 野炊膳食分組 1~15 組 -->
+      <section class="slide" id="slide-10">
         <div class="slide-header">
           <div>
             <div class="slide-category">野炊與烤肉小隊</div>
             <div class="slide-title">🍲 膳食野炊與烤肉編組名單（第 1 組 ～ 第 15 組）</div>
           </div>
-          <div class="slide-num">09 / 16</div>
+          <div class="slide-num">10 / 17</div>
         </div>
         <div class="grid-3" style="max-height: 520px; overflow-y: auto; padding-right: 0.5rem;">
           <div class="card"><div class="card-title">🥢 第 1 組（801 班，9人）</div><p style="font-size: 0.9rem;">劉O含、林O言、谷O恩、張O鈞、張O偉、林O諼、陳O宗、賴O豪、藍O詒</p></div>
@@ -932,14 +977,14 @@ html_template = f"""<!DOCTYPE html>
         </div>
       </section>
 
-      <!-- SLIDE 10: 【教學參考 1】營地建設與屋式帳 -->
-      <section class="slide" id="slide-10">
+      <!-- SLIDE 17: 【教學參考 1】營地建設與屋式帳 -->
+      <section class="slide" id="slide-11">
         <div class="slide-header">
           <div>
             <div class="slide-category">童軍知識卡 ①</div>
             <div class="slide-title">🏕️ 營地建設與屋式帳搭設解析（圖文與影音）</div>
           </div>
-          <div class="slide-num">10 / 16</div>
+          <div class="slide-num">11 / 17</div>
         </div>
         <div class="grid-4">
           <div class="card">
@@ -977,14 +1022,14 @@ html_template = f"""<!DOCTYPE html>
         </div>
       </section>
 
-      <!-- SLIDE 11: 【教學參考 2】童軍常用八大繩結 -->
-      <section class="slide" id="slide-11">
+      <!-- SLIDE 17: 【教學參考 2】童軍常用八大繩結 -->
+      <section class="slide" id="slide-12">
         <div class="slide-header">
           <div>
             <div class="slide-category">童軍知識卡 ②</div>
             <div class="slide-title">🪢 童軍常用八大繩結圖解與影音教學</div>
           </div>
-          <div class="slide-num">11 / 16</div>
+          <div class="slide-num">12 / 17</div>
         </div>
         <div class="grid-4" style="max-height: 520px; overflow-y: auto;">
           <div class="card">
@@ -1054,14 +1099,14 @@ html_template = f"""<!DOCTYPE html>
         </div>
       </section>
 
-      <!-- SLIDE 12: 【教學參考 3】自然方向辨識 -->
-      <section class="slide" id="slide-12">
+      <!-- SLIDE 17: 【教學參考 3】自然方向辨識 -->
+      <section class="slide" id="slide-13">
         <div class="slide-header">
           <div>
             <div class="slide-category">童軍知識卡 ③</div>
             <div class="slide-title">🧭 自然方向辨識（圖文與影音教學）</div>
           </div>
-          <div class="slide-num">12 / 16</div>
+          <div class="slide-num">13 / 17</div>
         </div>
         <div class="grid-4">
           <div class="card">
@@ -1099,14 +1144,14 @@ html_template = f"""<!DOCTYPE html>
         </div>
       </section>
 
-      <!-- SLIDE 13: 【教學參考 4】野外簡易急救處置 -->
-      <section class="slide" id="slide-13">
+      <!-- SLIDE 17: 【教學參考 4】野外簡易急救處置 -->
+      <section class="slide" id="slide-14">
         <div class="slide-header">
           <div>
             <div class="slide-category">童軍知識卡 ④</div>
             <div class="slide-title">🩹 野外簡易急救處置（圖文與影音教學）</div>
           </div>
-          <div class="slide-num">13 / 16</div>
+          <div class="slide-num">14 / 17</div>
         </div>
         <div class="grid-4">
           <div class="card">
@@ -1144,14 +1189,14 @@ html_template = f"""<!DOCTYPE html>
         </div>
       </section>
 
-      <!-- SLIDE 14: 【教學參考 5】臺灣六大毒蛇與急救「五要五不」 -->
-      <section class="slide" id="slide-14">
+      <!-- SLIDE 17: 【教學參考 5】臺灣六大毒蛇與急救「五要五不」 -->
+      <section class="slide" id="slide-15">
         <div class="slide-header">
           <div>
             <div class="slide-category">童軍知識卡 ⑤</div>
             <div class="slide-title">🐍 臺灣六大毒蛇與急救「五要五不」（圖文與影音）</div>
           </div>
-          <div class="slide-num">14 / 16</div>
+          <div class="slide-num">15 / 17</div>
         </div>
         <div class="grid-4">
           <div class="card">
@@ -1189,14 +1234,14 @@ html_template = f"""<!DOCTYPE html>
         </div>
       </section>
 
-      <!-- SLIDE 15: 營火晚會・學習單與自我檢核 -->
-      <section class="slide" id="slide-15">
+      <!-- SLIDE 17: 營火晚會・學習單與自我檢核 -->
+      <section class="slide" id="slide-16">
         <div class="slide-header">
           <div>
             <div class="slide-category">情感昇華與反思總結</div>
             <div class="slide-title">🔥 營火晚會精神・學習單指引與自我檢核指標</div>
           </div>
-          <div class="slide-num">15 / 16</div>
+          <div class="slide-num">16 / 17</div>
         </div>
         <div class="grid-2">
           <div class="card card-highlight">
@@ -1235,14 +1280,14 @@ html_template = f"""<!DOCTYPE html>
         </div>
       </section>
 
-      <!-- SLIDE 16: 智慧名冊速查系統 -->
-      <section class="slide" id="slide-16">
+      <!-- SLIDE 17: 智慧名冊速查系統 -->
+      <section class="slide" id="slide-17">
         <div class="slide-header">
           <div>
             <div class="slide-category">現場執行與導師工具</div>
             <div class="slide-title">👥 二年級隔宿露營 106 位學生名冊速查系統</div>
           </div>
-          <div class="slide-num">16 / 16</div>
+          <div class="slide-num">17 / 17</div>
         </div>
         
         <!-- Search & Filter Controls -->
@@ -1344,25 +1389,27 @@ html_template = f"""<!DOCTYPE html>
     const slideTitles = [
       "01. 封面：南投國中 115 二年級隔宿露營",
       "02. 活動實施計畫與教育宗旨",
-      "03. 想一想，準備好了！行前裝備檢核清單",
-      "04. 兩天一夜精實行程日程表",
-      "05. 工作人員職掌與隨隊名冊",
-      "06. 交通乘車編組與車次分配表",
-      "07. 男生帳棚住宿清冊（A01~A13）",
-      "08. 女生帳棚住宿清冊（B01~B14）",
-      "09. 膳食野炊與烤肉小隊編組名冊",
-      "10. 童軍知識卡 ① 營地建設與屋式帳",
-      "11. 童軍知識卡 ② 童軍常用八大繩結",
-      "12. 童軍知識卡 ③ 自然方向辨識",
-      "13. 童軍知識卡 ④ 野外簡易急救處置",
-      "14. 童軍知識卡 ⑤ 臺灣六大毒蛇與急救五要五不",
-      "15. 營火晚會精神・學習單指引與自我檢核",
-      "16. 👥 隔宿露營 106 位學生名冊速查系統"
+      "03. 📢 10/23（五）行前說明會四大重點宣導",
+      "04. 想一想，準備好了！行前裝備檢核清單",
+      "05. 兩天一夜精實行程日程表",
+      "06. 工作人員職掌與隨隊名冊",
+      "07. 交通乘車編組與車次分配表",
+      "08. 男生帳棚住宿清冊（A01~A13）",
+      "09. 女生帳棚住宿清冊（B01~B14）",
+      "10. 膳食野炊與烤肉小隊編組名冊",
+      "11. 童軍知識卡 ① 營地建設與屋式帳",
+      "12. 童軍知識卡 ② 童軍常用八大繩結",
+      "13. 童軍知識卡 ③ 自然方向辨識",
+      "14. 童軍知識卡 ④ 野外簡易急救處置",
+      "15. 童軍知識卡 ⑤ 臺灣六大毒蛇與急救五要五不",
+      "16. 營火晚會精神・學習單指引與自我檢核",
+      "17. 👥 隔宿露營 106 位學生名冊速查系統"
     ];
 
     const teacherNotes = [
       "【開場引導】：請導師提醒學生集合時間為 10/27（二）上午 07:30，於校園集合後前往 921 地震公園進行逃生演練。",
       "【計畫說明】：向家長與學生強調團隊生活、做中學與生活教育核心價值。請導師協助催繳 15 位尚未入帳學生之收據。",
+      "【行前宣導】：10/23 說明會請各班導師特別強調 4 大生活常規：出發前清查違禁品、零錢限 600 元內、體育服晚上穿、手機每晚約 1 小時報平安、日間著便服/班服+深色長褲（畢旅服裝連動）、重大違規立即由機動車遣返並記大過！",
       "【行李提醒】：手電筒與健保卡為第一要件！再次提醒學生不可穿著裙子、涼鞋與貴重飾品。",
       "【日程重點】：第一天野炊競賽與營火晚會為活動高峰，第二天上午山訓垂降攀岩為意志挑戰，下午 16:20 準時返校接送。",
       "【人員職掌】：董主任隨 1 車、姚組長隨丁車、劉校長與邱經理全場巡察支援。注意隨時回報各班身心狀況。",
@@ -1380,7 +1427,7 @@ html_template = f"""<!DOCTYPE html>
     ];
 
     let currentSlide = 1;
-    const totalSlides = 16;
+    const totalSlides = 17;
 
     function updateSlide() {{
       document.querySelectorAll('.slide').forEach((slide, idx) => {{

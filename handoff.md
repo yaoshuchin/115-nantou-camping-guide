@@ -7,7 +7,7 @@
   - **GitHub 倉庫**：[https://github.com/yaoshuchin/115-nantou-camping-guide](https://github.com/yaoshuchin/115-nantou-camping-guide)
   - **GitHub Pages 線上簡報版**：[https://yaoshuchin.github.io/115-nantou-camping-guide/](https://yaoshuchin.github.io/115-nantou-camping-guide/)
   - **GitHub Pages 露營手冊網頁版**：[https://yaoshuchin.github.io/115-nantou-camping-guide/handbook.html](https://yaoshuchin.github.io/115-nantou-camping-guide/handbook.html)
-  - **Netlify 發布站點**：[http://silly-bubblegum-01fa1b.netlify.app](http://silly-bubblegum-01fa1b.netlify.app)（手冊網頁版：[http://silly-bubblegum-01fa1b.netlify.app/handbook.html](http://silly-bubblegum-01fa1b.netlify.app/handbook.html)，預設存取密碼：`My-Drop-Site`）
+  - **Netlify 發布站點**：[http://strong-frangipane-096d3d.netlify.app](http://strong-frangipane-096d3d.netlify.app)（手冊網頁版：[http://strong-frangipane-096d3d.netlify.app/handbook.html](http://strong-frangipane-096d3d.netlify.app/handbook.html)，預設存取密碼：`My-Drop-Site`）
 
 ---
 
@@ -39,6 +39,10 @@
 4. **雲端同步與雙重發布**：
    - **GitHub**：更新已推送至遠端 `main` 分支，GitHub Pages 已更新上線。
    - **Netlify**：靜態資源已完整上傳部署至最新站點。
+
+5. **實裝 10/23（五）行前說明會四大宣導重點**：
+   - **簡報版 (`index.html`)**：新增獨立投影片「03. 📢 10/23（五）行前說明會四大重點宣導」，全簡報架構擴充至 17 頁，提供導師向全體學生投影片解說之專用介面。
+   - **電子手冊版 (`handbook.html`)**：於「⚠️ 生活須知」頂部配置高警示宣導大卡、「🎒 行李清單」更新零用錢上限與服裝規定、「📅 行程總覽」加入行前重要日程橫幅，完整落實：① 違禁品出發前再清查、② 個人物品（健保卡、藥、限600元、體育服晚上穿）與手機每晚約 1 小時報平安、③ 著便服/班服+深色長褲（畢旅服裝看表現）、④ 重大違紀機動車即刻送回學校並記大過。
 
 ---
 
