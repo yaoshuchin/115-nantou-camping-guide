@@ -23,19 +23,22 @@ html_template = f"""<!DOCTYPE html>
   <title>南投國中 115 學年度二年級戶外教育（隔宿露營）教學簡報</title>
   <style>
     :root {{
-      --primary: #1b4332;
-      --primary-light: #2d6a4f;
-      --accent: #d97706;
-      --accent-light: #f59e0b;
-      --gold: #eab308;
-      --bg: #0f172a;
-      --card-bg: rgba(30, 41, 59, 0.92);
-      --card-border: rgba(255, 255, 255, 0.1);
-      --text: #f8fafc;
-      --text-muted: #94a3b8;
-      --highlight: #38bdf8;
-      --danger: #ef4444;
-      --success: #10b981;
+      --primary: #15803d;
+      --primary-light: #22c55e;
+      --primary-dark: #14532d;
+      --accent: #16a34a;
+      --accent-light: #4ade80;
+      --gold: #d97706;
+      --bg: #f2fbf5;
+      --card-bg: #ffffff;
+      --card-border: #bbf7d0;
+      --card-shadow: 0 15px 35px -5px rgba(22, 101, 52, 0.08);
+      --text: #14532d;
+      --text-body: #1e293b;
+      --text-muted: #4b6b55;
+      --highlight: #0284c7;
+      --danger: #dc2626;
+      --success: #16a34a;
       --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
     }}
 
@@ -47,8 +50,8 @@ html_template = f"""<!DOCTYPE html>
 
     body {{
       font-family: var(--font-main);
-      background: radial-gradient(circle at 20% 20%, #1e293b 0%, #0f172a 100%);
-      color: var(--text);
+      background: radial-gradient(circle at 10% 10%, #dcfce7 0%, #f0fdf4 60%, #ecfdf5 100%);
+      color: var(--text-body);
       min-height: 100vh;
       overflow-x: hidden;
     }}
@@ -60,7 +63,7 @@ html_template = f"""<!DOCTYPE html>
       left: 0;
       right: 0;
       height: 60px;
-      background: rgba(15, 23, 42, 0.95);
+      background: rgba(240, 253, 244, 0.94);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--card-border);
       display: flex;
@@ -76,7 +79,7 @@ html_template = f"""<!DOCTYPE html>
       gap: 0.75rem;
     }}
     .badge-tag {{
-      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
       color: #fff;
       font-size: 0.75rem;
       font-weight: bold;
@@ -88,7 +91,7 @@ html_template = f"""<!DOCTYPE html>
       font-size: 1.05rem;
       font-weight: 700;
       letter-spacing: 0.5px;
-      color: #fff;
+      color: #14532d;
     }}
 
     .header-controls {{
@@ -98,9 +101,9 @@ html_template = f"""<!DOCTYPE html>
     }}
 
     .btn {{
-      background: rgba(255, 255, 255, 0.08);
+      background: #ffffff;
       border: 1px solid var(--card-border);
-      color: var(--text);
+      color: #166534;
       padding: 0.4rem 0.85rem;
       border-radius: 8px;
       cursor: pointer;
@@ -110,26 +113,27 @@ html_template = f"""<!DOCTYPE html>
       gap: 0.4rem;
       text-decoration: none;
       transition: all 0.2s ease;
+      font-weight: 500;
     }}
     .btn:hover {{
-      background: rgba(255, 255, 255, 0.18);
-      border-color: var(--accent);
+      background: #dcfce7;
+      border-color: #16a34a;
       transform: translateY(-1px);
     }}
     .btn-primary {{
       background: linear-gradient(135deg, var(--primary-light), var(--primary));
-      border: 1px solid #4ade80;
+      border: 1px solid #16a34a;
       color: #fff;
       font-weight: 600;
     }}
     .btn-primary:hover {{
-      background: linear-gradient(135deg, #4ade80, var(--primary));
-      color: #0f172a;
+      background: linear-gradient(135deg, #16a34a, #14532d);
+      color: #fff;
     }}
     .btn-video {{
-      background: rgba(239, 68, 68, 0.15);
-      border: 1px solid rgba(239, 68, 68, 0.4);
-      color: #fca5a5;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      color: #dc2626;
       font-weight: 600;
       font-size: 0.8rem;
       padding: 0.3rem 0.65rem;
@@ -142,9 +146,9 @@ html_template = f"""<!DOCTYPE html>
       margin-top: 0.45rem;
     }}
     .btn-video:hover {{
-      background: #ef4444;
+      background: #dc2626;
       color: #fff;
-      border-color: #ef4444;
+      border-color: #dc2626;
     }}
 
     /* Progress bar */
@@ -154,13 +158,13 @@ html_template = f"""<!DOCTYPE html>
       left: 0;
       right: 0;
       height: 4px;
-      background: rgba(255, 255, 255, 0.1);
+      background: #dcfce7;
       z-index: 999;
     }}
     .progress-bar-fill {{
       height: 100%;
       width: 6.25%;
-      background: linear-gradient(90deg, var(--accent), var(--highlight));
+      background: linear-gradient(90deg, #16a34a, #22c55e);
       transition: width 0.3s ease;
     }}
 
@@ -190,7 +194,7 @@ html_template = f"""<!DOCTYPE html>
       border: 1px solid var(--card-border);
       border-radius: 18px;
       padding: 2.2rem 2.8rem;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 15px 40px rgba(22, 101, 52, 0.08);
       animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }}
     .slide.active {{
@@ -207,7 +211,7 @@ html_template = f"""<!DOCTYPE html>
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 2px solid #e2f5e9;
       padding-bottom: 1rem;
       margin-bottom: 1.5rem;
     }}
@@ -222,7 +226,7 @@ html_template = f"""<!DOCTYPE html>
     .slide-title {{
       font-size: 1.85rem;
       font-weight: 800;
-      color: #fff;
+      color: #14532d;
       display: flex;
       align-items: center;
       gap: 0.75rem;
@@ -230,8 +234,8 @@ html_template = f"""<!DOCTYPE html>
     .slide-num {{
       font-size: 1.1rem;
       font-weight: 700;
-      color: var(--text-muted);
-      background: rgba(255, 255, 255, 0.05);
+      color: #166534;
+      background: #dcfce7;
       padding: 0.3rem 0.8rem;
       border-radius: 8px;
     }}
@@ -257,8 +261,8 @@ html_template = f"""<!DOCTYPE html>
     }}
 
     .card {{
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--card-border);
+      background: #f8fdf9;
+      border: 1px solid #dcfce7;
       border-radius: 12px;
       padding: 1.15rem;
       display: flex;
@@ -267,8 +271,9 @@ html_template = f"""<!DOCTYPE html>
       transition: all 0.2s ease;
     }}
     .card:hover {{
-      background: rgba(255, 255, 255, 0.07);
-      border-color: rgba(255, 255, 255, 0.2);
+      background: #ffffff;
+      border-color: #86efac;
+      box-shadow: 0 6px 16px rgba(22, 101, 52, 0.08);
       transform: translateY(-2px);
     }}
     .card-highlight {{
@@ -287,7 +292,7 @@ html_template = f"""<!DOCTYPE html>
     .card-title {{
       font-size: 1.05rem;
       font-weight: 700;
-      color: #fff;
+      color: #14532d;
       margin-bottom: 0.4rem;
     }}
 
@@ -297,12 +302,12 @@ html_template = f"""<!DOCTYPE html>
       height: 140px;
       border-radius: 8px;
       overflow: hidden;
-      background: #0f172a;
+      background: #f0fdf4;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0.6rem 0;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--card-border);
     }}
     .media-box img {{
       max-width: 100%;
@@ -325,20 +330,20 @@ html_template = f"""<!DOCTYPE html>
       font-size: 0.95rem;
     }}
     table.data-table th {{
-      background: rgba(255, 255, 255, 0.08);
-      color: var(--accent-light);
+      background: #dcfce7;
+      color: #14532d;
       padding: 0.8rem 1rem;
       font-weight: 700;
-      border-bottom: 1px solid var(--card-border);
+      border-bottom: 2px solid #86efac;
       white-space: nowrap;
     }}
     table.data-table td {{
       padding: 0.75rem 1rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      color: var(--text);
+      border-bottom: 1px solid #e2e8f0;
+      color: var(--text-body);
     }}
     table.data-table tr:hover td {{
-      background: rgba(255, 255, 255, 0.04);
+      background: #f0fdf4;
     }}
 
     /* Pills & Badges */
@@ -349,28 +354,28 @@ html_template = f"""<!DOCTYPE html>
       padding: 0.2rem 0.55rem;
       border-radius: 6px;
       margin: 0.15rem 0.2rem;
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
+      background: #dcfce7;
+      color: #14532d;
     }}
     .pill-boy {{
-      background: rgba(56, 189, 248, 0.2);
-      border: 1px solid rgba(56, 189, 248, 0.4);
-      color: #7dd3fc;
+      background: #e0f2fe;
+      border: 1px solid #bae6fd;
+      color: #0369a1;
     }}
     .pill-girl {{
-      background: rgba(244, 114, 182, 0.2);
-      border: 1px solid rgba(244, 114, 182, 0.4);
-      color: #f472b6;
+      background: #fce7f3;
+      border: 1px solid #fbcfe8;
+      color: #be185d;
     }}
     .pill-veg {{
-      background: rgba(34, 197, 94, 0.2);
-      border: 1px solid rgba(34, 197, 94, 0.5);
-      color: #86efac;
+      background: #dcfce7;
+      border: 1px solid #86efac;
+      color: #15803d;
     }}
     .pill-accent {{
-      background: rgba(217, 119, 6, 0.2);
-      border: 1px solid rgba(217, 119, 6, 0.5);
-      color: #fde68a;
+      background: #fef3c7;
+      border: 1px solid #fde68a;
+      color: #b45309;
     }}
 
     /* Bottom Navigation Bar */
@@ -380,7 +385,7 @@ html_template = f"""<!DOCTYPE html>
       left: 0;
       right: 0;
       height: 60px;
-      background: rgba(15, 23, 42, 0.95);
+      background: rgba(240, 253, 244, 0.94);
       backdrop-filter: blur(12px);
       border-top: 1px solid var(--card-border);
       display: flex;
@@ -399,7 +404,7 @@ html_template = f"""<!DOCTYPE html>
     .slide-indicator {{
       font-weight: 600;
       font-size: 0.9rem;
-      color: var(--text-muted);
+      color: #166534;
     }}
 
     /* Teacher notes drawer */
@@ -408,14 +413,15 @@ html_template = f"""<!DOCTYPE html>
       bottom: 60px;
       left: 0;
       right: 0;
-      background: #1e293b;
-      border-top: 2px solid var(--accent);
+      background: #ffffff;
+      border-top: 3px solid #16a34a;
       padding: 1.25rem 2rem;
       max-height: 250px;
       overflow-y: auto;
       z-index: 998;
       display: none;
-      box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 -10px 30px rgba(22, 101, 52, 0.1);
+      color: #1e293b;
     }}
     .notes-drawer.open {{
       display: block;
@@ -428,7 +434,7 @@ html_template = f"""<!DOCTYPE html>
     .notes-title {{
       font-size: 0.9rem;
       font-weight: 700;
-      color: var(--accent);
+      color: #15803d;
       margin-bottom: 0.4rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -438,8 +444,8 @@ html_template = f"""<!DOCTYPE html>
     .modal-overlay {{
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.75);
-      backdrop-filter: blur(6px);
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
       display: none;
       align-items: center;
       justify-content: center;
@@ -450,7 +456,7 @@ html_template = f"""<!DOCTYPE html>
       display: flex;
     }}
     .modal-box {{
-      background: #1e293b;
+      background: #ffffff;
       border: 1px solid var(--card-border);
       border-radius: 16px;
       width: 100%;
@@ -458,7 +464,8 @@ html_template = f"""<!DOCTYPE html>
       max-height: 85vh;
       overflow-y: auto;
       padding: 2rem;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 25px 50px -12px rgba(22, 101, 52, 0.15);
+      color: #1e293b;
     }}
     .modal-grid {{
       display: grid;
@@ -467,7 +474,7 @@ html_template = f"""<!DOCTYPE html>
       margin-top: 1.25rem;
     }}
     .modal-card {{
-      background: rgba(255, 255, 255, 0.05);
+      background: #f0fdf4;
       border: 1px solid var(--card-border);
       border-radius: 10px;
       padding: 1rem;
@@ -475,8 +482,8 @@ html_template = f"""<!DOCTYPE html>
       transition: all 0.2s ease;
     }}
     .modal-card:hover {{
-      background: rgba(217, 119, 6, 0.15);
-      border-color: var(--accent);
+      background: #dcfce7;
+      border-color: #16a34a;
       transform: translateY(-2px);
     }}
 
@@ -486,16 +493,16 @@ html_template = f"""<!DOCTYPE html>
       flex-wrap: wrap;
       gap: 0.8rem;
       align-items: center;
-      background: rgba(255, 255, 255, 0.04);
+      background: #f0fdf4;
       padding: 1rem;
       border-radius: 12px;
       margin-bottom: 1.25rem;
       border: 1px solid var(--card-border);
     }}
     .input-text {{
-      background: rgba(15, 23, 42, 0.8);
-      border: 1px solid var(--card-border);
-      color: #fff;
+      background: #ffffff;
+      border: 1.5px solid #86efac;
+      color: #14532d;
       padding: 0.6rem 1rem;
       border-radius: 8px;
       font-size: 0.95rem;
@@ -504,13 +511,13 @@ html_template = f"""<!DOCTYPE html>
     }}
     .input-text:focus {{
       outline: none;
-      border-color: var(--highlight);
-      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+      border-color: #16a34a;
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
     }}
     .select-dropdown {{
-      background: #0f172a;
-      border: 1px solid var(--card-border);
-      color: #fff;
+      background: #ffffff;
+      border: 1.5px solid #86efac;
+      color: #14532d;
       padding: 0.6rem 0.9rem;
       border-radius: 8px;
       font-size: 0.9rem;
@@ -556,7 +563,7 @@ html_template = f"""<!DOCTYPE html>
           <h2 style="font-size: 2.2rem; color: var(--gold); margin-bottom: 1rem; font-weight: 800;">
             ～好 戲 開 鑼・探 索 自 我～
           </h2>
-          <p style="font-size: 1.25rem; color: #cbd5e1; max-width: 800px; margin: 0 auto 2rem auto; line-height: 1.8;">
+          <p style="font-size: 1.25rem; color: #334155; max-width: 800px; margin: 0 auto 2rem auto; line-height: 1.8;">
             在做中學（Learning by Doing）實踐童軍互助精神，淬鍊自立自強生活體驗，凝聚班級榮譽與團隊默契！
           </p>
           <div class="grid-3" style="max-width: 950px; margin: 0 auto;">
@@ -938,7 +945,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">1. 營地五大分區規劃</div>
-              <p style="font-size: 0.85rem; color: #cbd5e1;">搭帳區門口順風、炊事區靠水下風處、活動場、WC、垃圾場。</p>
+              <p style="font-size: 0.85rem; color: #334155;">搭帳區門口順風、炊事區靠水下風處、活動場、WC、垃圾場。</p>
               <div class="media-box"><img src="assets/p13_img3.jpeg" alt="營地分區"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=童軍+營地建設+LNT" target="_blank" class="btn-video">▶ 觀看營地建設教學</a>
@@ -946,7 +953,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">2. 屋式帳結構與器材</div>
-              <p style="font-size: 0.85rem; color: #cbd5e1;">營釘14支、主繩2條、副繩16條、營柱、雷管雷帽、內外帳。</p>
+              <p style="font-size: 0.85rem; color: #334155;">營釘14支、主繩2條、副繩16條、營柱、雷管雷帽、內外帳。</p>
               <div class="media-box"><img src="assets/camp_setup_page13.png" alt="屋式帳器材"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=童軍+屋式帳+結構+營柱營釘" target="_blank" class="btn-video">▶ 觀看器材構造解說</a>
@@ -954,7 +961,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">3. 帳棚搭設圖文四步驟</div>
-              <p style="font-size: 0.85rem; color: #cbd5e1;">鋪平內帳 ➔ 組合四柱 ➔ 釘四角撐起 ➔ 短營柱穿外帳組合。</p>
+              <p style="font-size: 0.85rem; color: #334155;">鋪平內帳 ➔ 組合四柱 ➔ 釘四角撐起 ➔ 短營柱穿外帳組合。</p>
               <div class="media-box"><img src="assets/tent_pitching_page14.png" alt="搭帳步驟"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=童軍+帳篷搭設教學+步驟" target="_blank" class="btn-video">▶ 觀看步驟示範影片</a>
@@ -962,7 +969,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">4. 搭收口訣與防蛇曬帳</div>
-              <p style="font-size: 0.85rem; color: #cbd5e1;">口訣：一拉對角二立中柱...；收外帳：一拜天地二拜高堂...。</p>
+              <p style="font-size: 0.85rem; color: #334155;">口訣：一拉對角二立中柱...；收外帳：一拜天地二拜高堂...。</p>
               <div class="media-box"><img src="assets/p14_img7.jpeg" alt="搭收口訣"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=童軍+搭帳口訣+一拉對角+收外帳" target="_blank" class="btn-video">▶ 觀看搭帳口訣示範</a>
@@ -983,7 +990,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">1. 單結 (Overhand)</div>
-              <p style="font-size: 0.82rem; color: #cbd5e1;">基礎繩端防脫結眼，防止繩頭脫落。</p>
+              <p style="font-size: 0.82rem; color: #334155;">基礎繩端防脫結眼，防止繩頭脫落。</p>
               <div class="media-box"><img src="assets/knot_1_single.png" alt="單結"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=童軍+單結+Overhand+Knot" target="_blank" class="btn-video">▶ 觀看單結教學</a>
@@ -991,7 +998,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">2. 八字結 (Figure-8)</div>
-              <p style="font-size: 0.82rem; color: #cbd5e1;">比單結大、易解，登山防墜必備。</p>
+              <p style="font-size: 0.82rem; color: #334155;">比單結大、易解，登山防墜必備。</p>
               <div class="media-box"><img src="assets/knot_2_figure8.png" alt="八字結"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=童軍+八字結+Figure+Eight+Knot" target="_blank" class="btn-video">▶ 觀看八字結教學</a>
@@ -999,7 +1006,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">3. 活結 (Slip Knot)</div>
-              <p style="font-size: 0.82rem; color: #cbd5e1;">拉單端即解開，臨時牽繫與快拆首選。</p>
+              <p style="font-size: 0.82rem; color: #334155;">拉單端即解開，臨時牽繫與快拆首選。</p>
               <div class="media-box"><img src="assets/knot_3_slip.png" alt="活結"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=童軍+活結+Slip+Knot" target="_blank" class="btn-video">▶ 觀看活結教學</a>
@@ -1007,7 +1014,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">4. 平結 (Reef Knot)</div>
-              <p style="font-size: 0.82rem; color: #cbd5e1;">接等粗繩，急救三角巾包紮首選。</p>
+              <p style="font-size: 0.82rem; color: #334155;">接等粗繩，急救三角巾包紮首選。</p>
               <div class="media-box"><img src="assets/knot_4_square.png" alt="平結"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=童軍+平結+Square+Knot+Reef+Knot" target="_blank" class="btn-video">▶ 觀看平結教學</a>
@@ -1015,7 +1022,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">5. 接繩結 (Sheet Bend)</div>
-              <p style="font-size: 0.82rem; color: #cbd5e1;">專門連接兩條不同粗細或材質繩索。</p>
+              <p style="font-size: 0.82rem; color: #334155;">專門連接兩條不同粗細或材質繩索。</p>
               <div class="media-box"><img src="assets/knot_5_sheetbend.png" alt="接繩結"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=童軍+接繩結+Sheet+Bend" target="_blank" class="btn-video">▶ 觀看接繩結教學</a>
@@ -1023,7 +1030,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">6. 雙套結 (Clove Hitch)</div>
-              <p style="font-size: 0.82rem; color: #cbd5e1;">工程結之母！繫營柱雷管、開頭與收尾。</p>
+              <p style="font-size: 0.82rem; color: #334155;">工程結之母！繫營柱雷管、開頭與收尾。</p>
               <div class="media-box"><img src="assets/knot_6_clovehitch.png" alt="雙套結"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=童軍+雙套結+Clove+Hitch" target="_blank" class="btn-video">▶ 觀看雙套結教學</a>
@@ -1031,7 +1038,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">7. 雙半結 (Two Half)</div>
-              <p style="font-size: 0.82rem; color: #cbd5e1;">繞樹幹打兩次半結，緊密栓繫不滑脫。</p>
+              <p style="font-size: 0.82rem; color: #334155;">繞樹幹打兩次半結，緊密栓繫不滑脫。</p>
               <div class="media-box"><img src="assets/knot_7_twohalf.png" alt="雙半結"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=童軍+雙半結+Two+Half+Hitches" target="_blank" class="btn-video">▶ 觀看雙半結教學</a>
@@ -1039,7 +1046,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">8. 營繩結 (Taut-Line)</div>
-              <p style="font-size: 0.82rem; color: #cbd5e1;">滑動調長度，拉緊自動卡死微調張力。</p>
+              <p style="font-size: 0.82rem; color: #334155;">滑動調長度，拉緊自動卡死微調張力。</p>
               <div class="media-box"><img src="assets/knot_8_tautline.png" alt="營繩結"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=童軍+營繩結+營釘結+Taut-line+Hitch" target="_blank" class="btn-video">▶ 觀看營繩結教學</a>
@@ -1060,7 +1067,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">1. 指南針與 16 方位盤</div>
-              <p style="font-size: 0.85rem; color: #cbd5e1;">紅針指北（磁北），標準 16 方位判讀。</p>
+              <p style="font-size: 0.85rem; color: #334155;">紅針指北（磁北），標準 16 方位判讀。</p>
               <div class="media-box"><img src="assets/dir_compass_rose.png" alt="指南針方位"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=指北針+指南針+16方位+地圖定向" target="_blank" class="btn-video">▶ 觀看指北針定位</a>
@@ -1068,7 +1075,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">2. 手錶時針太陽法</div>
-              <p style="font-size: 0.85rem; color: #cbd5e1;">時針對太陽，時針與 12 點角平分線為正南。</p>
+              <p style="font-size: 0.85rem; color: #334155;">時針對太陽，時針與 12 點角平分線為正南。</p>
               <div class="media-box"><img src="assets/direction_page17.png" alt="手錶太陽法"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=手錶+太陽+方向辨識" target="_blank" class="btn-video">▶ 觀看手錶太陽法</a>
@@ -1076,7 +1083,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">3. 夜間北極星定位</div>
-              <p style="font-size: 0.85rem; color: #cbd5e1;">北斗七星勺口延伸 5 倍；仙后座 W 開口法。</p>
+              <p style="font-size: 0.85rem; color: #334155;">北斗七星勺口延伸 5 倍；仙后座 W 開口法。</p>
               <div class="media-box"><img src="assets/p17_img3.jpeg" alt="北極星"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=北極星+尋找+北斗七星+仙后座" target="_blank" class="btn-video">▶ 觀看北極星定位</a>
@@ -1084,7 +1091,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">4. 樹木年輪與向日葵</div>
-              <p style="font-size: 0.85rem; color: #cbd5e1;">年輪密者為北；向日葵午前向東南午後向西南。</p>
+              <p style="font-size: 0.85rem; color: #334155;">年輪密者為北；向日葵午前向東南午後向西南。</p>
               <div class="media-box"><img src="assets/worksheet_page22.png" alt="自然特徵定向"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=野外求生+自然方位辨識+年輪" target="_blank" class="btn-video">▶ 觀看自然定向教學</a>
@@ -1105,7 +1112,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">1. 意外割傷處理</div>
-              <p style="font-size: 0.85rem; color: #cbd5e1;">清水沖洗、無菌紗布直接加壓止血、抬高傷肢。</p>
+              <p style="font-size: 0.85rem; color: #334155;">清水沖洗、無菌紗布直接加壓止血、抬高傷肢。</p>
               <div class="media-box"><img src="assets/fa_cuts.png" alt="割傷加壓止血"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=外傷出血+加壓止血+包紮教學" target="_blank" class="btn-video">▶ 觀看加壓止血教學</a>
@@ -1113,7 +1120,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">2. 肌肉抽筋處理</div>
-              <p style="font-size: 0.85rem; color: #cbd5e1;">反向伸展大原則：小腿抽筋將腳掌向上扳屈。</p>
+              <p style="font-size: 0.85rem; color: #334155;">反向伸展大原則：小腿抽筋將腳掌向上扳屈。</p>
               <div class="media-box"><img src="assets/fa_cramps.png" alt="抽筋處理"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=小腿抽筋+急救處理+伸展" target="_blank" class="btn-video">▶ 觀看抽筋處理教學</a>
@@ -1121,7 +1128,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">3. 流鼻血緊急處置</div>
-              <p style="font-size: 0.85rem; color: #cbd5e1;">坐下頭微前傾（切忌後仰防嗆血），捏鼻翼軟骨。</p>
+              <p style="font-size: 0.85rem; color: #334155;">坐下頭微前傾（切忌後仰防嗆血），捏鼻翼軟骨。</p>
               <div class="media-box"><img src="assets/fa_nosebleed.png" alt="流鼻血處置"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=流鼻血+正確急救姿勢+頭前傾" target="_blank" class="btn-video">▶ 觀看流鼻血處置教學</a>
@@ -1129,7 +1136,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">4. 骨折固定處置</div>
-              <p style="font-size: 0.85rem; color: #cbd5e1;">切勿推拿，就地取材夾板超過上下兩關節固定。</p>
+              <p style="font-size: 0.85rem; color: #334155;">切勿推拿，就地取材夾板超過上下兩關節固定。</p>
               <div class="media-box"><img src="assets/fa_fracture.png" alt="骨折夾板固定"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=骨折+夾板固定+急救教學" target="_blank" class="btn-video">▶ 觀看骨折固定教學</a>
@@ -1150,7 +1157,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">1. 出血性毒蛇：百步蛇</div>
-              <p style="font-size: 0.85rem; color: #cbd5e1;">吻端尖翹、黑色三角形側斑，劇痛腫脹出血。</p>
+              <p style="font-size: 0.85rem; color: #334155;">吻端尖翹、黑色三角形側斑，劇痛腫脹出血。</p>
               <div class="media-box"><img src="assets/p16_img3.jpeg" alt="百步蛇"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=百步蛇+出血性毒蛇+介紹" target="_blank" class="btn-video">▶ 觀看百步蛇生態</a>
@@ -1158,7 +1165,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">2. 神經性毒蛇：雨傘節</div>
-              <p style="font-size: 0.85rem; color: #cbd5e1;">黑白環紋、致死率極高，引起呼吸麻痺衰竭。</p>
+              <p style="font-size: 0.85rem; color: #334155;">黑白環紋、致死率極高，引起呼吸麻痺衰竭。</p>
               <div class="media-box"><img src="assets/p16_img4.jpeg" alt="雨傘節"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=雨傘節+神經性毒蛇+介紹" target="_blank" class="btn-video">▶ 觀看雨傘節生態</a>
@@ -1166,7 +1173,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card">
             <div>
               <div class="card-title">3. 毒蛇圖鑑綜合鑑別</div>
-              <p style="font-size: 0.85rem; color: #cbd5e1;">龜殼花、赤尾青竹絲、眼鏡蛇、鎖鏈蛇辨別。</p>
+              <p style="font-size: 0.85rem; color: #334155;">龜殼花、赤尾青竹絲、眼鏡蛇、鎖鏈蛇辨別。</p>
               <div class="media-box"><img src="assets/snakes_cards.png" alt="毒蛇圖鑑"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=臺灣六大毒蛇+辨識教學" target="_blank" class="btn-video">▶ 觀看六大毒蛇鑑別</a>
@@ -1174,7 +1181,7 @@ html_template = f"""<!DOCTYPE html>
           <div class="card card-highlight">
             <div>
               <div class="card-title">4. 蛇傷急救「五要五不」</div>
-              <p style="font-size: 0.85rem; color: #cbd5e1;">五要：視為毒蛇、記特徵、脫飾品、包紮、送醫；五不：不割、不吸、不冰、不紮死、不喝酒！</p>
+              <p style="font-size: 0.85rem; color: #334155;">五要：視為毒蛇、記特徵、脫飾品、包紮、送醫；五不：不割、不吸、不冰、不紮死、不喝酒！</p>
               <div class="media-box"><img src="assets/snakes_safety_page16.png" alt="五要五不"></div>
             </div>
             <a href="https://www.youtube.com/results?search_query=疾管署+毒蛇咬傷+五要五不" target="_blank" class="btn-video">▶ 觀看疾管署五要五不</a>

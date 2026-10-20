@@ -6,7 +6,7 @@
 - **GitHub 專案倉庫**：[yaoshuchin/115-nantou-camping-guide](https://github.com/yaoshuchin/115-nantou-camping-guide)
 - **GitHub Pages 線上簡報版**：[https://yaoshuchin.github.io/115-nantou-camping-guide/](https://yaoshuchin.github.io/115-nantou-camping-guide/)
 - **GitHub Pages 露營手冊網頁版**：[https://yaoshuchin.github.io/115-nantou-camping-guide/handbook.html](https://yaoshuchin.github.io/115-nantou-camping-guide/handbook.html)
-- **Netlify 線上簡報備援**：[http://stirring-sunflower-3236f7.netlify.app](http://stirring-sunflower-3236f7.netlify.app)（存取密碼：`My-Drop-Site`）
+- **Netlify 線上簡報備援**：[http://harmonious-griffin-a72e95.netlify.app](http://harmonious-griffin-a72e95.netlify.app)（存取密碼：`My-Drop-Site`）
 
 ---
 
