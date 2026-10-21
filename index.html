@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>南投國中 115 學年度二年級戶外教育（隔宿露營）教學簡報</title>
   <style>
-    :root {
+    :root, [data-theme="green"] {
       --primary: #15803d;
       --primary-light: #22c55e;
       --primary-dark: #14532d;
@@ -13,12 +13,124 @@
       --accent-light: #4ade80;
       --gold: #d97706;
       --bg: #f2fbf5;
+      --body-gradient: radial-gradient(circle at 10% 10%, #dcfce7 0%, #f0fdf4 60%, #ecfdf5 100%);
       --card-bg: #ffffff;
       --card-border: #bbf7d0;
       --card-shadow: 0 15px 35px -5px rgba(22, 101, 52, 0.08);
       --text: #14532d;
       --text-body: #1e293b;
       --text-muted: #4b6b55;
+      --topbar-bg: rgba(240, 253, 244, 0.95);
+      --highlight: #0284c7;
+      --danger: #dc2626;
+      --success: #16a34a;
+      --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    }
+
+    [data-theme="purple"] {
+      --primary: #7e22ce;
+      --primary-light: #a855f7;
+      --primary-dark: #581c87;
+      --accent: #9333ea;
+      --accent-light: #c084fc;
+      --gold: #d97706;
+      --bg: #faf5ff;
+      --body-gradient: radial-gradient(circle at 10% 10%, #f3e8ff 0%, #faf5ff 60%, #f5f3ff 100%);
+      --card-bg: #ffffff;
+      --card-border: #e9d5ff;
+      --card-shadow: 0 15px 35px -5px rgba(126, 34, 206, 0.08);
+      --text: #581c87;
+      --text-body: #1e293b;
+      --text-muted: #6b21a8;
+      --topbar-bg: rgba(250, 245, 255, 0.95);
+      --highlight: #0284c7;
+      --danger: #dc2626;
+      --success: #16a34a;
+      --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    }
+
+    [data-theme="red"] {
+      --primary: #e11d48;
+      --primary-light: #fb7185;
+      --primary-dark: #9f1239;
+      --accent: #be123c;
+      --accent-light: #fda4af;
+      --gold: #d97706;
+      --bg: #fff1f2;
+      --body-gradient: radial-gradient(circle at 10% 10%, #ffe4e6 0%, #fff1f2 60%, #fff5f5 100%);
+      --card-bg: #ffffff;
+      --card-border: #fecdd3;
+      --card-shadow: 0 15px 35px -5px rgba(225, 29, 72, 0.08);
+      --text: #9f1239;
+      --text-body: #1e293b;
+      --text-muted: #881337;
+      --topbar-bg: rgba(255, 241, 242, 0.95);
+      --highlight: #0284c7;
+      --danger: #dc2626;
+      --success: #16a34a;
+      --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    }
+
+    [data-theme="blue"] {
+      --primary: #0284c7;
+      --primary-light: #38bdf8;
+      --primary-dark: #0369a1;
+      --accent: #0284c7;
+      --accent-light: #7dd3fc;
+      --gold: #d97706;
+      --bg: #f0f9ff;
+      --body-gradient: radial-gradient(circle at 10% 10%, #e0f2fe 0%, #f0f9ff 60%, #e0f7fa 100%);
+      --card-bg: #ffffff;
+      --card-border: #bae6fd;
+      --card-shadow: 0 15px 35px -5px rgba(3, 105, 161, 0.08);
+      --text: #0369a1;
+      --text-body: #1e293b;
+      --text-muted: #075985;
+      --topbar-bg: rgba(240, 249, 255, 0.95);
+      --highlight: #0284c7;
+      --danger: #dc2626;
+      --success: #16a34a;
+      --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    }
+
+    [data-theme="gray"] {
+      --primary: #475569;
+      --primary-light: #94a3b8;
+      --primary-dark: #1e293b;
+      --accent: #334155;
+      --accent-light: #cbd5e1;
+      --gold: #d97706;
+      --bg: #f8fafc;
+      --body-gradient: radial-gradient(circle at 10% 10%, #f1f5f9 0%, #f8fafc 60%, #e2e8f0 100%);
+      --card-bg: #ffffff;
+      --card-border: #cbd5e1;
+      --card-shadow: 0 15px 35px -5px rgba(30, 41, 59, 0.08);
+      --text: #1e293b;
+      --text-body: #1e293b;
+      --text-muted: #475569;
+      --topbar-bg: rgba(248, 250, 252, 0.95);
+      --highlight: #0284c7;
+      --danger: #dc2626;
+      --success: #16a34a;
+      --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    }
+
+    [data-theme="orange"] {
+      --primary: #d97706;
+      --primary-light: #fbbf24;
+      --primary-dark: #92400e;
+      --accent: #b45309;
+      --accent-light: #fde68a;
+      --gold: #b45309;
+      --bg: #fffbeb;
+      --body-gradient: radial-gradient(circle at 10% 10%, #fef3c7 0%, #fffbeb 60%, #fff7ed 100%);
+      --card-bg: #ffffff;
+      --card-border: #fde68a;
+      --card-shadow: 0 15px 35px -5px rgba(180, 83, 9, 0.08);
+      --text: #92400e;
+      --text-body: #1e293b;
+      --text-muted: #78350f;
+      --topbar-bg: rgba(255, 251, 235, 0.95);
       --highlight: #0284c7;
       --danger: #dc2626;
       --success: #16a34a;
@@ -33,10 +145,11 @@
 
     body {
       font-family: var(--font-main);
-      background: radial-gradient(circle at 10% 10%, #dcfce7 0%, #f0fdf4 60%, #ecfdf5 100%);
+      background: var(--body-gradient);
       color: var(--text-body);
       min-height: 100vh;
       overflow-x: hidden;
+      transition: background 0.3s ease;
     }
 
     /* Top Header Bar */
@@ -46,14 +159,15 @@
       left: 0;
       right: 0;
       height: 60px;
-      background: rgba(240, 253, 244, 0.94);
+      background: var(--topbar-bg);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--card-border);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 1.5rem;
+      padding: 0 1.25rem;
       z-index: 1000;
+      transition: all 0.3s ease;
     }
 
     .logo-group {
@@ -74,45 +188,81 @@
       font-size: 1.05rem;
       font-weight: 700;
       letter-spacing: 0.5px;
-      color: #14532d;
+      color: var(--primary-dark);
     }
 
     .header-controls {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.5rem;
+      flex-wrap: wrap;
     }
 
     .btn {
       background: #ffffff;
-      border: 1px solid var(--card-border);
-      color: #166534;
-      padding: 0.4rem 0.85rem;
+      border: 1.5px solid var(--card-border);
+      color: var(--primary-dark);
+      padding: 0.4rem 0.8rem;
       border-radius: 8px;
       cursor: pointer;
       font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      text-decoration: none;
+      gap: 0.35rem;
       transition: all 0.2s ease;
-      font-weight: 500;
     }
     .btn:hover {
-      background: #dcfce7;
-      border-color: #16a34a;
+      background: var(--bg);
+      border-color: var(--primary);
       transform: translateY(-1px);
     }
+
     .btn-primary {
       background: linear-gradient(135deg, var(--primary-light), var(--primary));
-      border: 1px solid #16a34a;
+      border: 1px solid var(--primary);
       color: #fff;
       font-weight: 600;
     }
     .btn-primary:hover {
-      background: linear-gradient(135deg, #16a34a, #14532d);
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       color: #fff;
     }
+
+    /* Floating Navigation Controls */
+    .side-nav-btn {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 80px;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(8px);
+      border: 1.5px solid var(--card-border);
+      color: var(--primary-dark);
+      font-size: 1.5rem;
+      font-weight: 900;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1050;
+      transition: all 0.25s ease;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      user-select: none;
+    }
+    .side-nav-prev { left: 16px; }
+    .side-nav-next { right: 16px; }
+    .side-nav-btn:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary-light);
+      transform: translateY(-50%) scale(1.08);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+    }
+
     .btn-video {
       background: #fef2f2;
       border: 1px solid #fecaca;
@@ -464,6 +614,11 @@
       cursor: pointer;
       transition: all 0.2s ease;
     }
+    .modal-card.current-active {
+      background: var(--bg) !important;
+      border: 2px solid var(--primary) !important;
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
+    }
     .modal-card:hover {
       background: #dcfce7;
       border-color: #16a34a;
@@ -517,8 +672,27 @@
       <span class="header-title">南投國中 115 學年度二年級隔宿露營簡報</span>
     </div>
     <div class="header-controls">
+      <!-- 🎨 背景主題切換 -->
+      <div style="display:flex; align-items:center; gap:0.35rem; background:rgba(255,255,255,0.85); padding:0.25rem 0.6rem; border-radius:8px; border:1px solid var(--card-border);">
+        <span style="font-size:0.85rem; font-weight:700; color:var(--primary-dark);">🎨 背景：</span>
+        <select id="themeSelector" onchange="changeTheme(this.value)" style="border:none; background:transparent; font-size:0.85rem; font-weight:700; color:var(--primary-dark); cursor:pointer; outline:none;">
+          <option value="green">🌿 淡綠 (預設)</option>
+          <option value="purple">🍇 淡紫</option>
+          <option value="red">🌸 淡紅</option>
+          <option value="blue">🌊 淡藍</option>
+          <option value="gray">🌫️ 淺灰</option>
+          <option value="orange">🍊 淺橙</option>
+        </select>
+      </div>
+
+      <!-- 快速上一頁與下一頁功能鍵 -->
+      <div style="display:flex; align-items:center; gap:0.25rem;">
+        <button class="btn" onclick="prevSlide()" title="上一張 (←)" style="padding:0.4rem 0.65rem; font-weight:700;">◀ 上一頁</button>
+        <button class="btn" onclick="nextSlide()" title="下一張 (→)" style="padding:0.4rem 0.65rem; font-weight:700;">下一頁 ▶</button>
+      </div>
+
       <a href="handbook.html" class="btn">📖 前往手冊網頁版</a>
-      <button class="btn" id="btnOpenIndex" onclick="openDirectory()">📑 目錄索引</button>
+      <button class="btn" id="btnOpenIndex" onclick="openDirectory()">📑 目錄總覽</button>
       <button class="btn" id="btnNotes" onclick="toggleNotes()">💡 教學重點</button>
       <button class="btn btn-primary" id="btnFullscreen" onclick="toggleFullscreen()">⛶ 全螢幕放映</button>
     </div>
@@ -1125,6 +1299,25 @@
             <a href="https://www.youtube.com/results?search_query=野外求生+自然方位辨識+年輪" target="_blank" class="btn-video">▶ 觀看自然定向教學</a>
           </div>
         </div>
+
+        <!-- 🌕 延伸教學工具：月相模擬器 -->
+        <div class="card card-highlight" style="margin-top: 1.25rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; background: linear-gradient(135deg, rgba(2,132,199,0.08), rgba(217,119,6,0.08)); border: 1.5px dashed var(--accent);">
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div style="font-size: 2.3rem;">🌕</div>
+            <div>
+              <div class="card-title" style="margin-bottom: 0.25rem; font-size: 1.15rem; color: var(--text);">
+                🔭 延伸童軍野營教學：月相模擬器 (Moon Phase Simulator)
+              </div>
+              <p style="font-size: 0.9rem; color: #334155;">
+                野營夜間辨位與觀星輔助！透過 Gemini 互動工具即時觀察月球公轉軌跡、日地月相對位置與初一至三十月相盈虧變化。
+              </p>
+            </div>
+          </div>
+          <a href="https://gemini.google.com/share/90fe02a031a5?social_preview=false&skid=498c1de2-4192-4fb7-9b14-92d3a058c761" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.4rem; font-size: 0.95rem; font-weight: bold; border-radius: 9999px; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 14px rgba(2,132,199,0.25);">
+            <span>🌕 開啟月相模擬器</span>
+            <span style="font-size: 0.8rem; opacity: 0.9;">(點擊新分頁開啟 ↗)</span>
+          </a>
+        </div>
       </section>
 
       <!-- SLIDE 17: 【教學參考 4】野外簡易急救處置 -->
@@ -1355,9 +1548,12 @@
   <!-- Modal Index / Directory -->
   <div class="modal-overlay" id="directoryModal" onclick="closeDirectory(event)">
     <div class="modal-box" onclick="event.stopPropagation()">
-      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--card-border); padding-bottom: 0.8rem;">
-        <h3 style="font-size: 1.3rem; color: #fff;">📑 投影片章節目錄與快速跳轉</h3>
-        <button class="btn" onclick="closeDirectory()">關閉 ✖</button>
+      <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--card-border); padding-bottom: 0.8rem;">
+        <div>
+          <h3 style="font-size: 1.35rem; color: var(--primary-dark); font-weight: 800;">📑 投影片章節目錄總覽</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">點擊任一章節卡片即可快速跳轉至該投影片（共 17 頁，支援鍵盤 ESC 關閉）</p>
+        </div>
+        <button class="btn btn-primary" onclick="closeDirectory()" style="padding: 0.4rem 1rem;">關閉 ✖</button>
       </div>
       <div class="modal-grid" id="modalDirectoryGrid">
         <!-- Injected via JS -->
@@ -1462,14 +1658,30 @@
       }
     }
 
+    // 主題背景切換
+    function changeTheme(themeName) {
+      document.body.setAttribute('data-theme', themeName);
+      localStorage.setItem('nantouCampingTheme', themeName);
+      const selector = document.getElementById('themeSelector');
+      if (selector) selector.value = themeName;
+    }
+
+    // 目錄總覽功能修正
     function openDirectory() {
       const modal = document.getElementById('directoryModal');
       const grid = document.getElementById('modalDirectoryGrid');
       grid.innerHTML = '';
       slideTitles.forEach((title, idx) => {
         const card = document.createElement('div');
-        card.className = 'modal-card';
-        card.innerHTML = `<strong style="color:var(--gold); font-size:1.1rem;">#${idx+1}</strong><div style="margin-top:0.3rem; font-size:0.9rem;">${title}</div>`;
+        const isCurrent = (idx + 1 === currentSlide);
+        card.className = 'modal-card' + (isCurrent ? ' current-active' : '');
+        card.innerHTML = `
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <strong style="color:var(--primary); font-size:1.15rem;">#${String(idx+1).padStart(2, '0')}</strong>
+            ${isCurrent ? '<span style="background:var(--primary); color:#fff; font-size:0.75rem; padding:0.15rem 0.5rem; border-radius:9999px; font-weight:bold;">📍 當前頁面</span>' : ''}
+          </div>
+          <div style="margin-top:0.4rem; font-size:0.92rem; font-weight:600; color:#1e293b; line-height:1.4;">${title}</div>
+        `;
         card.onclick = () => goToSlide(idx + 1);
         grid.appendChild(card);
       });
@@ -1544,11 +1756,19 @@
       document.getElementById('filterBus').value = 'ALL';
       document.getElementById('filterGender').value = 'ALL';
       renderStudents(studentsData);
+
+    // 初始化讀取背景主題
+    const savedTheme = localStorage.getItem('nantouCampingTheme') || 'green';
+    changeTheme(savedTheme);
     }
 
     // Initialization
     updateSlide();
     renderStudents(studentsData);
+
+    // 初始化讀取背景主題
+    const savedTheme = localStorage.getItem('nantouCampingTheme') || 'green';
+    changeTheme(savedTheme);
   </script>
 </body>
 </html>

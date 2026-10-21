@@ -186,6 +186,18 @@ scout_items = [
       },
     {
         "cat": "direction",
+        "tag": "自然方向辨識・天文互動",
+        "title": "月相模擬器 (Moon Phase Simulator)",
+        "subtitle": "日地月相對位置、月球公轉與月相盈虧即時互動模擬",
+        "img": "assets/p17_img3.jpeg",
+        "desc": "露營夜間辨認方位與觀測夜空的必備互動工具！模擬月球繞地球公轉時的受光面與在地球上所見的月相變化（新月、上弦月、滿月、下弦月）。",
+        "webUrl": "https://gemini.google.com/share/90fe02a031a5?social_preview=false&skid=498c1de2-4192-4fb7-9b14-92d3a058c761",
+        "webTitle": "🌕 開啟月相模擬器 (Gemini 互動工具)",
+        "videoUrl": "https://www.youtube.com/results?search_query=月相變化+動畫模擬+地球月球太陽",
+        "videoTitle": "🎬 推薦影片：月相變化原理"
+    },
+    {
+        "cat": "direction",
         "tag": "自然方向辨識",
         "title": "年輪疏密與植物向光性",
         "subtitle": "年輪朝南稀疏朝北密集，向日葵清晨向東黃昏向西",
@@ -1388,6 +1400,70 @@ html_content = f"""<!DOCTYPE html>
         color: #000;
       }}
     }}
+  
+    /* Sub-tab Navigation (Level 2 Nested Tabs) */
+    .sub-tab-nav-bar {{
+      background: #ffffff;
+      border: 1.5px solid #bae6fd;
+      border-radius: 14px;
+      padding: 0.75rem 1.25rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.06);
+    }}
+    .sub-tab-title {{
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #0369a1;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }}
+    .sub-tab-pills {{
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }}
+    .sub-tab-btn {{
+      padding: 0.45rem 1.15rem;
+      border-radius: 9999px;
+      border: 1.5px solid #bae6fd;
+      background: #f0f9ff;
+      color: #0369a1;
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }}
+    .sub-tab-btn:hover {{
+      background: #e0f2fe;
+      border-color: #0284c7;
+    }}
+    .sub-tab-btn.active {{
+      background: #0284c7;
+      color: #ffffff;
+      border-color: #0284c7;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+    }}
+    .sub-pane {{
+      display: none;
+    }}
+    .sub-pane.active {{
+      display: block;
+      animation: fadeIn 0.25s ease;
+    }}
+    @keyframes fadeIn {{
+      from {{ opacity: 0; transform: translateY(4px); }}
+      to {{ opacity: 1; transform: translateY(0); }}
+    }}
+
   </style>
 </head>
 <body>
@@ -1434,16 +1510,13 @@ html_content = f"""<!DOCTYPE html>
   <nav class="tab-nav-bar" id="tabNavBar">
     <div class="tab-nav-container">
       <a href="index.html" class="btn-to-slide">🖥️ 切換至教學簡報</a>
-      <button class="tab-btn active" onclick="switchTab('schedule')">📅 行程總覽</button>
-      <button class="tab-btn" onclick="switchTab('lookup')">🔍 查帳分車</button>
-      <button class="tab-btn" onclick="switchTab('buses')">🚌 團務車次</button>
-      <button class="tab-btn" onclick="switchTab('tents')">⛺ 帳棚住宿</button>
-      <button class="tab-btn" onclick="switchTab('meals')">🍲 野炊膳食</button>
-      <button class="tab-btn" onclick="switchTab('scout')">⚜️ 童軍技能</button>
-      <button class="tab-btn" onclick="switchTab('mountain')">🧗 山訓探索</button>
-      <button class="tab-btn" onclick="switchTab('worksheet')">🎯 露營學習單</button>
-      <button class="tab-btn" onclick="switchTab('packing')">🎒 行李清單</button>
-      <button class="tab-btn" onclick="switchTab('notices')">⚠️ 生活須知</button>
+      <button class="tab-btn active" data-tab="schedule" onclick="switchTab('schedule')">📅 行程總覽</button>
+      <button class="tab-btn" data-tab="lookup" onclick="switchTab('lookup')">🔍 查帳分車</button>
+      <button class="tab-btn" data-tab="buses" onclick="switchTab('buses')">🚌 團務車次</button>
+      <button class="tab-btn" data-tab="camp-cook" onclick="switchTab('camp-cook')">⛺ 帳棚・野炊</button>
+      <button class="tab-btn" data-tab="scout-mountain" onclick="switchTab('scout-mountain')">⚜️ 童軍・山訓</button>
+      <button class="tab-btn" data-tab="worksheet" onclick="switchTab('worksheet')">🎯 露營學習單</button>
+      <button class="tab-btn" data-tab="pack-rules" onclick="switchTab('pack-rules')">🎒 行李・生活</button>
     </div>
   </nav>
 
@@ -1863,8 +1936,20 @@ html_content = f"""<!DOCTYPE html>
       </div>
     </section>
 
-    <!-- ==================== TAB 4: ⛺ 帳棚住宿 ==================== -->
-    <section class="tab-pane" id="pane-tents">
+    <!-- ==================== TAB 4: ⛺ 帳棚・野炊 (二階層次標籤) ==================== -->
+    <section class="tab-pane" id="pane-camp-cook">
+      <div class="sub-tab-nav-bar">
+        <div class="sub-tab-title">⛺ 帳棚住宿與野炊膳食管理專區</div>
+        <div class="sub-tab-pills">
+          <button class="sub-tab-btn active" id="subbtn-tents" onclick="switchSubTab('camp-cook', 'tents')">⛺ 帳棚住宿編組</button>
+          <button class="sub-tab-btn" id="subbtn-meals" onclick="switchSubTab('camp-cook', 'meals')">🍲 野炊膳食編組</button>
+        </div>
+      </div>
+
+      <!-- 二階子區域 1: 帳棚住宿 -->
+      <div class="sub-pane active" id="subpane-tents">
+        <!-- ==================== TAB 4: ⛺ 帳棚住宿 ==================== -->
+    
       <div class="section-header">
         <div>
           <h2 class="section-title">⛺ 營地配置與帳棚住宿編組</h2>
@@ -1893,10 +1978,12 @@ html_content = f"""<!DOCTYPE html>
       <div class="buses-grid" id="tentsContainer">
         {tents_cards_html}
       </div>
-    </section>
+      </div>
 
-    <!-- ==================== TAB 5: 🍲 野炊膳食 ==================== -->
-    <section class="tab-pane" id="pane-meals">
+      <!-- 二階子區域 2: 野炊膳食 -->
+      <div class="sub-pane" id="subpane-meals">
+        <!-- ==================== TAB 5: 🍲 野炊膳食 ==================== -->
+    
       <div class="section-header">
         <div>
           <h2 class="section-title">🍲 炊事競賽與野炊烤肉分組</h2>
@@ -1917,10 +2004,25 @@ html_content = f"""<!DOCTYPE html>
       <div class="buses-grid" id="mealsContainer">
         {meals_cards_html}
       </div>
+      </div>
     </section>
 
-    <!-- ==================== TAB 6: ⚜️ 童軍技能 (Image 4 Style) ==================== -->
-    <section class="tab-pane" id="pane-scout">
+    </section>
+
+    <!-- ==================== TAB 5: ⚜️ 童軍・山訓 (二階層次標籤) ==================== -->
+    <section class="tab-pane" id="pane-scout-mountain">
+      <div class="sub-tab-nav-bar">
+        <div class="sub-tab-title">⚜️ 童軍技能教育與山訓探索活動專區</div>
+        <div class="sub-tab-pills">
+          <button class="sub-tab-btn active" id="subbtn-scout" onclick="switchSubTab('scout-mountain', 'scout')">⚜️ 童軍技能圖鑑</button>
+          <button class="sub-tab-btn" id="subbtn-mountain" onclick="switchSubTab('scout-mountain', 'mountain')">🧗 山訓探索教育</button>
+        </div>
+      </div>
+
+      <!-- 二階子區域 1: 童軍技能 -->
+      <div class="sub-pane active" id="subpane-scout">
+        <!-- ==================== TAB 6: ⚜️ 童軍技能 (Image 4 Style) ==================== -->
+    
       <div class="section-header">
         <div>
           <h2 class="section-title">⚜️ 童軍技能教育圖鑑與教學影片</h2>
@@ -1942,10 +2044,12 @@ html_content = f"""<!DOCTYPE html>
       <div class="scout-grid" id="scoutCardsContainer">
         {scout_cards_html}
       </div>
-    </section>
+      </div>
 
-    <!-- ==================== TAB 7: 🧗 山訓探索 ==================== -->
-    <section class="tab-pane" id="pane-mountain">
+      <!-- 二階子區域 2: 山訓探索 -->
+      <div class="sub-pane" id="subpane-mountain">
+        <!-- ==================== TAB 7: 🧗 山訓探索 ==================== -->
+    
       <div class="section-header">
         <div>
           <h2 class="section-title">🧗 山訓與探索教育活動</h2>
@@ -2017,6 +2121,9 @@ html_content = f"""<!DOCTYPE html>
           <li><strong>五、出局立即高舉雙手：</strong>被擊中者應大聲喊出「陣亡」並高舉雙手迅速離開火線至安全區。</li>
         </ul>
       </div>
+      </div>
+    </section>
+
     </section>
 
     <!-- ==================== TAB 8: 🎯 露營學習單 (Image 5 Style) ==================== -->
@@ -2052,8 +2159,20 @@ html_content = f"""<!DOCTYPE html>
       </div>
     </section>
 
-    <!-- ==================== TAB 9: 🎒 行李清單 ==================== -->
-    <section class="tab-pane" id="pane-packing">
+    <!-- ==================== TAB 7: 🎒 行李・生活 (二階層次標籤) ==================== -->
+    <section class="tab-pane" id="pane-pack-rules">
+      <div class="sub-tab-nav-bar">
+        <div class="sub-tab-title">🎒 行程裝備檢核與生活須知手冊</div>
+        <div class="sub-tab-pills">
+          <button class="sub-tab-btn active" id="subbtn-packing" onclick="switchSubTab('pack-rules', 'packing')">🎒 行李清單檢核</button>
+          <button class="sub-tab-btn" id="subbtn-notices" onclick="switchSubTab('pack-rules', 'notices')">⚠️ 生活公約與須知</button>
+        </div>
+      </div>
+
+      <!-- 二階子區域 1: 行李清單 -->
+      <div class="sub-pane active" id="subpane-packing">
+        <!-- ==================== TAB 9: 🎒 行李清單 ==================== -->
+    
       <div class="section-header">
         <div>
           <h2 class="section-title">🎒 行前裝備與行李攜帶清單</h2>
@@ -2095,10 +2214,12 @@ html_content = f"""<!DOCTYPE html>
           <label class="check-item"><input type="checkbox"><span><strong>出發前再次清查違禁品</strong>（禁菸酒檳榔刀械）</span></label>
         </div>
       </div>
-    </section>
+      </div>
 
-    <!-- ==================== TAB 10: ⚠️ 生活須知 ==================== -->
-    <section class="tab-pane" id="pane-notices">
+      <!-- 二階子區域 2: 生活須知 -->
+      <div class="sub-pane" id="subpane-notices">
+        <!-- ==================== TAB 10: ⚠️ 生活須知 ==================== -->
+    
       <div class="section-header">
         <div>
           <h2 class="section-title">⚠️ 營規生活守則與安全應變須知</h2>
@@ -2170,6 +2291,7 @@ html_content = f"""<!DOCTYPE html>
           </ul>
         </div>
       </div>
+      </div>
     </section>
 
   </main>
@@ -2182,30 +2304,79 @@ html_content = f"""<!DOCTYPE html>
   </div>
 
   <script>
-    // Tab Switching Logic
+    // 二階層次標籤映射表
+    const tabMapping = {{
+      'tents': {{ main: 'camp-cook', sub: 'tents' }},
+      'meals': {{ main: 'camp-cook', sub: 'meals' }},
+      'camp-cook': {{ main: 'camp-cook', sub: 'tents' }},
+      'scout': {{ main: 'scout-mountain', sub: 'scout' }},
+      'mountain': {{ main: 'scout-mountain', sub: 'mountain' }},
+      'scout-mountain': {{ main: 'scout-mountain', sub: 'scout' }},
+      'packing': {{ main: 'pack-rules', sub: 'packing' }},
+      'notices': {{ main: 'pack-rules', sub: 'notices' }},
+      'pack-rules': {{ main: 'pack-rules', sub: 'packing' }}
+    }};
+
+    // 主標籤切換
     function switchTab(tabId) {{
-      const tabs = document.querySelectorAll('.tab-btn');
-      tabs.forEach(t => {{
-        if (t.getAttribute('onclick') && t.getAttribute('onclick').includes(tabId)) {{
-          t.classList.add('active');
+      let mainTab = tabId;
+      let subTab = null;
+
+      if (tabMapping[tabId]) {{
+        mainTab = tabMapping[tabId].main;
+        subTab = tabMapping[tabId].sub;
+      }}
+
+      // 更新主標籤高亮
+      document.querySelectorAll('.tab-btn').forEach(btn => {{
+        if (btn.getAttribute('data-tab') === mainTab) {{
+          btn.classList.add('active');
         }} else {{
-          t.classList.remove('active');
+          btn.classList.remove('active');
         }}
       }});
 
-      const panes = document.querySelectorAll('.tab-pane');
-      panes.forEach(p => p.classList.remove('active'));
-
-      const targetPane = document.getElementById('pane-' + tabId);
+      // 切換主區域
+      document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+      const targetPane = document.getElementById('pane-' + mainTab);
       if (targetPane) {{
         targetPane.classList.add('active');
       }}
 
-      // Scroll smoothly to navigation bar
+      // 若指定二階子標籤，切換子標籤
+      if (subTab) {{
+        switchSubTab(mainTab, subTab);
+      }}
+
+      // 平滑滾動至導覽列
       const navBar = document.getElementById('tabNavBar');
       if (navBar) {{
-        window.scrollTo({{ top: navBar.offsetTop, behavior: 'smooth' }});
+        window.scrollTo({{ top: navBar.offsetTop - 10, behavior: 'smooth' }});
       }}
+    }}
+
+    // 二階子標籤切換
+    function switchSubTab(mainId, subId) {{
+      const pane = document.getElementById('pane-' + mainId);
+      if (!pane) return;
+
+      // 更新子按鈕高亮
+      pane.querySelectorAll('.sub-tab-btn').forEach(btn => {{
+        if (btn.id === 'subbtn-' + subId) {{
+          btn.classList.add('active');
+        }} else {{
+          btn.classList.remove('active');
+        }}
+      }});
+
+      // 切換子區域
+      pane.querySelectorAll('.sub-pane').forEach(sp => {{
+        if (sp.id === 'subpane-' + subId) {{
+          sp.classList.add('active');
+        }} else {{
+          sp.classList.remove('active');
+        }}
+      }});
     }}
 
     // Day 1 / Day 2 Switcher in Schedule Tab
