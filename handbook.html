@@ -994,6 +994,7 @@
           <div class="hero-info-meta">👤 團控經理：邱O凱 (0972-721756) | 學校電話：049-2222549</div>
           <div class="hero-actions">
             <a href="tel:0972721756" class="btn-hero-action">📞 打電話 (邱O凱 經理)</a>
+            <button onclick="switchTab('briefing')" class="btn-hero-action" style="background:#fee2e2; color:#b91c1c; border:1px solid #fca5a5; font-weight:700;">📢 10/22線上說明會</button>
             <button onclick="switchTab('notices')" class="btn-hero-action">🚑 緊急通訊網</button>
           </div>
         </div>
@@ -1005,6 +1006,7 @@
   <nav class="tab-nav-bar" id="tabNavBar">
     <div class="tab-nav-container">
       <a href="index.html" class="btn-to-slide">🖥️ 切換至教學簡報</a>
+      <button class="tab-btn" data-tab="briefing" onclick="switchTab('briefing')" style="background:#fff1f2; border:1.5px solid #fecdd3; color:#be123c; font-weight:800;">📢 10/22線上說明會</button>
       <button class="tab-btn active" data-tab="schedule" onclick="switchTab('schedule')">📅 行程總覽</button>
       <button class="tab-btn" data-tab="lookup" onclick="switchTab('lookup')">🔍 查帳分車</button>
       <button class="tab-btn" data-tab="buses" onclick="switchTab('buses')">🚌 團務車次</button>
@@ -1017,6 +1019,129 @@
 
   <!-- Main Content Panes -->
   <main class="main-content">
+
+    <!-- ==================== TAB 0: 📢 10/22 線上說明會 ==================== -->
+    <section class="tab-pane" id="pane-briefing">
+      <div class="section-header">
+        <div>
+          <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.3rem;">
+            <span style="background:#ef4444; color:#fff; font-size:0.75rem; font-weight:bold; padding:0.2rem 0.6rem; border-radius:9999px;">重要行前錄影</span>
+            <span style="background:#0284c7; color:#fff; font-size:0.75rem; font-weight:bold; padding:0.2rem 0.6rem; border-radius:9999px;">21頁完整簡報</span>
+            <span style="background:#16a34a; color:#fff; font-size:0.75rem; font-weight:bold; padding:0.2rem 0.6rem; border-radius:9999px;">海報公告</span>
+          </div>
+          <h2 class="section-title">📢 10/22 二年級隔宿露營行前線上說明會</h2>
+          <p class="section-subtitle">家長與同學行前必看！涵蓋行程叮嚀、行李裝備、安全紀律與21頁圖文簡報完整播放</p>
+        </div>
+      </div>
+
+      <!-- 1. 嵌入 YouTube 說明會影片 -->
+      <div class="briefing-video-card" style="background:#ffffff; border:1.5px solid #bae6fd; border-radius:16px; padding:1.25rem; box-shadow:0 4px 20px rgba(2,132,199,0.08); margin-bottom:1.5rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.85rem; flex-wrap:wrap; gap:0.5rem;">
+          <div style="display:flex; align-items:center; gap:0.5rem;">
+            <span style="font-size:1.3rem;">🎬</span>
+            <h3 style="font-size:1.15rem; color:#0369a1; font-weight:800; margin:0;">說明會線上錄影完整重溫</h3>
+          </div>
+          <a href="https://youtu.be/Q81Z1Sxl0_0" target="_blank" class="btn-hero-action" style="background:#fef2f2; border:1px solid #fecaca; color:#dc2626; font-weight:700; text-decoration:none; padding:0.35rem 0.85rem; border-radius:8px; font-size:0.85rem; display:inline-flex; align-items:center; gap:0.35rem;">
+            ▶ 在 YouTube 開啟播放 ↗
+          </a>
+        </div>
+        <div style="position:relative; width:100%; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; background:#0f172a; box-shadow:0 6px 18px rgba(0,0,0,0.15);">
+          <iframe src="https://www.youtube-nocookie.com/embed/Q81Z1Sxl0_0" title="1151022投中隔宿露營行前說明會" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <p style="font-size:0.88rem; color:#64748b; margin-top:0.75rem; line-height:1.6;">
+          📌 <strong>影片導讀</strong>：請同學與家長在出發前完整觀看說明會錄影，詳細了解各班集合時間、乘車秩序、活動流程、違禁品管制與生活常規要求。
+        </p>
+      </div>
+
+      <!-- 2. 21 張投影片簡報播放器 -->
+      <div class="briefing-slideshow-card" style="background:#ffffff; border:1.5px solid #bae6fd; border-radius:16px; padding:1.25rem; box-shadow:0 4px 20px rgba(2,132,199,0.08); margin-bottom:1.5rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.6rem;">
+          <div>
+            <div style="display:flex; align-items:center; gap:0.5rem;">
+              <span style="font-size:1.3rem;">📑</span>
+              <h3 style="font-size:1.15rem; color:#0369a1; font-weight:800; margin:0;">1151022 二年級隔宿露營行前須知簡報 (21 頁)</h3>
+            </div>
+            <p style="font-size:0.85rem; color:#64748b; margin-top:0.25rem;">支援上一頁、下一頁按鈕切換、縮圖快速跳轉，點擊大圖可開啟全螢幕高解析放大檢視</p>
+          </div>
+          <div style="display:flex; align-items:center; gap:0.5rem; background:#f0f9ff; padding:0.35rem 0.75rem; border-radius:10px; border:1px solid #bae6fd;">
+            <button class="sub-tab-btn" onclick="prevBriefingSlide()" style="padding:0.35rem 0.85rem; font-weight:bold; font-size:0.88rem;">◀ 上一張</button>
+            <span id="briefingSlideIndicator" style="font-size:0.95rem; font-weight:800; color:#0284c7; min-width:90px; text-align:center;">第 1 / 21 頁</span>
+            <button class="sub-tab-btn" onclick="nextBriefingSlide()" style="padding:0.35rem 0.85rem; font-weight:bold; font-size:0.88rem;">下一張 ▶</button>
+          </div>
+        </div>
+
+        <!-- 播放器主畫面 (大圖) -->
+        <div style="position:relative; background:#0f172a; border-radius:12px; overflow:hidden; text-align:center; min-height:300px; display:flex; align-items:center; justify-content:center; box-shadow:inset 0 0 25px rgba(0,0,0,0.5);">
+          <img id="briefingMainImg" src="assets/briefing/slide_1.jpg" alt="行前須知投影片 1" style="max-width:100%; max-height:560px; width:auto; height:auto; object-fit:contain; border-radius:8px; cursor:zoom-in; transition:opacity 0.2s ease;" onclick="openLightbox(this.src, '行前須知投影片 第 ' + currentBriefingSlide + ' 頁')">
+          
+          <!-- 左右浮動翻頁按鈕 -->
+          <button onclick="prevBriefingSlide()" style="position:absolute; left:12px; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.65); color:#fff; border:1.5px solid rgba(255,255,255,0.4); border-radius:50%; width:46px; height:46px; font-size:1.3rem; font-weight:bold; cursor:pointer; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(6px); transition:all 0.2s; box-shadow:0 4px 12px rgba(0,0,0,0.3);" title="上一張 (←)">◀</button>
+          <button onclick="nextBriefingSlide()" style="position:absolute; right:12px; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.65); color:#fff; border:1.5px solid rgba(255,255,255,0.4); border-radius:50%; width:46px; height:46px; font-size:1.3rem; font-weight:bold; cursor:pointer; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(6px); transition:all 0.2s; box-shadow:0 4px 12px rgba(0,0,0,0.3);" title="下一張 (→)">▶</button>
+        </div>
+
+        <!-- 底部 21 張微縮圖滑軌 -->
+        <div style="margin-top:0.85rem;">
+          <div style="font-size:0.82rem; font-weight:700; color:#64748b; margin-bottom:0.35rem;">縮圖快速瀏覽（點擊任一頁立即切換）：</div>
+          <div style="display:flex; gap:0.5rem; overflow-x:auto; padding-bottom:0.6rem; scrollbar-width:thin;" id="briefingThumbnailsStrip">
+            <img src="assets/briefing/slide_1.jpg" alt="投影片 1" class="briefing-thumb-item" onclick="goToBriefingSlide(1)" style="width:72px; height:42px; object-fit:cover; border-radius:6px; cursor:pointer; border:2px solid #0284c7; flex-shrink:0; transition:all 0.2s;" title="跳至第 1 頁">
+            <img src="assets/briefing/slide_2.jpg" alt="投影片 2" class="briefing-thumb-item" onclick="goToBriefingSlide(2)" style="width:72px; height:42px; object-fit:cover; border-radius:6px; cursor:pointer; border:2px solid #e2e8f0; flex-shrink:0; transition:all 0.2s;" title="跳至第 2 頁">
+            <img src="assets/briefing/slide_3.jpg" alt="投影片 3" class="briefing-thumb-item" onclick="goToBriefingSlide(3)" style="width:72px; height:42px; object-fit:cover; border-radius:6px; cursor:pointer; border:2px solid #e2e8f0; flex-shrink:0; transition:all 0.2s;" title="跳至第 3 頁">
+            <img src="assets/briefing/slide_4.jpg" alt="投影片 4" class="briefing-thumb-item" onclick="goToBriefingSlide(4)" style="width:72px; height:42px; object-fit:cover; border-radius:6px; cursor:pointer; border:2px solid #e2e8f0; flex-shrink:0; transition:all 0.2s;" title="跳至第 4 頁">
+            <img src="assets/briefing/slide_5.jpg" alt="投影片 5" class="briefing-thumb-item" onclick="goToBriefingSlide(5)" style="width:72px; height:42px; object-fit:cover; border-radius:6px; cursor:pointer; border:2px solid #e2e8f0; flex-shrink:0; transition:all 0.2s;" title="跳至第 5 頁">
+            <img src="assets/briefing/slide_6.jpg" alt="投影片 6" class="briefing-thumb-item" onclick="goToBriefingSlide(6)" style="width:72px; height:42px; object-fit:cover; border-radius:6px; cursor:pointer; border:2px solid #e2e8f0; flex-shrink:0; transition:all 0.2s;" title="跳至第 6 頁">
+            <img src="assets/briefing/slide_7.jpg" alt="投影片 7" class="briefing-thumb-item" onclick="goToBriefingSlide(7)" style="width:72px; height:42px; object-fit:cover; border-radius:6px; cursor:pointer; border:2px solid #e2e8f0; flex-shrink:0; transition:all 0.2s;" title="跳至第 7 頁">
+            <img src="assets/briefing/slide_8.jpg" alt="投影片 8" class="briefing-thumb-item" onclick="goToBriefingSlide(8)" style="width:72px; height:42px; object-fit:cover; border-radius:6px; cursor:pointer; border:2px solid #e2e8f0; flex-shrink:0; transition:all 0.2s;" title="跳至第 8 頁">
+            <img src="assets/briefing/slide_9.jpg" alt="投影片 9" class="briefing-thumb-item" onclick="goToBriefingSlide(9)" style="width:72px; height:42px; object-fit:cover; border-radius:6px; cursor:pointer; border:2px solid #e2e8f0; flex-shrink:0; transition:all 0.2s;" title="跳至第 9 頁">
+            <img src="assets/briefing/slide_10.jpg" alt="投影片 10" class="briefing-thumb-item" onclick="goToBriefingSlide(10)" style="width:72px; height:42px; object-fit:cover; border-radius:6px; cursor:pointer; border:2px solid #e2e8f0; flex-shrink:0; transition:all 0.2s;" title="跳至第 10 頁">
+            <img src="assets/briefing/slide_11.jpg" alt="投影片 11" class="briefing-thumb-item" onclick="goToBriefingSlide(11)" style="width:72px; height:42px; object-fit:cover; border-radius:6px; cursor:pointer; border:2px solid #e2e8f0; flex-shrink:0; transition:all 0.2s;" title="跳至第 11 頁">
+            <img src="assets/briefing/slide_12.jpg" alt="投影片 12" class="briefing-thumb-item" onclick="goToBriefingSlide(12)" style="width:72px; height:42px; object-fit:cover; border-radius:6px; cursor:pointer; border:2px solid #e2e8f0; flex-shrink:0; transition:all 0.2s;" title="跳至第 12 頁">
+            <img src="assets/briefing/slide_13.jpg" alt="投影片 13" class="briefing-thumb-item" onclick="goToBriefingSlide(13)" style="width:72px; height:42px; object-fit:cover; border-radius:6px; cursor:pointer; border:2px solid #e2e8f0; flex-shrink:0; transition:all 0.2s;" title="跳至第 13 頁">
+            <img src="assets/briefing/slide_14.jpg" alt="投影片 14" class="briefing-thumb-item" onclick="goToBriefingSlide(14)" style="width:72px; height:42px; object-fit:cover; border-radius:6px; cursor:pointer; border:2px solid #e2e8f0; flex-shrink:0; transition:all 0.2s;" title="跳至第 14 頁">
+            <img src="assets/briefing/slide_15.jpg" alt="投影片 15" class="briefing-thumb-item" onclick="goToBriefingSlide(15)" style="width:72px; height:42px; object-fit:cover; border-radius:6px; cursor:pointer; border:2px solid #e2e8f0; flex-shrink:0; transition:all 0.2s;" title="跳至第 15 頁">
+            <img src="assets/briefing/slide_16.jpg" alt="投影片 16" class="briefing-thumb-item" onclick="goToBriefingSlide(16)" style="width:72px; height:42px; object-fit:cover; border-radius:6px; cursor:pointer; border:2px solid #e2e8f0; flex-shrink:0; transition:all 0.2s;" title="跳至第 16 頁">
+            <img src="assets/briefing/slide_17.jpg" alt="投影片 17" class="briefing-thumb-item" onclick="goToBriefingSlide(17)" style="width:72px; height:42px; object-fit:cover; border-radius:6px; cursor:pointer; border:2px solid #e2e8f0; flex-shrink:0; transition:all 0.2s;" title="跳至第 17 頁">
+            <img src="assets/briefing/slide_18.jpg" alt="投影片 18" class="briefing-thumb-item" onclick="goToBriefingSlide(18)" style="width:72px; height:42px; object-fit:cover; border-radius:6px; cursor:pointer; border:2px solid #e2e8f0; flex-shrink:0; transition:all 0.2s;" title="跳至第 18 頁">
+            <img src="assets/briefing/slide_19.jpg" alt="投影片 19" class="briefing-thumb-item" onclick="goToBriefingSlide(19)" style="width:72px; height:42px; object-fit:cover; border-radius:6px; cursor:pointer; border:2px solid #e2e8f0; flex-shrink:0; transition:all 0.2s;" title="跳至第 19 頁">
+            <img src="assets/briefing/slide_20.jpg" alt="投影片 20" class="briefing-thumb-item" onclick="goToBriefingSlide(20)" style="width:72px; height:42px; object-fit:cover; border-radius:6px; cursor:pointer; border:2px solid #e2e8f0; flex-shrink:0; transition:all 0.2s;" title="跳至第 20 頁">
+            <img src="assets/briefing/slide_21.jpg" alt="投影片 21" class="briefing-thumb-item" onclick="goToBriefingSlide(21)" style="width:72px; height:42px; object-fit:cover; border-radius:6px; cursor:pointer; border:2px solid #e2e8f0; flex-shrink:0; transition:all 0.2s;" title="跳至第 21 頁">
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. 最下方 2 張海報與須知重點圖片 -->
+      <div class="briefing-posters-card" style="background:#ffffff; border:1.5px solid #bae6fd; border-radius:16px; padding:1.25rem; box-shadow:0 4px 20px rgba(2,132,199,0.08);">
+        <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:1rem;">
+          <span style="font-size:1.3rem;">📌</span>
+          <h3 style="font-size:1.15rem; color:#0369a1; font-weight:800; margin:0;">行前須知海報與重點公告圖檔</h3>
+        </div>
+        
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:1.25rem;">
+          <!-- 海報 -->
+          <div style="border:1.5px solid #e0f2fe; border-radius:12px; padding:1rem; background:#f8fafc; text-align:center;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem;">
+              <h4 style="font-size:1rem; color:#0f172a; font-weight:700; margin:0;">📄 1151022 二年級隔宿露營行前須知海報</h4>
+              <button onclick="openLightbox('assets/briefing/briefing_poster.jpg', '二年級隔宿露營行前須知海報')" class="sub-tab-btn" style="padding:0.25rem 0.6rem; font-size:0.8rem;">🔍 放大</button>
+            </div>
+            <div style="overflow:hidden; border-radius:8px; background:#fff; box-shadow:0 4px 14px rgba(0,0,0,0.08); cursor:zoom-in;" onclick="openLightbox('assets/briefing/briefing_poster.jpg', '二年級隔宿露營行前須知海報')">
+              <img src="assets/briefing/briefing_poster.jpg" alt="行前須知海報" style="width:100%; height:auto; display:block; transition:transform 0.25s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <p style="font-size:0.85rem; color:#64748b; margin-top:0.6rem;">點擊圖片可開啟全螢幕高解析度檢視</p>
+          </div>
+
+          <!-- 行前須知 4 -->
+          <div style="border:1.5px solid #e0f2fe; border-radius:12px; padding:1rem; background:#f8fafc; text-align:center;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem;">
+              <h4 style="font-size:1rem; color:#0f172a; font-weight:700; margin:0;">📋 1151022 二年級隔宿露營行前須知 4</h4>
+              <button onclick="openLightbox('assets/briefing/briefing_notice4.png', '二年級隔宿露營行前須知 4')" class="sub-tab-btn" style="padding:0.25rem 0.6rem; font-size:0.8rem;">🔍 放大</button>
+            </div>
+            <div style="overflow:hidden; border-radius:8px; background:#fff; box-shadow:0 4px 14px rgba(0,0,0,0.08); cursor:zoom-in;" onclick="openLightbox('assets/briefing/briefing_notice4.png', '二年級隔宿露營行前須知 4')">
+              <img src="assets/briefing/briefing_notice4.png" alt="行前須知 4" style="width:100%; height:auto; display:block; transition:transform 0.25s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <p style="font-size:0.85rem; color:#64748b; margin-top:0.6rem;">點擊圖片可開啟全螢幕高解析度檢視</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ==================== TAB 1: 📅 行程總覽 ==================== -->
     <section class="tab-pane active" id="pane-schedule">
@@ -3746,6 +3871,8 @@
   <script>
     // 二階層次標籤映射表
     const tabMapping = {
+      'briefing': { main: 'briefing', sub: null },
+      'online-briefing': { main: 'briefing', sub: null },
       'tents': { main: 'camp-cook', sub: 'tents' },
       'meals': { main: 'camp-cook', sub: 'meals' },
       'camp-cook': { main: 'camp-cook', sub: 'tents' },
@@ -3818,6 +3945,88 @@
         }
       });
     }
+
+    // 10/22 線上說明會簡報輪播器邏輯
+    let currentBriefingSlide = 1;
+    const totalBriefingSlides = 21;
+
+    function updateBriefingSlide() {
+      const img = document.getElementById('briefingMainImg');
+      const indicator = document.getElementById('briefingSlideIndicator');
+      if (img) {
+        img.style.opacity = '0.3';
+        setTimeout(() => {
+          img.src = `assets/briefing/slide_${currentBriefingSlide}.jpg`;
+          img.alt = `行前須知投影片 ${currentBriefingSlide}`;
+          img.style.opacity = '1';
+        }, 100);
+      }
+      if (indicator) {
+        indicator.innerText = `第 ${currentBriefingSlide} / ${totalBriefingSlides} 頁`;
+      }
+      // 更新縮圖外框高亮
+      document.querySelectorAll('.briefing-thumb-item').forEach((thumb, idx) => {
+        if (idx + 1 === currentBriefingSlide) {
+          thumb.style.borderColor = '#0284c7';
+          thumb.style.boxShadow = '0 0 0 2px rgba(2,132,199,0.4)';
+          thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        } else {
+          thumb.style.borderColor = '#e2e8f0';
+          thumb.style.boxShadow = 'none';
+        }
+      });
+    }
+
+    function nextBriefingSlide() {
+      if (currentBriefingSlide < totalBriefingSlides) {
+        currentBriefingSlide++;
+      } else {
+        currentBriefingSlide = 1;
+      }
+      updateBriefingSlide();
+    }
+
+    function prevBriefingSlide() {
+      if (currentBriefingSlide > 1) {
+        currentBriefingSlide--;
+      } else {
+        currentBriefingSlide = totalBriefingSlides;
+      }
+      updateBriefingSlide();
+    }
+
+    function goToBriefingSlide(n) {
+      currentBriefingSlide = n;
+      updateBriefingSlide();
+    }
+
+    // Lightbox 大圖預覽
+    function openLightbox(src, caption) {
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+      if (modal && img) {
+        img.src = src;
+        if (cap) cap.innerText = caption || '';
+        modal.style.display = 'flex';
+      }
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      if (modal) modal.style.display = 'none';
+    }
+
+    // 鍵盤導航支援
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+      const briefingPane = document.getElementById('pane-briefing');
+      if (briefingPane && briefingPane.classList.contains('active')) {
+        if (e.key === 'ArrowRight' || e.key === 'PageDown') nextBriefingSlide();
+        if (e.key === 'ArrowLeft' || e.key === 'PageUp') prevBriefingSlide();
+      }
+    });
+
 
     // Day 1 / Day 2 Switcher in Schedule Tab
     function switchDay(day) {
@@ -3962,5 +4171,14 @@
       });
     });
   </script>
+  <!-- Lightbox Modal for Fullscreen Image Preview -->
+  <div id="lightboxModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.88); backdrop-filter:blur(8px); z-index:3000; align-items:center; justify-content:center; padding:1.5rem;" onclick="closeLightbox()">
+    <div style="position:relative; max-width:94vw; max-height:94vh; text-align:center;" onclick="event.stopPropagation()">
+      <img id="lightboxImg" src="" style="max-width:100%; max-height:86vh; border-radius:8px; box-shadow:0 25px 50px rgba(0,0,0,0.6);">
+      <div id="lightboxCaption" style="color:#ffffff; font-weight:700; margin-top:0.75rem; font-size:1.05rem; text-shadow:0 2px 4px rgba(0,0,0,0.8);"></div>
+      <button onclick="closeLightbox()" style="position:absolute; top:-16px; right:-16px; background:#ef4444; color:#fff; border:2px solid #fff; border-radius:50%; width:38px; height:38px; font-size:1.2rem; font-weight:bold; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(0,0,0,0.3);">✖</button>
+    </div>
+  </div>
+
 </body>
 </html>
