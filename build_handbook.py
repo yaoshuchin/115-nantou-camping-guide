@@ -1499,7 +1499,7 @@ html_content = f"""<!DOCTYPE html>
           <div class="hero-info-meta">👤 團控經理：邱O凱 (0972-721756) | 學校電話：049-2222549</div>
           <div class="hero-actions">
             <a href="tel:0972721756" class="btn-hero-action">📞 打電話 (邱O凱 經理)</a>
-            <button onclick="switchTab('briefing')" class="btn-hero-action" style="background:#fee2e2; color:#b91c1c; border:1px solid #fca5a5; font-weight:700;">📢 10/22線上說明會</button>
+            <button onclick="switchTab('briefing')" class="btn-hero-action" style="background:#fee2e2; color:#b91c1c; border:1px solid #fca5a5; font-weight:700;">📢 10/23線上說明會</button>
             <button onclick="switchTab('notices')" class="btn-hero-action">🚑 緊急通訊網</button>
           </div>
         </div>
@@ -1511,7 +1511,7 @@ html_content = f"""<!DOCTYPE html>
   <nav class="tab-nav-bar" id="tabNavBar">
     <div class="tab-nav-container">
       <a href="index.html" class="btn-to-slide">🖥️ 切換至教學簡報</a>
-      <button class="tab-btn" data-tab="briefing" onclick="switchTab('briefing')" style="background:#fff1f2; border:1.5px solid #fecdd3; color:#be123c; font-weight:800;">📢 10/22線上說明會</button>
+      <button class="tab-btn" data-tab="briefing" onclick="switchTab('briefing')" style="background:#fff1f2; border:1.5px solid #fecdd3; color:#be123c; font-weight:800;">📢 10/23線上說明會</button>
       <button class="tab-btn active" data-tab="schedule" onclick="switchTab('schedule')">📅 行程總覽</button>
       <button class="tab-btn" data-tab="lookup" onclick="switchTab('lookup')">🔍 查帳分車</button>
       <button class="tab-btn" data-tab="buses" onclick="switchTab('buses')">🚌 團務車次</button>
@@ -1525,7 +1525,7 @@ html_content = f"""<!DOCTYPE html>
   <!-- Main Content Panes -->
   <main class="main-content">
 
-    <!-- ==================== TAB 0: 📢 10/22 線上說明會 ==================== -->
+    <!-- ==================== TAB 0: 📢 10/23 線上說明會 ==================== -->
     <section class="tab-pane" id="pane-briefing">
       <div class="section-header">
         <div>
@@ -1534,8 +1534,42 @@ html_content = f"""<!DOCTYPE html>
             <span style="background:#0284c7; color:#fff; font-size:0.75rem; font-weight:bold; padding:0.2rem 0.6rem; border-radius:9999px;">21頁完整簡報</span>
             <span style="background:#16a34a; color:#fff; font-size:0.75rem; font-weight:bold; padding:0.2rem 0.6rem; border-radius:9999px;">海報公告</span>
           </div>
-          <h2 class="section-title">📢 10/22 二年級隔宿露營行前線上說明會</h2>
+          <h2 class="section-title">📢 10/23 二年級隔宿露營行前線上說明會</h2>
           <p class="section-subtitle">家長與同學行前必看！涵蓋行程叮嚀、行李裝備、安全紀律與21頁圖文簡報完整播放</p>
+        </div>
+      </div>
+
+      <!-- 10/23 行前說明會四大重點宣導 -->
+      <div style="background:#fff1f2; border:2px solid #fecdd3; border-radius:16px; padding:1.5rem; margin-bottom:1.5rem; box-shadow:0 4px 15px rgba(225, 29, 72, 0.08);">
+        <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:1rem;">
+          <span style="background:#e11d48; color:#fff; font-size:0.85rem; font-weight:700; padding:0.3rem 0.8rem; border-radius:9999px;">重要行前宣導</span>
+          <h3 style="font-size:1.35rem; font-weight:800; color:#9f1239; margin:0;">📢 10/23（五）隔宿露營行前說明會四大重點</h3>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1rem;">
+          <div style="background:#ffffff; border:1px solid #fecdd3; border-radius:12px; padding:1.1rem;">
+            <div style="font-weight:700; color:#be123c; font-size:1.05rem; margin-bottom:0.4rem;">🚫 一、違禁品出發前再檢查</div>
+            <p style="font-size:0.92rem; color:#4c0519; line-height:1.65; margin:0;">
+              嚴禁攜帶菸酒、檳榔、各類刀械利器、打火機及危險物品。<strong>出發前請家長與導師務必再徹底檢查一次行李！</strong>
+            </p>
+          </div>
+          <div style="background:#ffffff; border:1px solid #fecdd3; border-radius:12px; padding:1.1rem;">
+            <div style="font-weight:700; color:#be123c; font-size:1.05rem; margin-bottom:0.4rem;">📱 二、個人物品與手機統一保管</div>
+            <p style="font-size:0.92rem; color:#4c0519; line-height:1.65; margin:0;">
+              健保卡、個人醫藥必帶；<strong>零用錢限制在 600 元以內</strong>；<strong>學校體育服供晚上洗澡後就寢穿著</strong>。手機由學校導師統一保管，<strong>晚上約有 1 小時開放向家長打電話報平安</strong>。
+            </p>
+          </div>
+          <div style="background:#ffffff; border:1px solid #fecdd3; border-radius:12px; padding:1.1rem;">
+            <div style="font-weight:700; color:#be123c; font-size:1.05rem; margin-bottom:0.4rem;">👕 三、服裝儀容與畢旅連動</div>
+            <p style="font-size:0.92rem; color:#4c0519; line-height:1.65; margin:0;">
+              日間活動著<strong>休閒便服或班服（下身一律著深色長褲）</strong>。本次露營生活常規表現將作為<strong>三年級畢業旅行服裝規定之重要評量依據（畢旅服裝看表現！）</strong>
+            </p>
+          </div>
+          <div style="background:#ffffff; border:2px solid #ef4444; border-radius:12px; padding:1.1rem; background:#fff5f5;">
+            <div style="font-weight:700; color:#b91c1c; font-size:1.05rem; margin-bottom:0.4rem;">🚨 四、機動車即刻送回學校</div>
+            <p style="font-size:0.92rem; color:#7f1d1d; line-height:1.65; margin:0;">
+              活動期間凡違犯校規之<strong>打架、抽菸、喝酒、吃檳榔等重大偏差行為，一律由「機動車即刻送回學校，通知家長帶回家管教」，並依校規予以「記大過處分」！</strong>
+            </p>
+          </div>
         </div>
       </div>
 
@@ -1551,7 +1585,7 @@ html_content = f"""<!DOCTYPE html>
           </a>
         </div>
         <div style="position:relative; width:100%; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; background:#0f172a; box-shadow:0 6px 18px rgba(0,0,0,0.15);">
-          <iframe src="https://www.youtube-nocookie.com/embed/Q81Z1Sxl0_0" title="1151022投中隔宿露營行前說明會" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe src="https://www.youtube-nocookie.com/embed/Q81Z1Sxl0_0" title="1151023投中隔宿露營行前說明會" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
         <p style="font-size:0.88rem; color:#64748b; margin-top:0.75rem; line-height:1.6;">
           📌 <strong>影片導讀</strong>：請同學與家長在出發前完整觀看說明會錄影，詳細了解各班集合時間、乘車秩序、活動流程、違禁品管制與生活常規要求。
@@ -1564,7 +1598,7 @@ html_content = f"""<!DOCTYPE html>
           <div>
             <div style="display:flex; align-items:center; gap:0.5rem;">
               <span style="font-size:1.3rem;">📑</span>
-              <h3 style="font-size:1.15rem; color:#0369a1; font-weight:800; margin:0;">1151022 二年級隔宿露營行前須知簡報 (21 頁)</h3>
+              <h3 style="font-size:1.15rem; color:#0369a1; font-weight:800; margin:0;">1151023 二年級隔宿露營行前須知簡報 (21 頁)</h3>
             </div>
             <p style="font-size:0.85rem; color:#64748b; margin-top:0.25rem;">支援上一頁、下一頁按鈕切換、縮圖快速跳轉，點擊大圖可開啟全螢幕高解析放大檢視</p>
           </div>
@@ -1624,7 +1658,7 @@ html_content = f"""<!DOCTYPE html>
           <!-- 海報 -->
           <div style="border:1.5px solid #e0f2fe; border-radius:12px; padding:1rem; background:#f8fafc; text-align:center;">
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem;">
-              <h4 style="font-size:1rem; color:#0f172a; font-weight:700; margin:0;">📄 1151022 二年級隔宿露營行前須知海報</h4>
+              <h4 style="font-size:1rem; color:#0f172a; font-weight:700; margin:0;">📄 1151023 二年級隔宿露營行前須知海報</h4>
               <button onclick="openLightbox('assets/briefing/briefing_poster.jpg', '二年級隔宿露營行前須知海報')" class="sub-tab-btn" style="padding:0.25rem 0.6rem; font-size:0.8rem;">🔍 放大</button>
             </div>
             <div style="overflow:hidden; border-radius:8px; background:#fff; box-shadow:0 4px 14px rgba(0,0,0,0.08); cursor:zoom-in;" onclick="openLightbox('assets/briefing/briefing_poster.jpg', '二年級隔宿露營行前須知海報')">
@@ -1636,7 +1670,7 @@ html_content = f"""<!DOCTYPE html>
           <!-- 行前須知 4 -->
           <div style="border:1.5px solid #e0f2fe; border-radius:12px; padding:1rem; background:#f8fafc; text-align:center;">
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.6rem;">
-              <h4 style="font-size:1rem; color:#0f172a; font-weight:700; margin:0;">📋 1151022 二年級隔宿露營行前須知 4</h4>
+              <h4 style="font-size:1rem; color:#0f172a; font-weight:700; margin:0;">📋 1151023 二年級隔宿露營行前須知 4</h4>
               <button onclick="openLightbox('assets/briefing/briefing_notice4.png', '二年級隔宿露營行前須知 4')" class="sub-tab-btn" style="padding:0.25rem 0.6rem; font-size:0.8rem;">🔍 放大</button>
             </div>
             <div style="overflow:hidden; border-radius:8px; background:#fff; box-shadow:0 4px 14px rgba(0,0,0,0.08); cursor:zoom-in;" onclick="openLightbox('assets/briefing/briefing_notice4.png', '二年級隔宿露營行前須知 4')">
@@ -2352,38 +2386,18 @@ html_content = f"""<!DOCTYPE html>
         </div>
       </div>
 
-      <!-- 10/23 行前說明會四大重點宣導 -->
-      <div style="background:#fff1f2; border:2px solid #fecdd3; border-radius:16px; padding:1.5rem; margin-bottom:1.5rem; box-shadow:0 4px 15px rgba(225, 29, 72, 0.08);">
-        <div style="display:flex; align-items:center; gap:0.6rem; margin-bottom:1rem;">
-          <span style="background:#e11d48; color:#fff; font-size:0.85rem; font-weight:700; padding:0.3rem 0.8rem; border-radius:9999px;">重要行前宣導</span>
-          <h3 style="font-size:1.35rem; font-weight:800; color:#9f1239; margin:0;">📢 10/23（五）隔宿露營行前說明會四大重點</h3>
-        </div>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1rem;">
-          <div style="background:#ffffff; border:1px solid #fecdd3; border-radius:12px; padding:1.1rem;">
-            <div style="font-weight:700; color:#be123c; font-size:1.05rem; margin-bottom:0.4rem;">🚫 一、違禁品出發前再檢查</div>
-            <p style="font-size:0.92rem; color:#4c0519; line-height:1.65; margin:0;">
-              嚴禁攜帶菸酒、檳榔、各類刀械利器、打火機及危險物品。<strong>出發前請家長與導師務必再徹底檢查一次行李！</strong>
-            </p>
-          </div>
-          <div style="background:#ffffff; border:1px solid #fecdd3; border-radius:12px; padding:1.1rem;">
-            <div style="font-weight:700; color:#be123c; font-size:1.05rem; margin-bottom:0.4rem;">📱 二、個人物品與手機統一保管</div>
-            <p style="font-size:0.92rem; color:#4c0519; line-height:1.65; margin:0;">
-              健保卡、個人醫藥必帶；<strong>零用錢限制在 600 元以內</strong>；<strong>學校體育服供晚上洗澡後就寢穿著</strong>。手機由學校導師統一保管，<strong>晚上約有 1 小時開放向家長打電話報平安</strong>。
-            </p>
-          </div>
-          <div style="background:#ffffff; border:1px solid #fecdd3; border-radius:12px; padding:1.1rem;">
-            <div style="font-weight:700; color:#be123c; font-size:1.05rem; margin-bottom:0.4rem;">👕 三、服裝儀容與畢旅連動</div>
-            <p style="font-size:0.92rem; color:#4c0519; line-height:1.65; margin:0;">
-              日間活動著<strong>休閒便服或班服（下身一律著深色長褲）</strong>。本次露營生活常規表現將作為<strong>三年級畢業旅行服裝規定之重要評量依據（畢旅服裝看表現！）</strong>
-            </p>
-          </div>
-          <div style="background:#ffffff; border:2px solid #ef4444; border-radius:12px; padding:1.1rem; background:#fff5f5;">
-            <div style="font-weight:700; color:#b91c1c; font-size:1.05rem; margin-bottom:0.4rem;">🚨 四、機動車即刻送回學校</div>
-            <p style="font-size:0.92rem; color:#7f1d1d; line-height:1.65; margin:0;">
-              活動期間凡違犯校規之<strong>打架、抽菸、喝酒、吃檳榔等重大偏差行為，一律由「機動車即刻送回學校，通知家長帶回家管教」，並依校規予以「記大過處分」！</strong>
-            </p>
+      <!-- 10/23 行前說明會四大重點連結 -->
+      <div style="background:#fff1f2; border:1.5px solid #fecdd3; border-radius:12px; padding:0.9rem 1.25rem; margin-bottom:1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.6rem;">
+        <div style="display:flex; align-items:center; gap:0.6rem;">
+          <span style="font-size:1.3rem;">📢</span>
+          <div>
+            <strong style="color:#9f1239; font-size:1rem;">10/23（五）隔宿露營行前說明會四大重點宣導與線上說明會</strong>
+            <p style="font-size:0.85rem; color:#881337; margin:0.15rem 0 0 0;">違禁品檢查・手機集中保管・服裝畢旅連動・機動車遣返</p>
           </div>
         </div>
+        <button onclick="switchTab('briefing')" class="btn-hero-action" style="background:#e11d48; color:#fff; border:none; padding:0.4rem 1rem; border-radius:8px; font-weight:700; font-size:0.88rem; cursor:pointer;">
+          查看 10/23 說明會專區 ➔
+        </button>
       </div>
 
       <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:1.25rem;">
@@ -2506,7 +2520,7 @@ html_content = f"""<!DOCTYPE html>
       }});
     }}
 
-    // 10/22 線上說明會簡報輪播器邏輯
+    // 10/23 線上說明會簡報輪播器邏輯
     let currentBriefingSlide = 1;
     const totalBriefingSlides = 21;
 
