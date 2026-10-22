@@ -1560,9 +1560,12 @@ html_content = f"""<!DOCTYPE html>
           </div>
           <div style="background:#ffffff; border:1px solid #fecdd3; border-radius:12px; padding:1.1rem;">
             <div style="font-weight:700; color:#be123c; font-size:1.05rem; margin-bottom:0.4rem;">👕 三、服裝儀容與畢旅連動</div>
-            <p style="font-size:0.92rem; color:#4c0519; line-height:1.65; margin:0;">
-              日間活動著<strong>休閒便服或班服（下身一律著深色長褲）</strong>。本次露營生活常規表現將作為<strong>三年級畢業旅行服裝規定之重要評量依據（畢旅服裝看表現！）</strong>
-            </p>
+            <div style="font-size:0.92rem; color:#4c0519; line-height:1.75; margin:0;">
+              <div>1. <strong>晚上一律穿體育服</strong></div>
+              <div>2. <strong>白天由老師自行決定（班服或便服）（下身一律著深色長褲）</strong></div>
+              <div>3. <strong>第一天表現不好，第二天將穿體育服</strong></div>
+              <div>4. <strong>本次露營生活常規表現將作為三年級畢業旅行服裝規定之重要評量依據（畢旅服裝看表現！）</strong></div>
+            </div>
           </div>
           <div style="background:#ffffff; border:2px solid #ef4444; border-radius:12px; padding:1.1rem; background:#fff5f5;">
             <div style="font-weight:700; color:#b91c1c; font-size:1.05rem; margin-bottom:0.4rem;">🚨 四、機動車即刻送回學校</div>
@@ -1689,12 +1692,6 @@ html_content = f"""<!DOCTYPE html>
           <h2 class="section-title">📅 兩日行程時間與路線</h2>
           <p class="section-subtitle">點選下方天數切換行程細節、用餐安排與重點時間</p>
         </div>
-      </div>
-
-      <!-- 10/23 行前說明會提醒橫幅 -->
-      <div style="background:#fef2f2; border:1px solid #fecaca; border-radius:12px; padding:0.85rem 1.25rem; margin-bottom:1.5rem; display:flex; align-items:center; gap:0.6rem; color:#991b1b; font-size:0.95rem;">
-        <span style="font-size:1.25rem;">📢</span>
-        <div><strong>行前重要提醒：10/23（五）召開隔宿露營行前說明會</strong>，請全體同學務必遵守出發前違禁品清查、個人物品管制（零錢限600元內、體育服晚上穿）、深色長褲服儀規定及校規紀律守則！</div>
       </div>
 
       <!-- Day Switch Buttons (Image 1 Style) -->

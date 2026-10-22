@@ -836,11 +836,13 @@ html_template = f"""<!DOCTYPE html>
           </div>
           <!-- Card 3: 服裝儀容規定 -->
           <div class="card card-highlight">
-            <div class="card-title">👕 三、服裝儀容規定（畢旅服裝看本次表現！）</div>
-            <p style="line-height: 1.7; font-size: 0.95rem; margin-top: 0.3rem;">
-              • <strong>日間活動穿著</strong>：穿著休閒便服或各班班服，下半身一律穿著「<strong>深色長褲</strong>」（防蚊蟲叮咬與林間攀爬劃傷），嚴禁穿著拖鞋或涼鞋走動。<br>
-              • <strong>與畢業旅行連動</strong>：本次隔宿露營的全校生活常規與紀律遵守狀況，將作為<strong>三年級畢業旅行服裝穿著開放之重要評估指標</strong>（畢旅服裝看表現）！
-            </p>
+            <div class="card-title">👕 三、服裝儀容與畢旅連動</div>
+            <div style="line-height: 1.75; font-size: 0.95rem; margin-top: 0.3rem;">
+              • <strong>1. 晚上一律穿體育服</strong><br>
+              • <strong>2. 白天由老師自行決定（班服或便服）（下身一律著深色長褲）</strong><br>
+              • <strong>3. 第一天表現不好，第二天將穿體育服</strong><br>
+              • <strong>4. 本次露營生活常規表現將作為三年級畢業旅行服裝規定之重要評量依據（畢旅服裝看表現！）</strong>
+            </div>
           </div>
           <!-- Card 4: 機動車即刻送回學校 -->
           <div class="card card-danger" style="border: 2px solid #ef4444; background: #fff5f5;">
