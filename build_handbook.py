@@ -1529,13 +1529,14 @@ html_content = f"""<!DOCTYPE html>
     <section class="tab-pane" id="pane-briefing">
       <div class="section-header">
         <div>
-          <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.3rem;">
-            <span style="background:#ef4444; color:#fff; font-size:0.75rem; font-weight:bold; padding:0.2rem 0.6rem; border-radius:9999px;">重要行前錄影</span>
+          <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.3rem; flex-wrap:wrap;">
+            <span style="background:#ef4444; color:#fff; font-size:0.75rem; font-weight:bold; padding:0.2rem 0.6rem; border-radius:9999px;">重要行前宣導</span>
+            <span style="background:#2563eb; color:#fff; font-size:0.75rem; font-weight:bold; padding:0.2rem 0.6rem; border-radius:9999px;">線上確認單</span>
             <span style="background:#0284c7; color:#fff; font-size:0.75rem; font-weight:bold; padding:0.2rem 0.6rem; border-radius:9999px;">21頁完整簡報</span>
             <span style="background:#16a34a; color:#fff; font-size:0.75rem; font-weight:bold; padding:0.2rem 0.6rem; border-radius:9999px;">海報公告</span>
           </div>
           <h2 class="section-title">📢 10/23 二年級隔宿露營行前線上說明會</h2>
-          <p class="section-subtitle">家長與同學行前必看！涵蓋行程叮嚀、行李裝備、安全紀律與21頁圖文簡報完整播放</p>
+          <p class="section-subtitle">家長與同學行前必看！涵蓋四大重點叮嚀、線上確認簽名單、說明會錄影、21頁圖文簡報與重點海報</p>
         </div>
       </div>
 
@@ -1576,7 +1577,30 @@ html_content = f"""<!DOCTYPE html>
         </div>
       </div>
 
-      <!-- 1. 嵌入 YouTube 說明會影片 -->
+      <!-- 1. 嵌入南投國中隔宿露營行前宣導線上確認單 (Google Apps Script) -->
+      <div class="briefing-form-card" style="background:#ffffff; border:1.5px solid #93c5fd; border-radius:16px; padding:1.25rem; box-shadow:0 4px 20px rgba(37,99,235,0.08); margin-bottom:1.5rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.85rem; flex-wrap:wrap; gap:0.5rem;">
+          <div style="display:flex; align-items:center; gap:0.5rem;">
+            <span style="font-size:1.4rem;">✍️</span>
+            <div>
+              <h3 style="font-size:1.15rem; color:#1d4ed8; font-weight:800; margin:0;">南投國中隔宿露營行前宣導線上確認單</h3>
+              <p style="font-size:0.85rem; color:#64748b; margin:0.15rem 0 0 0;">請全體二年級同學與家長於詳閱四大重點後填寫送出，完成線上回條簽名</p>
+            </div>
+          </div>
+          <a href="https://script.google.com/macros/s/AKfycbwAqWNLvsp72k-TDaxTZVDHuYEzZ3S0pseO1e1T_ImAdDonx-Lkp_0i1ANFQKQ5csmCqg/exec" target="_blank" class="btn-hero-action" style="background:#eff6ff; border:1px solid #bfdbfe; color:#1d4ed8; font-weight:700; text-decoration:none; padding:0.35rem 0.85rem; border-radius:8px; font-size:0.85rem; display:inline-flex; align-items:center; gap:0.35rem;">
+            ↗ 在新視窗開啟確認單
+          </a>
+        </div>
+        <div style="position:relative; width:100%; height:820px; border-radius:12px; overflow:hidden; border:1px solid #e2e8f0; background:#f8fafc; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+          <iframe src="https://script.google.com/macros/s/AKfycbwAqWNLvsp72k-TDaxTZVDHuYEzZ3S0pseO1e1T_ImAdDonx-Lkp_0i1ANFQKQ5csmCqg/exec" title="南投國中隔宿露營行前宣導確認單" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"></iframe>
+        </div>
+        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:10px; padding:0.65rem 1rem; margin-top:0.75rem; font-size:0.85rem; color:#0369a1; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
+          <span>📌 <strong>填寫說明</strong>：填寫年級、班級、座號、姓名及聯絡 Email 並勾選確認後送出，系統將自動寄送確認信件留存。若因瀏覽器安全限制未顯示上方表格，請點擊右方按鈕。</span>
+          <a href="https://script.google.com/macros/s/AKfycbwAqWNLvsp72k-TDaxTZVDHuYEzZ3S0pseO1e1T_ImAdDonx-Lkp_0i1ANFQKQ5csmCqg/exec" target="_blank" style="font-weight:700; color:#0284c7; text-decoration:underline; white-space:nowrap;">點此直接開啟填寫 ↗</a>
+        </div>
+      </div>
+
+      <!-- 2. 嵌入 YouTube 說明會影片 -->
       <div class="briefing-video-card" style="background:#ffffff; border:1.5px solid #bae6fd; border-radius:16px; padding:1.25rem; box-shadow:0 4px 20px rgba(2,132,199,0.08); margin-bottom:1.5rem;">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.85rem; flex-wrap:wrap; gap:0.5rem;">
           <div style="display:flex; align-items:center; gap:0.5rem;">
