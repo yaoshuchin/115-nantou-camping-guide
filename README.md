@@ -6,7 +6,7 @@
 - **GitHub 專案倉庫**：[yaoshuchin/115-nantou-camping-guide](https://github.com/yaoshuchin/115-nantou-camping-guide)
 - **GitHub Pages 線上簡報版**：[https://yaoshuchin.github.io/115-nantou-camping-guide/](https://yaoshuchin.github.io/115-nantou-camping-guide/)
 - **GitHub Pages 露營手冊網頁版**：[https://yaoshuchin.github.io/115-nantou-camping-guide/handbook.html](https://yaoshuchin.github.io/115-nantou-camping-guide/handbook.html)
-- **Netlify 線上站點**：[http://mellifluous-alpaca-9c2049.netlify.app](http://mellifluous-alpaca-9c2049.netlify.app)（手冊網頁版：[http://mellifluous-alpaca-9c2049.netlify.app/handbook.html](http://mellifluous-alpaca-9c2049.netlify.app/handbook.html)，存取密碼：`My-Drop-Site`）
+- **Netlify 線上站點**：[http://unique-donut-474351.netlify.app](http://unique-donut-474351.netlify.app)（手冊網頁版：[http://unique-donut-474351.netlify.app/handbook.html](http://unique-donut-474351.netlify.app/handbook.html)，存取密碼：`My-Drop-Site`）
 
 ---
 
