@@ -1007,7 +1007,17 @@ html_template = f"""<!DOCTYPE html>
             </ul>
           </div>
         </div>
-        <div class="card card-danger" style="margin-top: 1.25rem;">
+        <div class="card" style="margin-top: 1rem; border: 2px solid #0284c7; background: #f0f9ff;">
+          <div class="card-title" style="color: #0369a1; margin-bottom: 0.6rem;">💡 補充說明</div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.75rem; font-size: 0.92rem; line-height: 1.7;">
+            <div>• <strong>洗澡替換拖鞋</strong>：僅限洗澡盥洗或帳棚內替換，日間活動嚴禁穿拖鞋。</div>
+            <div>• <strong>個人防護備品</strong>：帽子、隨身口罩、行動電源、女性衛生用品。</div>
+            <div>• <strong>輕便背包</strong>：日間分站活動與步道健走攜帶水壺及隨身貴重物品。</div>
+            <div>• <strong>多備用一套便服的提醒</strong>：野炊與山訓易弄髒或汗濕，建議背包內多備一套便服。</div>
+            <div>• <strong>旅行社提供免洗餐具之資訊</strong>：野炊與用餐期間，旅行社已貼心備妥免洗餐具（同學亦可自備環保餐具）。</div>
+          </div>
+        </div>
+        <div class="card card-danger" style="margin-top: 1rem;">
           <div class="card-title">⚠️ 攜帶管制注意事項（嚴格禁止攜帶）</div>
           <p style="font-size: 0.92rem; line-height: 1.6;">
             ❌ 嚴禁穿戴有礙活動進行之飾品：項鍊、戒指、手鐲、長垂耳環、皮鞋、裙子。<br>
