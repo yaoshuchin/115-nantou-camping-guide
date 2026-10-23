@@ -7,14 +7,16 @@
   - **GitHub 倉庫**：[https://github.com/yaoshuchin/115-nantou-camping-guide](https://github.com/yaoshuchin/115-nantou-camping-guide)
   - **GitHub Pages 線上簡報版**：[https://yaoshuchin.github.io/115-nantou-camping-guide/](https://yaoshuchin.github.io/115-nantou-camping-guide/)
   - **GitHub Pages 露營手冊網頁版**：[https://yaoshuchin.github.io/115-nantou-camping-guide/handbook.html](https://yaoshuchin.github.io/115-nantou-camping-guide/handbook.html)
-  - **Netlify 發布站點**：[http://unique-donut-474351.netlify.app](http://unique-donut-474351.netlify.app)（手冊網頁版：[http://unique-donut-474351.netlify.app/handbook.html](http://unique-donut-474351.netlify.app/handbook.html)，預設存取密碼：`My-Drop-Site`）
+  - **Netlify 發布站點**：[http://dazzling-dodol-e7d0ed.netlify.app](http://dazzling-dodol-e7d0ed.netlify.app)（手冊網頁版：[http://dazzling-dodol-e7d0ed.netlify.app/handbook.html](http://dazzling-dodol-e7d0ed.netlify.app/handbook.html)，預設存取密碼：`My-Drop-Site`）
 
 ---
 
 ## 📌 一、當前進度與成果紀錄
 
-1. **電子手冊版與教學簡報版同步嵌入「✍️ 10/23行前宣導線上確認單」(Google Apps Script)**：
-   - **手冊版嵌入全功能確認單**：在手冊「📢 10/23 線上說明會」子頁面四大重點下方，嵌入高度 820px 之 Google Apps Script 確認單（`https://script.google.com/macros/s/AKfycbwAqWNLvsp72k-TDaxTZVDHuYEzZ3S0pseO1e1T_ImAdDonx-Lkp_0i1ANFQKQ5csmCqg/exec`）。
+1. **電子手冊版將「✍️ 10/23行前宣導線上確認單」置於最下方並優化排版**：
+   - **確認單位置調整**：依指示將 Google Apps Script 線上確認單由四大重點下方移至「📢 10/23 線上說明會」標籤子頁面的**最下方**（順序：四大宣導重點 ➔ YouTube 錄影 ➔ 21 頁簡報播放器 ➔ 2 張公告海報 ➔ ✍️ 線上確認單）。
+   - **新增頂部直達錨點**：在說明會副標題下方新增「✍️ 點此快速跳至頁面最下方填寫線上確認單 ➔」快捷膠囊按鈕，方便使用者直接滾動至最底端填寫。
+   - **直接顯示技術診斷與說明**：針對 Google Apps Script 因同源政策預設 `X-Frame-Options: SAMEORIGIN` 阻擋 iframe 內嵌問題，提供清楚之後台改動指引（在 `doGet()` 加入 `.setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL)` 建立新版本即可直接顯示），並配備顯眼的一鍵外開全螢幕按鈕作為備援。
    - **雙重外連備援機制**：考量部分瀏覽器阻擋跨網域 iframe，卡片頂部與底部皆配備「↗ 在新視窗開啟確認單」與「點此直接開啟填寫 ↗」按鈕，確保學生與家長順暢填寫並獲得確認信。
    - **簡報版雙處快捷串接**：Slide 03（四大宣導重點）底部導航按鈕與 Slide 04（錄影與海報）頂部工具列皆新增「✍️ 線上確認單簽名 ↗」一鍵直達按鈕，方便導師課堂引導。
 

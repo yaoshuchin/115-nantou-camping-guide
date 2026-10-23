@@ -7,7 +7,7 @@
 - **主要工作目錄**：`D:\antigravity\1151019二年級隔宿露營`
 - **GitHub 倉庫**：https://github.com/yaoshuchin/115-nantou-camping-guide
 - **GitHub Pages 站點**：https://yaoshuchin.github.io/115-nantou-camping-guide/
-- **Netlify 發布站點**：http://unique-donut-474351.netlify.app (備援: http://mellifluous-alpaca-9c2049.netlify.app)
+- **Netlify 發布站點**：http://dazzling-dodol-e7d0ed.netlify.app (備援: http://unique-donut-474351.netlify.app)
 - **預設分支**：`main`
 - **核心資料來源**：
   - 本目錄手冊檔案：`1151019-115南投國二露營手冊.pdf`（共 26 頁完整活動手冊）
