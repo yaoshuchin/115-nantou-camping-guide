@@ -1513,11 +1513,9 @@ html_content = f"""<!DOCTYPE html>
       <a href="index.html" class="btn-to-slide">🖥️ 切換至教學簡報</a>
       <button class="tab-btn" data-tab="briefing" onclick="switchTab('briefing')" style="background:#fff1f2; border:1.5px solid #fecdd3; color:#be123c; font-weight:800;">📢 10/23線上說明會</button>
       <button class="tab-btn active" data-tab="schedule" onclick="switchTab('schedule')">📅 行程總覽</button>
-      <button class="tab-btn" data-tab="lookup" onclick="switchTab('lookup')">🔍 查帳分車</button>
-      <button class="tab-btn" data-tab="buses" onclick="switchTab('buses')">🚌 團務車次</button>
-      <button class="tab-btn" data-tab="camp-cook" onclick="switchTab('camp-cook')">⛺ 帳棚・野炊</button>
-      <button class="tab-btn" data-tab="scout-mountain" onclick="switchTab('scout-mountain')">⚜️ 童軍・山訓</button>
-      <button class="tab-btn" data-tab="worksheet" onclick="switchTab('worksheet')">🎯 露營學習單</button>
+      <button class="tab-btn" data-tab="lookup" onclick="switchTab('lookup')">🔍 查詢</button>
+      <button class="tab-btn" data-tab="camp-cook" onclick="switchTab('camp-cook')">🚌 車次・帳棚・野炊</button>
+      <button class="tab-btn" data-tab="scout-mountain" onclick="switchTab('scout-mountain')">⚜️ 童軍・山訓。露營</button>
       <button class="tab-btn" data-tab="pack-rules" onclick="switchTab('pack-rules')">🎒 行李・生活</button>
     </div>
   </nav>
@@ -1907,12 +1905,12 @@ html_content = f"""<!DOCTYPE html>
       </div>
     </section>
 
-    <!-- ==================== TAB 2: 🔍 查帳分車 ==================== -->
+    <!-- ==================== TAB 2: 🔍 查詢 ==================== -->
     <section class="tab-pane" id="pane-lookup">
       <div class="section-header">
         <div>
-          <h2 class="section-title">🔍 帳號、桌次與車次即時速查</h2>
-          <p class="section-subtitle">輸入同學姓名、帳號、班級（801~807）或桌次即可秒查！姓名第二字固化遮蔽確保個資安全。</p>
+          <h2 class="section-title">🔍 學生編組快速查詢</h2>
+          <p class="section-subtitle">輸入同學姓名、帳號、班級（801~807）、車次或野炊組別即可秒查！姓名第二字固化遮蔽確保個資安全。</p>
         </div>
         <button class="btn-hero-action" onclick="window.print()">🖨️ 列印查帳名冊</button>
       </div>
@@ -1975,235 +1973,270 @@ html_content = f"""<!DOCTYPE html>
       </div>
     </section>
 
-    <!-- ==================== TAB 3: 🚌 團務車次 ==================== -->
-    <section class="tab-pane" id="pane-buses">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">🚌 團務編組與隨車師長</h2>
-          <p class="section-subtitle">全團 4 輛專車編制、各車班級名額與隨車導師名單</p>
-        </div>
-      </div>
-
-      <div class="buses-grid">
-        <!-- 1 車 (Image 3 Style) -->
-        <div class="bus-card">
-          <div>
-            <div class="bus-card-header">
-              <div class="bus-card-title">🚌 1 車</div>
-              <span class="bus-student-pill">學生 20 人</span>
-            </div>
-            <div class="bus-class-line">班級分配：805 (全部) + 806 (全部)</div>
-            <div class="bus-breakdown">805班：男7、女4 (11人) | 806班：男4、女5 (9人)</div>
-            
-            <div class="bus-teachers-box">
-              <div class="bus-teachers-label">隨車師長</div>
-              <div class="bus-teacher-item">
-                <span>學務主任</span>
-                <span style="font-weight:700;">董O遠</span>
-              </div>
-              <div class="bus-teacher-item">
-                <span>805 班導師</span>
-                <span style="font-weight:700;">林O銓</span>
-              </div>
-              <div class="bus-teacher-item">
-                <span>806 班導師</span>
-                <span style="font-weight:700;">許O玉</span>
-              </div>
-            </div>
-          </div>
-          <div class="bus-veg-badge">
-            <span>🥗</span>
-            <span>本車含素食餐食：1 位 (805班 15號 張O瑜)</span>
-          </div>
-        </div>
-
-        <!-- 2 車 -->
-        <div class="bus-card">
-          <div>
-            <div class="bus-card-header">
-              <div class="bus-card-title">🚌 2 車</div>
-              <span class="bus-student-pill">學生 34 人</span>
-            </div>
-            <div class="bus-class-line">班級分配：802 (全部) + 804 (全部)</div>
-            <div class="bus-breakdown">802班：男6、女13 (19人) | 804班：男7、女8 (15人)</div>
-            
-            <div class="bus-teachers-box">
-              <div class="bus-teachers-label">隨車師長</div>
-              <div class="bus-teacher-item">
-                <span>802 班導師</span>
-                <span style="font-weight:700;">黃O君</span>
-              </div>
-              <div class="bus-teacher-item">
-                <span>804 班導師</span>
-                <span style="font-weight:700;">李O儒</span>
-              </div>
-            </div>
-          </div>
-          <div style="font-size:0.85rem; color:#64748b; margin-top:0.5rem;">
-            📌 備註：804班 11號女同學 劉O硯 於本車，與805班同名同學分屬不同車次。
-          </div>
-        </div>
-
-        <!-- 3 車 -->
-        <div class="bus-card">
-          <div>
-            <div class="bus-card-header">
-              <div class="bus-card-title">🚌 3 車</div>
-              <span class="bus-student-pill">學生 32 人</span>
-            </div>
-            <div class="bus-class-line">班級分配：801 (全部) + 803 (全部)</div>
-            <div class="bus-breakdown">801班：男10、女7 (17人) | 803班：男6、女9 (15人)</div>
-            
-            <div class="bus-teachers-box">
-              <div class="bus-teachers-label">隨車師長</div>
-              <div class="bus-teacher-item">
-                <span>801 班導師</span>
-                <span style="font-weight:700;">黃O月</span>
-              </div>
-              <div class="bus-teacher-item">
-                <span>803 班導師</span>
-                <span style="font-weight:700;">林O玟</span>
-              </div>
-            </div>
-          </div>
-          <div style="font-size:0.85rem; color:#64748b; margin-top:0.5rem;">
-            📌 備註：801班男女人數平衡，本車含第 1、2、6、7 野炊小隊。
-          </div>
-        </div>
-
-        <!-- 丁 車 -->
-        <div class="bus-card">
-          <div>
-            <div class="bus-card-header">
-              <div class="bus-card-title">🚌 丁 車</div>
-              <span class="bus-student-pill">學生 21 人</span>
-            </div>
-            <div class="bus-class-line">班級分配：807 (全部)</div>
-            <div class="bus-breakdown">807班：男8、女13 (全班 21人)</div>
-            
-            <div class="bus-teachers-box">
-              <div class="bus-teachers-label">隨車師長</div>
-              <div class="bus-teacher-item">
-                <span>訓育組長</span>
-                <span style="font-weight:700;">姚O勤</span>
-              </div>
-              <div class="bus-teacher-item">
-                <span>807 班導師</span>
-                <span style="font-weight:700;">黃O慧</span>
-              </div>
-            </div>
-          </div>
-          <div style="font-size:0.85rem; color:#64748b; margin-top:0.5rem;">
-            📌 備註：全班單獨成車，含第 13、14、15 野炊小隊及帳棚 A12~A13、B12~B14。
-          </div>
-        </div>
-
-        <!-- 公務指揮車 -->
-        <div class="bus-card" style="border-left: 4px solid #f97316;">
-          <div>
-            <div class="bus-card-header">
-              <div class="bus-card-title">🚗 公務機動指揮車</div>
-              <span class="bus-student-pill" style="background:#ffedd5; color:#c2410c;">巡迴督導</span>
-            </div>
-            <div class="bus-class-line">任務職掌：全校行車戒護、緊急應變與醫療支援</div>
-            <div class="bus-breakdown">機動巡迴 4 輛遊覽車前後，掌握路況與隨隊安全</div>
-            
-            <div class="bus-teachers-box">
-              <div class="bus-teachers-label">巡查人員名冊</div>
-              <div class="bus-teacher-item">
-                <span>南投國中校長</span>
-                <span style="font-weight:700;">劉O彥</span>
-              </div>
-              <div class="bus-teacher-item">
-                <span>中國青年旅行社團控經理</span>
-                <span style="font-weight:700;">邱O凱 (0972-721756)</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== TAB 4: ⛺ 帳棚・野炊 (二階層次標籤) ==================== -->
+    <!-- ==================== TAB 3: 🚌 車次・帳棚・野炊 (二階層次標籤) ==================== -->
     <section class="tab-pane" id="pane-camp-cook">
       <div class="sub-tab-nav-bar">
-        <div class="sub-tab-title">⛺ 帳棚住宿與野炊膳食管理專區</div>
+        <div class="sub-tab-title">🚌 車次・帳棚住宿・野炊膳食・帳棚教學管理專區</div>
         <div class="sub-tab-pills">
           <button class="sub-tab-btn active" id="subbtn-tents" onclick="switchSubTab('camp-cook', 'tents')">⛺ 帳棚住宿編組</button>
           <button class="sub-tab-btn" id="subbtn-meals" onclick="switchSubTab('camp-cook', 'meals')">🍲 野炊膳食編組</button>
+          <button class="sub-tab-btn" id="subbtn-buses" onclick="switchSubTab('camp-cook', 'buses')">🚌 團務車次編組</button>
+          <button class="sub-tab-btn" id="subbtn-tent-guide" onclick="switchSubTab('camp-cook', 'tent-guide')">🏕️ 帳棚教學</button>
         </div>
       </div>
 
-      <!-- 二階子區域 1: 帳棚住宿 -->
+      <!-- 二階子區域 1: 帳棚住宿編組 -->
       <div class="sub-pane active" id="subpane-tents">
-        <!-- ==================== TAB 4: ⛺ 帳棚住宿 ==================== -->
-    
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">⛺ 營地配置與帳棚住宿編組</h2>
-          <p class="section-subtitle">全團共 27 頂屋式帳篷（男生帳 A01~A13 共 13 頂、女生帳 B01~B14 共 14 頂），依班級性別集中搭設</p>
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">⛺ 營地配置與帳棚住宿編組名冊</h2>
+            <p class="section-subtitle">全團共 27 頂屋式帳篷（男生帳 A01~A13 共 13 頂、女生帳 B01~B14 共 14 頂），依班級性別集中搭設</p>
+          </div>
+          <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+            <button class="filter-pill-btn active" onclick="filterTents('all', this)">全部帳篷 (27頂)</button>
+            <button class="filter-pill-btn" onclick="filterTents('A', this)">男生帳 A01~A13</button>
+            <button class="filter-pill-btn" onclick="filterTents('B', this)">女生帳 B01~B14</button>
+          </div>
         </div>
-        <div style="display:flex; gap:0.5rem;">
-          <button class="filter-pill-btn active" onclick="filterTents('all', this)">全部帳篷 (27頂)</button>
-          <button class="filter-pill-btn" onclick="filterTents('A', this)">男生帳 A01~A13</button>
-          <button class="filter-pill-btn" onclick="filterTents('B', this)">女生帳 B01~B14</button>
+
+        <!-- Tents Grid -->
+        <div class="buses-grid" id="tentsContainer">
+          {tents_cards_html}
         </div>
       </div>
 
-      <!-- Camp Image Banner -->
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:1rem; margin-bottom:1.5rem;">
-        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; padding:0.5rem; text-align:center;">
-          <img src="assets/camp_setup_page13.png" style="max-width:100%; height:auto; border-radius:8px;" alt="營地配置">
-          <div style="font-size:0.85rem; color:#64748b; margin-top:0.3rem;">手冊第 13 頁：營地配置與搭帳要領</div>
-        </div>
-        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; padding:0.5rem; text-align:center;">
-          <img src="assets/tent_pitching_page14.png" style="max-width:100%; height:auto; border-radius:8px;" alt="帳篷搭設圖解">
-          <div style="font-size:0.85rem; color:#64748b; margin-top:0.3rem;">手冊第 14 頁：屋式帳搭設五步驟與力學原理</div>
-        </div>
-      </div>
-
-      <!-- Tents Grid -->
-      <div class="buses-grid" id="tentsContainer">
-        {tents_cards_html}
-      </div>
-      </div>
-
-      <!-- 二階子區域 2: 野炊膳食 -->
+      <!-- 二階子區域 2: 野炊膳食編組 -->
       <div class="sub-pane" id="subpane-meals">
-        <!-- ==================== TAB 5: 🍲 野炊膳食 ==================== -->
-    
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">🍲 炊事競賽與野炊烤肉分組</h2>
-          <p class="section-subtitle">全團 15 組炊事實作編組，分工掌理掌廚、生火、配菜、洗滌與場地收拾</p>
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">🍲 炊事競賽與野炊烤肉分組</h2>
+            <p class="section-subtitle">全團 15 組炊事實作編組，分工掌理掌廚、生火、配菜、洗滌與場地收拾</p>
+          </div>
+        </div>
+
+        <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:12px; padding:1.2rem; margin-bottom:1.5rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
+          <div>
+            <div style="font-weight:700; color:#15803d; font-size:1.05rem; margin-bottom:0.25rem;">🔥 野炊安全與生火三大守則</div>
+            <div style="font-size:0.92rem; color:#334155;">① 生火三部曲：先易燃火種引燃，次鋪細柴樹枝，待火旺後加入粗柴維持炭火。 ② 鍋具取放一律使用乾抹布或隔熱手套，防止熱油熱水噴濺。 ③ 炊事完畢必須落實灰燼澆水完全降溫滅火。</div>
+          </div>
+          <div style="margin-left:auto; background:#ffffff; border:1px solid #86efac; border-radius:8px; padding:0.5rem 1rem; color:#15803d; font-weight:700; font-size:0.9rem;">
+            🥗 第 10 組含素食 1 份 (805班 張O瑜)
+          </div>
+        </div>
+
+        <div class="buses-grid" id="mealsContainer">
+          {meals_cards_html}
         </div>
       </div>
 
-      <div style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:12px; padding:1.2rem; margin-bottom:1.5rem; display:flex; flex-wrap:wrap; gap:1.5rem; align-items:center;">
-        <div>
-          <div style="font-weight:700; color:#15803d; font-size:1.05rem; margin-bottom:0.25rem;">🔥 野炊安全與生火三大守則</div>
-          <div style="font-size:0.92rem; color:#334155;">① 生火三部曲：先易燃火種引燃，次鋪細柴樹枝，待火旺後加入粗柴維持炭火。 ② 鍋具取放一律使用乾抹布或隔熱手套，防止熱油熱水噴濺。 ③ 炊事完畢必須落實灰燼澆水完全降溫滅火。</div>
+      <!-- 二階子區域 3: 團務車次編組 -->
+      <div class="sub-pane" id="subpane-buses">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">🚌 團務編組與隨車師長</h2>
+            <p class="section-subtitle">全團 4 輛專車編制、各車班級名額與隨車導師名單</p>
+          </div>
         </div>
-        <div style="margin-left:auto; background:#ffffff; border:1px solid #86efac; border-radius:8px; padding:0.5rem 1rem; color:#15803d; font-weight:700; font-size:0.9rem;">
-          🥗 第 10 組含素食 1 份 (805班 張O瑜)
+
+        <div class="buses-grid">
+          <!-- 1 車 (Image 3 Style) -->
+          <div class="bus-card">
+            <div>
+              <div class="bus-card-header">
+                <div class="bus-card-title">🚌 1 車</div>
+                <span class="bus-student-pill">學生 20 人</span>
+              </div>
+              <div class="bus-class-line">班級分配：805 (全部) + 806 (全部)</div>
+              <div class="bus-breakdown">805班：男7、女4 (11人) | 806班：男4、女5 (9人)</div>
+              
+              <div class="bus-teachers-box">
+                <div class="bus-teachers-label">隨車師長</div>
+                <div class="bus-teacher-item">
+                  <span>學務主任</span>
+                  <span style="font-weight:700;">董O遠</span>
+                </div>
+                <div class="bus-teacher-item">
+                  <span>805 班導師</span>
+                  <span style="font-weight:700;">林O銓</span>
+                </div>
+                <div class="bus-teacher-item">
+                  <span>806 班導師</span>
+                  <span style="font-weight:700;">許O玉</span>
+                </div>
+              </div>
+            </div>
+            <div class="bus-veg-badge">
+              <span>🥗</span>
+              <span>本車含素食餐食：1 位 (805班 15號 張O瑜)</span>
+            </div>
+          </div>
+
+          <!-- 2 車 -->
+          <div class="bus-card">
+            <div>
+              <div class="bus-card-header">
+                <div class="bus-card-title">🚌 2 車</div>
+                <span class="bus-student-pill">學生 34 人</span>
+              </div>
+              <div class="bus-class-line">班級分配：802 (全部) + 804 (全部)</div>
+              <div class="bus-breakdown">802班：男6、女13 (19人) | 804班：男7、女8 (15人)</div>
+              
+              <div class="bus-teachers-box">
+                <div class="bus-teachers-label">隨車師長</div>
+                <div class="bus-teacher-item">
+                  <span>802 班導師</span>
+                  <span style="font-weight:700;">黃O君</span>
+                </div>
+                <div class="bus-teacher-item">
+                  <span>804 班導師</span>
+                  <span style="font-weight:700;">李O儒</span>
+                </div>
+              </div>
+            </div>
+            <div style="font-size:0.85rem; color:#64748b; margin-top:0.5rem;">
+              📌 備註：804班 11號女同學 劉O硯 於本車，與805班同名同學分屬不同車次。
+            </div>
+          </div>
+
+          <!-- 3 車 -->
+          <div class="bus-card">
+            <div>
+              <div class="bus-card-header">
+                <div class="bus-card-title">🚌 3 車</div>
+                <span class="bus-student-pill">學生 32 人</span>
+              </div>
+              <div class="bus-class-line">班級分配：801 (全部) + 803 (全部)</div>
+              <div class="bus-breakdown">801班：男10、女7 (17人) | 803班：男6、女9 (15人)</div>
+              
+              <div class="bus-teachers-box">
+                <div class="bus-teachers-label">隨車師長</div>
+                <div class="bus-teacher-item">
+                  <span>801 班導師</span>
+                  <span style="font-weight:700;">黃O月</span>
+                </div>
+                <div class="bus-teacher-item">
+                  <span>803 班導師</span>
+                  <span style="font-weight:700;">林O玟</span>
+                </div>
+              </div>
+            </div>
+            <div style="font-size:0.85rem; color:#64748b; margin-top:0.5rem;">
+              📌 備註：801班男女人數平衡，本車含第 1、2、6、7 野炊小隊。
+            </div>
+          </div>
+
+          <!-- 丁 車 -->
+          <div class="bus-card">
+            <div>
+              <div class="bus-card-header">
+                <div class="bus-card-title">🚌 丁 車</div>
+                <span class="bus-student-pill">學生 21 人</span>
+              </div>
+              <div class="bus-class-line">班級分配：807 (全部)</div>
+              <div class="bus-breakdown">807班：男8、女13 (全班 21人)</div>
+              
+              <div class="bus-teachers-box">
+                <div class="bus-teachers-label">隨車師長</div>
+                <div class="bus-teacher-item">
+                  <span>訓育組長</span>
+                  <span style="font-weight:700;">姚O勤</span>
+                </div>
+                <div class="bus-teacher-item">
+                  <span>807 班導師</span>
+                  <span style="font-weight:700;">黃O慧</span>
+                </div>
+              </div>
+            </div>
+            <div style="font-size:0.85rem; color:#64748b; margin-top:0.5rem;">
+              📌 備註：全班單獨成車，含第 13、14、15 野炊小隊及帳棚 A12~A13、B12~B14。
+            </div>
+          </div>
+
+          <!-- 公務指揮車 -->
+          <div class="bus-card" style="border-left: 4px solid #f97316;">
+            <div>
+              <div class="bus-card-header">
+                <div class="bus-card-title">🚗 公務機動指揮車</div>
+                <span class="bus-student-pill" style="background:#ffedd5; color:#c2410c;">巡迴督導</span>
+              </div>
+              <div class="bus-class-line">任務職掌：全校行車戒護、緊急應變與醫療支援</div>
+              <div class="bus-breakdown">機動巡迴 4 輛遊覽車前後，掌握路況與隨隊安全</div>
+              
+              <div class="bus-teachers-box">
+                <div class="bus-teachers-label">巡查人員名冊</div>
+                <div class="bus-teacher-item">
+                  <span>南投國中校長</span>
+                  <span style="font-weight:700;">劉O彥</span>
+                </div>
+                <div class="bus-teacher-item">
+                  <span>中國青年旅行社團控經理</span>
+                  <span style="font-weight:700;">邱O凱 (0972-721756)</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="buses-grid" id="mealsContainer">
-        {meals_cards_html}
-      </div>
+      <!-- 二階子區域 4: 帳棚教學 -->
+      <div class="sub-pane" id="subpane-tent-guide">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">🏕️ 帳棚教學：營地配置與搭帳指引</h2>
+            <p class="section-subtitle">手冊第 13~14 頁核心圖鑑：營區帳篷動線配置、屋式帳搭設五步驟與防風防雨力學要領</p>
+          </div>
+        </div>
+
+        <!-- 營地配置與帳棚搭設圖解（從帳棚住宿編組移至此處） -->
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap:1.25rem; margin-bottom:1.5rem;">
+          <div style="background:#ffffff; border:1.5px solid #bae6fd; border-radius:14px; overflow:hidden; padding:1rem; box-shadow:0 4px 14px rgba(2, 132, 199, 0.08);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+              <h3 style="font-size:1.05rem; color:#0369a1; font-weight:800; margin:0;">🗺️ 尖山埤營地配置與搭帳要領</h3>
+              <button onclick="openLightbox('assets/camp_setup_page13.png', '手冊第 13 頁：營地配置與搭帳要領')" class="sub-tab-btn" style="padding:0.25rem 0.65rem; font-size:0.8rem;">🔍 點擊放大</button>
+            </div>
+            <div style="overflow:hidden; border-radius:10px; border:1px solid #e2e8f0; cursor:zoom-in; text-align:center; background:#f8fafc;" onclick="openLightbox('assets/camp_setup_page13.png', '手冊第 13 頁：營地配置與搭帳要領')">
+              <img src="assets/camp_setup_page13.png" style="max-width:100%; height:auto; display:block; margin:0 auto; transition:transform 0.25s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'" alt="營地配置">
+            </div>
+            <p style="font-size:0.88rem; color:#64748b; margin-top:0.75rem; line-height:1.6;">
+              📌 <strong>圖解重點</strong>：男生帳集中於 A 區（A01~A13 共 13 頂），女生帳集中於 B 區（B01~B14 共 14 頂）。營帳之間預留逃生通道與防蚊排水線。
+            </p>
+          </div>
+
+          <div style="background:#ffffff; border:1.5px solid #bae6fd; border-radius:14px; overflow:hidden; padding:1rem; box-shadow:0 4px 14px rgba(2, 132, 199, 0.08);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+              <h3 style="font-size:1.05rem; color:#0369a1; font-weight:800; margin:0;">⛺ 屋式帳搭設五大步驟與力學原理</h3>
+              <button onclick="openLightbox('assets/tent_pitching_page14.png', '手冊第 14 頁：屋式帳搭設五步驟與力學原理')" class="sub-tab-btn" style="padding:0.25rem 0.65rem; font-size:0.8rem;">🔍 點擊放大</button>
+            </div>
+            <div style="overflow:hidden; border-radius:10px; border:1px solid #e2e8f0; cursor:zoom-in; text-align:center; background:#f8fafc;" onclick="openLightbox('assets/tent_pitching_page14.png', '手冊第 14 頁：屋式帳搭設五步驟與力學原理')">
+              <img src="assets/tent_pitching_page14.png" style="max-width:100%; height:auto; display:block; margin:0 auto; transition:transform 0.25s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'" alt="帳篷搭設圖解">
+            </div>
+            <p style="font-size:0.88rem; color:#64748b; margin-top:0.75rem; line-height:1.6;">
+              📌 <strong>圖解重點</strong>：由 6~8 位隊員通力合作，依序完成「鋪設地布 ➔ 穿入支架 ➔ 撐起主柱 ➔ 外帳披覆 ➔ 45度斜角營釘拉繩緊固」。
+            </p>
+          </div>
+        </div>
+
+        <!-- 搭帳安全與常規提醒守則 -->
+        <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:14px; padding:1.25rem; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+          <h3 style="font-size:1.1rem; color:#0284c7; font-weight:800; margin-bottom:0.6rem;">💡 營帳生活與夜間安全重要提醒</h3>
+          <ul style="font-size:0.92rem; color:#334155; line-height:1.75; padding-left:1.3rem; margin:0;">
+            <li><strong>帳內嚴禁明火</strong>：帳篷材質易燃，帳內絕對禁止點燃蠟燭、打火機、蚊香或任何明火。照明請一律使用 LED 手電筒或頭燈。</li>
+            <li><strong>鞋子入睡倒扣</strong>：進入帳棚前脫鞋，鞋頭朝外「倒扣」或置入鞋袋內放進帳角，防止夜間露水與蜈蚣、蛇蟲爬入。</li>
+            <li><strong>拉鍊隨手閉合</strong>：進出帳篷時紗門拉鍊務必隨手拉嚴，徹底防範蚊蟲叮咬。</li>
+            <li><strong>嚴禁跨帳串門</strong>：晚間熄燈查舖後一律在各自帳篷內安歇，未經師長隊輔許可，嚴禁互換帳篷或夜間串班。</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    </section>
-
-    <!-- ==================== TAB 5: ⚜️ 童軍・山訓 (二階層次標籤) ==================== -->
+    <!-- ==================== TAB 4: ⚜️ 童軍・山訓。露營 (二階層次標籤) ==================== -->
     <section class="tab-pane" id="pane-scout-mountain">
       <div class="sub-tab-nav-bar">
-        <div class="sub-tab-title">⚜️ 童軍技能教育與山訓探索活動專區</div>
+        <div class="sub-tab-title">⚜️ 童軍技能教育・山訓探索・露營學習單專區</div>
         <div class="sub-tab-pills">
           <button class="sub-tab-btn active" id="subbtn-scout" onclick="switchSubTab('scout-mountain', 'scout')">⚜️ 童軍技能圖鑑</button>
           <button class="sub-tab-btn" id="subbtn-mountain" onclick="switchSubTab('scout-mountain', 'mountain')">🧗 山訓探索教育</button>
+          <button class="sub-tab-btn" id="subbtn-worksheet" onclick="switchSubTab('scout-mountain', 'worksheet')">🎯 露營學習單</button>
         </div>
       </div>
 
@@ -2310,38 +2343,36 @@ html_content = f"""<!DOCTYPE html>
         </ul>
       </div>
       </div>
-    </section>
 
-    </section>
-
-    <!-- ==================== TAB 8: 🎯 露營學習單 (Image 5 Style) ==================== -->
-    <section class="tab-pane" id="pane-worksheet">
-      <div class="section-header">
-        <div>
-          <h2 class="section-title">🎯 隔宿露營・互動學習單</h2>
-          <p class="section-subtitle">在營地或車上測試露營與童軍小知識！點選按鈕或點擊卡片查看解答與解析</p>
-        </div>
-      </div>
-
-      <div style="margin-bottom:1.5rem;">
-        <h3 style="font-size:1.25rem; font-weight:800; color:#0369a1; margin-bottom:1rem;">一、是非挑戰題 (點選即時驗證)</h3>
-        
-        <div class="worksheet-container" id="quizContainer">
-          {quiz_cards_html}
-        </div>
-      </div>
-
-      <!-- Worksheet Paper Image Preview -->
-      <div style="background:#ffffff; border:1px solid #e0f2fe; border-radius:14px; padding:1.5rem; margin-top:2rem;">
-        <h3 style="font-size:1.15rem; color:#0369a1; font-weight:700; margin-bottom:1rem;">📝 手冊紙本學習單（手冊第 22~23 頁存檔對照）</h3>
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1rem;">
-          <div style="text-align:center;">
-            <img src="assets/worksheet_page22.png" style="max-width:100%; height:auto; border-radius:8px; border:1px solid #cbd5e1;" alt="學習單第22頁">
-            <div style="font-size:0.85rem; color:#64748b; margin-top:0.3rem;">手冊第 22 頁：野營心得與營火反思</div>
+      <!-- 二階子區域 3: 露營學習單 -->
+      <div class="sub-pane" id="subpane-worksheet">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">🎯 隔宿露營・互動學習單</h2>
+            <p class="section-subtitle">在營地或車上測試露營與童軍小知識！點選按鈕或點擊卡片查看解答與解析</p>
           </div>
-          <div style="text-align:center;">
-            <img src="assets/worksheet_page23.png" style="max-width:100%; height:auto; border-radius:8px; border:1px solid #cbd5e1;" alt="學習單第23頁">
-            <div style="font-size:0.85rem; color:#64748b; margin-top:0.3rem;">手冊第 23 頁：探索活動心得與自我評量</div>
+        </div>
+
+        <div style="margin-bottom:1.5rem;">
+          <h3 style="font-size:1.25rem; font-weight:800; color:#0369a1; margin-bottom:1rem;">一、是非挑戰題 (點選即時驗證)</h3>
+          
+          <div class="worksheet-container" id="quizContainer">
+            {quiz_cards_html}
+          </div>
+        </div>
+
+        <!-- Worksheet Paper Image Preview -->
+        <div style="background:#ffffff; border:1px solid #e0f2fe; border-radius:14px; padding:1.5rem; margin-top:2rem;">
+          <h3 style="font-size:1.15rem; color:#0369a1; font-weight:700; margin-bottom:1rem;">📝 手冊紙本學習單（手冊第 22~23 頁存檔對照）</h3>
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1rem;">
+            <div style="text-align:center;">
+              <img src="assets/worksheet_page22.png" style="max-width:100%; height:auto; border-radius:8px; border:1px solid #cbd5e1;" alt="學習單第22頁">
+              <div style="font-size:0.85rem; color:#64748b; margin-top:0.3rem;">手冊第 22 頁：野營心得與營火反思</div>
+            </div>
+            <div style="text-align:center;">
+              <img src="assets/worksheet_page23.png" style="max-width:100%; height:auto; border-radius:8px; border:1px solid #cbd5e1;" alt="學習單第23頁">
+              <div style="font-size:0.85rem; color:#64748b; margin-top:0.3rem;">手冊第 23 頁：探索活動心得與自我評量</div>
+            </div>
           </div>
         </div>
       </div>
@@ -2485,15 +2516,26 @@ html_content = f"""<!DOCTYPE html>
     const tabMapping = {{
       'briefing': {{ main: 'briefing', sub: null }},
       'online-briefing': {{ main: 'briefing', sub: null }},
+      'schedule': {{ main: 'schedule', sub: null }},
+      'lookup': {{ main: 'lookup', sub: null }},
+      'search': {{ main: 'lookup', sub: null }},
+      // 車次・帳棚・野炊
+      'camp-cook': {{ main: 'camp-cook', sub: 'tents' }},
+      'bus-camp-cook': {{ main: 'camp-cook', sub: 'tents' }},
       'tents': {{ main: 'camp-cook', sub: 'tents' }},
       'meals': {{ main: 'camp-cook', sub: 'meals' }},
-      'camp-cook': {{ main: 'camp-cook', sub: 'tents' }},
+      'buses': {{ main: 'camp-cook', sub: 'buses' }},
+      'tent-guide': {{ main: 'camp-cook', sub: 'tent-guide' }},
+      'tent-teaching': {{ main: 'camp-cook', sub: 'tent-guide' }},
+      // 童軍・山訓。露營
+      'scout-mountain': {{ main: 'scout-mountain', sub: 'scout' }},
       'scout': {{ main: 'scout-mountain', sub: 'scout' }},
       'mountain': {{ main: 'scout-mountain', sub: 'mountain' }},
-      'scout-mountain': {{ main: 'scout-mountain', sub: 'scout' }},
+      'worksheet': {{ main: 'scout-mountain', sub: 'worksheet' }},
+      // 行李・生活
+      'pack-rules': {{ main: 'pack-rules', sub: 'packing' }},
       'packing': {{ main: 'pack-rules', sub: 'packing' }},
-      'notices': {{ main: 'pack-rules', sub: 'notices' }},
-      'pack-rules': {{ main: 'pack-rules', sub: 'packing' }}
+      'notices': {{ main: 'pack-rules', sub: 'notices' }}
     }};
 
     // 主標籤切換
@@ -2770,7 +2812,7 @@ html_content = f"""<!DOCTYPE html>
       }}
     }}
 
-    // Checklist interactive toggle
+    // Checklist interactive toggle & Hash Routing
     document.addEventListener('DOMContentLoaded', () => {{
       document.querySelectorAll('.check-item input[type="checkbox"]').forEach(cb => {{
         cb.addEventListener('change', (e) => {{
@@ -2781,6 +2823,14 @@ html_content = f"""<!DOCTYPE html>
           }}
         }});
       }});
+
+      // 檢查網址錨點進行智慧分頁跳轉
+      if (window.location.hash) {{
+        const hashTag = window.location.hash.substring(1);
+        if (tabMapping[hashTag]) {{
+          switchTab(hashTag);
+        }}
+      }}
     }});
   </script>
   <!-- Lightbox Modal for Fullscreen Image Preview -->
