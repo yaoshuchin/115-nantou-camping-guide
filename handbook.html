@@ -995,6 +995,8 @@
           <div class="hero-actions">
             <a href="tel:0972721756" class="btn-hero-action">📞 打電話 (邱O凱 經理)</a>
             <button onclick="switchTab('briefing')" class="btn-hero-action" style="background:#fee2e2; color:#b91c1c; border:1px solid #fca5a5; font-weight:700;">📢 10/23線上說明會</button>
+            <button onclick="switchTab('classes-photo')" class="btn-hero-action" style="background:#e0f2fe; color:#0369a1; font-weight:700;">📷 隊輔拍攝相簿</button>
+            <button onclick="switchTab('staff-photo')" class="btn-hero-action" style="background:#ffedd5; color:#c2410c; font-weight:700;">📸 訓育組拍攝</button>
             <button onclick="switchTab('notices')" class="btn-hero-action">🚑 緊急通訊網</button>
           </div>
         </div>
@@ -1012,6 +1014,8 @@
       <button class="tab-btn" data-tab="camp-cook" onclick="switchTab('camp-cook')">🚌 車次・帳棚・野炊</button>
       <button class="tab-btn" data-tab="scout-mountain" onclick="switchTab('scout-mountain')">⚜️ 童軍・山訓。露營</button>
       <button class="tab-btn" data-tab="pack-rules" onclick="switchTab('pack-rules')">🎒 行李・生活</button>
+      <button class="tab-btn" data-tab="classes-photo" onclick="switchTab('classes-photo')">📷 隊輔拍攝</button>
+      <button class="tab-btn" data-tab="staff-photo" onclick="switchTab('staff-photo')">📸 訓育組拍攝</button>
     </div>
   </nav>
 
@@ -3942,6 +3946,94 @@
       </div>
     </section>
 
+    <!-- ==================== TAB 6: 📷 隊輔拍攝 ==================== -->
+    <section class="tab-pane" id="pane-classes-photo">
+      <div class="section-header" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1rem;">
+        <div>
+          <h2 class="section-title">📷 隊輔拍攝 · 尖山埤探索相簿</h2>
+          <p class="section-subtitle">各班隨隊隊輔活動隨行紀錄，完整收錄各中隊生活、生火野炊、童軍技能、晚會與山訓闖關精彩寫真</p>
+        </div>
+        <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap;">
+          <a href="https://yaoshuchin.github.io/115-nantou-camping-classes/" target="_blank" class="sub-tab-btn" style="background:#0284c7; color:#fff; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:4px; padding:0.45rem 0.9rem;">
+            ↗ 在新視窗開啟
+          </a>
+          <button onclick="reloadPhotoFrame('iframeClassesPhoto', 'https://yaoshuchin.github.io/115-nantou-camping-classes/')" class="sub-tab-btn" style="padding:0.45rem 0.75rem;" title="重新整理相簿">
+            🔄 重新整理
+          </button>
+          <button onclick="toggleIframeFullscreen('iframeClassesPhoto')" class="sub-tab-btn" style="padding:0.45rem 0.75rem;" title="全螢幕開啟">
+            ⛶ 全螢幕
+          </button>
+        </div>
+      </div>
+
+      <div style="background:#ffffff; border:1px solid #bae6fd; border-radius:14px; padding:0.85rem; box-shadow:0 4px 20px rgba(2, 132, 199, 0.08); margin-bottom:1.5rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:0.4rem 0.6rem 0.75rem; border-bottom:1px solid #f1f5f9; font-size:0.88rem; color:#475569; flex-wrap:wrap; gap:0.5rem;">
+          <div style="display:flex; align-items:center; gap:0.5rem;">
+            <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#10b981; box-shadow:0 0 0 3px rgba(16,185,129,0.2);"></span>
+            <span>內嵌頁面：<a href="https://yaoshuchin.github.io/115-nantou-camping-classes/" target="_blank" style="color:#0284c7; text-decoration:none; font-weight:600;">https://yaoshuchin.github.io/115-nantou-camping-classes/</a></span>
+          </div>
+          <div style="display:flex; gap:0.4rem;">
+            <span style="background:#e0f2fe; color:#0369a1; padding:3px 10px; border-radius:999px; font-weight:700; font-size:0.8rem;">尖山埤探索相簿 · 801~807 班級寫真</span>
+          </div>
+        </div>
+        <div id="containerClassesPhoto" style="position:relative; width:100%; height:84vh; min-height:780px; margin-top:0.75rem; border-radius:10px; overflow:hidden; background:#0f172a; box-shadow:inset 0 2px 6px rgba(0,0,0,0.3);">
+          <iframe 
+            id="iframeClassesPhoto" 
+            src="https://yaoshuchin.github.io/115-nantou-camping-classes/" 
+            title="南投國中 115 隔宿露營 - 隊輔拍攝" 
+            style="width:100%; height:100%; border:0; display:block;" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TAB 7: 📸 訓育組拍攝 ==================== -->
+    <section class="tab-pane" id="pane-staff-photo">
+      <div class="section-header" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1rem;">
+        <div>
+          <h2 class="section-title">📸 訓育組拍攝 · 露營探索活動精彩紀實</h2>
+          <p class="section-subtitle">訓育組隨隊師長視角全程記錄，包含開訓典禮、大隊集會、營火晚會大合照、班級競賽與閉幕頒獎現場</p>
+        </div>
+        <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap;">
+          <a href="https://yaoshuchin.github.io/115-nantou-camping-photo/" target="_blank" class="sub-tab-btn" style="background:#0284c7; color:#fff; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:4px; padding:0.45rem 0.9rem;">
+            ↗ 在新視窗開啟
+          </a>
+          <button onclick="reloadPhotoFrame('iframeStaffPhoto', 'https://yaoshuchin.github.io/115-nantou-camping-photo/')" class="sub-tab-btn" style="padding:0.45rem 0.75rem;" title="重新整理相簿">
+            🔄 重新整理
+          </button>
+          <button onclick="toggleIframeFullscreen('iframeStaffPhoto')" class="sub-tab-btn" style="padding:0.45rem 0.75rem;" title="全螢幕開啟">
+            ⛶ 全螢幕
+          </button>
+        </div>
+      </div>
+
+      <div style="background:#ffffff; border:1px solid #fed7aa; border-radius:14px; padding:0.85rem; box-shadow:0 4px 20px rgba(249, 115, 22, 0.08); margin-bottom:1.5rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; padding:0.4rem 0.6rem 0.75rem; border-bottom:1px solid #f1f5f9; font-size:0.88rem; color:#475569; flex-wrap:wrap; gap:0.5rem;">
+          <div style="display:flex; align-items:center; gap:0.5rem;">
+            <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#10b981; box-shadow:0 0 0 3px rgba(16,185,129,0.2);"></span>
+            <span>內嵌頁面：<a href="https://yaoshuchin.github.io/115-nantou-camping-photo/" target="_blank" style="color:#ea580c; text-decoration:none; font-weight:600;">https://yaoshuchin.github.io/115-nantou-camping-photo/</a></span>
+          </div>
+          <div style="display:flex; gap:0.4rem;">
+            <span style="background:#ffedd5; color:#c2410c; padding:3px 10px; border-radius:999px; font-weight:700; font-size:0.8rem;">訓育組拍攝 · 01~09 活動全紀錄</span>
+          </div>
+        </div>
+        <div id="containerStaffPhoto" style="position:relative; width:100%; height:84vh; min-height:780px; margin-top:0.75rem; border-radius:10px; overflow:hidden; background:#0f172a; box-shadow:inset 0 2px 6px rgba(0,0,0,0.3);">
+          <iframe 
+            id="iframeStaffPhoto" 
+            src="https://yaoshuchin.github.io/115-nantou-camping-photo/" 
+            title="南投國中 115 隔宿露營 - 訓育組拍攝" 
+            style="width:100%; height:100%; border:0; display:block;" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Floating Tools (Bottom-right) -->
@@ -3975,7 +4067,14 @@
       // 行李・生活
       'pack-rules': { main: 'pack-rules', sub: 'packing' },
       'packing': { main: 'pack-rules', sub: 'packing' },
-      'notices': { main: 'pack-rules', sub: 'notices' }
+      'notices': { main: 'pack-rules', sub: 'notices' },
+      // 隊輔拍攝與訓育組拍攝
+      'classes-photo': { main: 'classes-photo', sub: null },
+      'classes': { main: 'classes-photo', sub: null },
+      'guide-photo': { main: 'classes-photo', sub: null },
+      'staff-photo': { main: 'staff-photo', sub: null },
+      'staff': { main: 'staff-photo', sub: null },
+      'photo': { main: 'staff-photo', sub: null }
     };
 
     // 主標籤切換
@@ -4109,6 +4208,26 @@
     function closeLightbox() {
       const modal = document.getElementById('lightboxModal');
       if (modal) modal.style.display = 'none';
+    }
+
+    // 相簿 iframe 重新載入與全螢幕切換
+    function reloadPhotoFrame(frameId, url) {
+      const frame = document.getElementById(frameId);
+      if (frame) {
+        frame.src = url;
+      }
+    }
+
+    function toggleIframeFullscreen(frameId) {
+      const el = document.getElementById(frameId);
+      if (!el) return;
+      if (el.requestFullscreen) {
+        el.requestFullscreen();
+      } else if (el.webkitRequestFullscreen) {
+        el.webkitRequestFullscreen();
+      } else if (el.msRequestFullscreen) {
+        el.msRequestFullscreen();
+      }
     }
 
     // 鍵盤導航支援

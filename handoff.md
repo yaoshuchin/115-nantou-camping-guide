@@ -1,19 +1,35 @@
 # 南投國中 115 二年級隔宿露營專案交接與進度紀錄 (handoff.md)
 
-- **更新日期**：115 年 10 月 23 日（2026-10-23）
+- **更新日期**：115 年 10 月 29 日（2026-10-29）
 - **專案路徑**：`D:\antigravity\1151019二年級隔宿露營`
 - **核心來源**：`1151019-115南投國二露營手冊.pdf`（共 26 頁）及 `1151022投中隔宿行前說明/`
 - **線上發布網址**：
   - **GitHub 倉庫**：[https://github.com/yaoshuchin/115-nantou-camping-guide](https://github.com/yaoshuchin/115-nantou-camping-guide)
   - **GitHub Pages 線上簡報版**：[https://yaoshuchin.github.io/115-nantou-camping-guide/](https://yaoshuchin.github.io/115-nantou-camping-guide/)
   - **GitHub Pages 露營手冊網頁版**：[https://yaoshuchin.github.io/115-nantou-camping-guide/handbook.html](https://yaoshuchin.github.io/115-nantou-camping-guide/handbook.html)
+  - **隊輔拍攝相簿專區**：[https://yaoshuchin.github.io/115-nantou-camping-classes/](https://yaoshuchin.github.io/115-nantou-camping-classes/)
+  - **訓育組精彩紀實專區**：[https://yaoshuchin.github.io/115-nantou-camping-photo/](https://yaoshuchin.github.io/115-nantou-camping-photo/)
   - **Netlify 發布站點**：[http://dazzling-dodol-e7d0ed.netlify.app](http://dazzling-dodol-e7d0ed.netlify.app)（手冊網頁版：[http://dazzling-dodol-e7d0ed.netlify.app/handbook.html](http://dazzling-dodol-e7d0ed.netlify.app/handbook.html)，預設存取密碼：`My-Drop-Site`）
 
 ---
 
 ## 📌 一、當前進度與成果紀錄
 
-1. **標籤架構全面整併為 6 大主標籤與二層式巢狀架構（`build_handbook.py` & `handbook.html`）**：
+1. **電子手冊版新增「📷 隊輔拍攝」與「📸 訓育組拍攝」專屬標籤頁並內嵌完整相簿（`handbook.html`）**：
+   - **新增導覽列標籤**：
+     - 在頂部黏性導航列（`tabNavBar`）新增兩個標籤按鈕：`📷 隊輔拍攝` 與 `📸 訓育組拍攝`，支援點擊平滑切換與高亮底線。
+     - 在頂部 Hero 承辦單位資訊卡新增「📷 隊輔拍攝相簿」與「📸 訓育組拍攝」直達捷徑膠囊。
+   - **內嵌「📷 隊輔拍攝」網頁（`https://yaoshuchin.github.io/115-nantou-camping-classes/`）**：
+     - 整合各班隨隊隊輔所拍攝之 801~807 各班級精選寫真相簿。
+     - 配備高解析度響應式 `<iframe>`（高度 84vh，min-height 780px），支援班級篩選與縮圖燈箱。
+     - 工具列提供「↗ 在新視窗開啟」、「🔄 重新整理」與「⛶ 全螢幕開啟」三合一控制項。
+   - **內嵌「📸 訓育組拍攝」網頁（`https://yaoshuchin.github.io/115-nantou-camping-photo/`）**：
+     - 整合訓育組隨隊師長全程記錄之 01~09 大會流程、始業式、野炊、營火晚會與閉幕頒獎完整紀實。
+     - 配備全視窗 `<iframe>` 內嵌容器，支援各活動分站影音相片切換。
+     - 工具列同樣提供「↗ 在新視窗開啟」、「🔄 重新整理」與「⛶ 全螢幕開啟」功能。
+   - **智慧路由支援**：在 `tabMapping` 中擴充 `classes-photo`、`staff-photo` 等多組別名，支援網址 hash 錨點直接跳轉至指定相簿頁。
+
+2. **標籤架構全面整併為二層式巢狀架構（`build_handbook.py` & `handbook.html`）**：
    - **主標籤「🔍 查詢」**：原「查帳分車」正式更名為「🔍 查詢」，標題調整為「🔍 學生編組快速查詢（車次・帳棚・野炊組別速查）」，支援姓名快速比對。
    - **主標籤「🚌 車次・帳棚・野炊」整合與四項二階次標籤**：
      - 將原獨立之「團務車次」與「帳棚・野炊」合併為單一主標籤，內設四個二階子標籤：
