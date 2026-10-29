@@ -102,7 +102,7 @@
 
 5. **雲端同步與雙重發布**：
    - **GitHub**：更新已推送至遠端 `main` 分支，GitHub Pages 已更新上線。
-   - **Netlify**：全站靜態資源已成功部署至 `http://calm-swan-e9c90a.netlify.app`。
+   - **Netlify**：全站靜態資源已成功部署至 `http://funny-hamster-defccb.netlify.app`。
 
 6. **實裝 10/23（五）行前說明會四大宣導重點**：
    - **簡報版 (`index.html`)**：新增獨立投影片「03. 📢 10/23（五）行前說明會四大重點宣導」，全簡報架構擴充至 17 頁，提供導師向全體學生投影片解說之專用介面。
