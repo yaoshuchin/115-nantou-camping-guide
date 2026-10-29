@@ -9,7 +9,7 @@
   - **GitHub Pages 露營手冊網頁版**：[https://yaoshuchin.github.io/115-nantou-camping-guide/handbook.html](https://yaoshuchin.github.io/115-nantou-camping-guide/handbook.html)
   - **隊輔拍攝相簿專區**：[https://yaoshuchin.github.io/115-nantou-camping-classes/](https://yaoshuchin.github.io/115-nantou-camping-classes/)
   - **訓育組精彩紀實專區**：[https://yaoshuchin.github.io/115-nantou-camping-photo/](https://yaoshuchin.github.io/115-nantou-camping-photo/)
-  - **Netlify 發布站點**：[http://dazzling-dodol-e7d0ed.netlify.app](http://dazzling-dodol-e7d0ed.netlify.app)（手冊網頁版：[http://dazzling-dodol-e7d0ed.netlify.app/handbook.html](http://dazzling-dodol-e7d0ed.netlify.app/handbook.html)，預設存取密碼：`My-Drop-Site`）
+  - **Netlify 發布站點**：[http://funny-hamster-defccb.netlify.app](http://funny-hamster-defccb.netlify.app)（手冊網頁版：[http://funny-hamster-defccb.netlify.app/handbook.html](http://funny-hamster-defccb.netlify.app/handbook.html)，預設存取密碼：`My-Drop-Site`）
 
 ---
 
